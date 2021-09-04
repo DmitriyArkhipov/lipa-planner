@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9526E3A3C7002CA116 /* RootTabs.swift */; };
+		CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9726E3A4C5002CA116 /* SearchScreen.swift */; };
+		CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9C26E3A6C7002CA116 /* FiltersView.swift */; };
+		CD04EFA026E3A764002CA116 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9F26E3A764002CA116 /* SearchHistoryView.swift */; };
 		CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */; };
-		CD959AA526E397EC00F31FAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA426E397EC00F31FAA /* ContentView.swift */; };
 		CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA626E397EF00F31FAA /* Assets.xcassets */; };
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD04EF9526E3A3C7002CA116 /* RootTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabs.swift; sourceTree = "<group>"; };
+		CD04EF9726E3A4C5002CA116 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		CD04EF9C26E3A6C7002CA116 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		CD04EF9F26E3A764002CA116 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
 		CD959A9F26E397EC00F31FAA /* LipaPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipaPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipaPlannerApp.swift; sourceTree = "<group>"; };
-		CD959AA426E397EC00F31FAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD959AA626E397EF00F31FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD959AAB26E397EF00F31FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +39,128 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD04EF8926E39CD5002CA116 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CD04EF8F26E39DE9002CA116 /* CoreData */,
+				CD04EF8E26E39D63002CA116 /* API */,
+				CD04EF8D26E39D50002CA116 /* Views */,
+				CD04EF8C26E39D46002CA116 /* Redux */,
+				CD04EF8B26E39CFD002CA116 /* Utils */,
+				CD04EF8A26E39CDD002CA116 /* Screens */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		CD04EF8A26E39CDD002CA116 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CD04EF9426E39F65002CA116 /* TrainCardScreen */,
+				CD04EF9326E39F3F002CA116 /* NotificationScreen */,
+				CD04EF9226E39F29002CA116 /* RemindersListScreen */,
+				CD04EF9126E39E8D002CA116 /* SearchScreen */,
+				CD04EF9026E39E00002CA116 /* TrainsListScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CD04EF8B26E39CFD002CA116 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CD04EF8C26E39D46002CA116 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		CD04EF8D26E39D50002CA116 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD04EF8E26E39D63002CA116 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CD04EF8F26E39DE9002CA116 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CD04EF9026E39E00002CA116 /* TrainsListScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TrainsListScreen;
+			sourceTree = "<group>";
+		};
+		CD04EF9126E39E8D002CA116 /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CD04EF9926E3A689002CA116 /* Views */,
+				CD04EF9726E3A4C5002CA116 /* SearchScreen.swift */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		CD04EF9226E39F29002CA116 /* RemindersListScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RemindersListScreen;
+			sourceTree = "<group>";
+		};
+		CD04EF9326E39F3F002CA116 /* NotificationScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NotificationScreen;
+			sourceTree = "<group>";
+		};
+		CD04EF9426E39F65002CA116 /* TrainCardScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TrainCardScreen;
+			sourceTree = "<group>";
+		};
+		CD04EF9926E3A689002CA116 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD04EF9B26E3A6A2002CA116 /* SearchHistoryView */,
+				CD04EF9A26E3A691002CA116 /* FiltersView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD04EF9A26E3A691002CA116 /* FiltersView */ = {
+			isa = PBXGroup;
+			children = (
+				CD04EF9C26E3A6C7002CA116 /* FiltersView.swift */,
+			);
+			path = FiltersView;
+			sourceTree = "<group>";
+		};
+		CD04EF9B26E3A6A2002CA116 /* SearchHistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				CD04EF9F26E3A764002CA116 /* SearchHistoryView.swift */,
+			);
+			path = SearchHistoryView;
+			sourceTree = "<group>";
+		};
 		CD959A9626E397EC00F31FAA = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +180,9 @@
 		CD959AA126E397EC00F31FAA /* LipaPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				CD04EF8926E39CD5002CA116 /* Source */,
 				CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */,
-				CD959AA426E397EC00F31FAA /* ContentView.swift */,
+				CD04EF9526E3A3C7002CA116 /* RootTabs.swift */,
 				CD959AA626E397EF00F31FAA /* Assets.xcassets */,
 				CD959AAB26E397EF00F31FAA /* Info.plist */,
 				CD959AA826E397EF00F31FAA /* Preview Content */,
@@ -138,8 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD959AA526E397EC00F31FAA /* ContentView.swift in Sources */,
+				CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */,
+				CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */,
+				CD04EFA026E3A764002CA116 /* SearchHistoryView.swift in Sources */,
 				CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */,
+				CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +399,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"LipaPlanner/Preview Content\"";
 				DEVELOPMENT_TEAM = D983Q7J5Y7;
 				ENABLE_PREVIEWS = YES;
@@ -277,8 +410,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.lipaplanner.LipaPlanner;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.lipaplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = lipa_dev_all;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,7 +423,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"LipaPlanner/Preview Content\"";
 				DEVELOPMENT_TEAM = D983Q7J5Y7;
 				ENABLE_PREVIEWS = YES;
@@ -299,8 +434,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.lipaplanner.LipaPlanner;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.lipaplanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = lipa_appstore;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
