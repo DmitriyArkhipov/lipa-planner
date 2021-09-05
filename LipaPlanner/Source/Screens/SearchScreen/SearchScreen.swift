@@ -10,9 +10,11 @@ import SwiftUI
 struct SearchScreen: View {
     var body: some View {
         ScrollView(.vertical) {
-            FiltersView()
+            FiltersView().padding()
             SearchHistoryView()
         }
+        .clipped()
+        .background(Color(hex: "1A1A20").edgesIgnoringSafeArea(.all))
     }
 }
 
