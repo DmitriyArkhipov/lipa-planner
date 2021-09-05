@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchScreen: View {
     var body: some View {
-        VStack{
+        ScrollView(.vertical) {
             FiltersView()
             SearchHistoryView()
         }
