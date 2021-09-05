@@ -31,10 +31,17 @@ struct FiltersView: View {
             Text("Откуда")
             Text("Куда")
             HStack {
-                Button("Ускоренные", action: {})
+                SelectorButton(
+                    title: "Ускоренные",
+                    onPress: { isSelected in print("test: ", isSelected)}
+                )
                 Spacer()
-                Button("Все", action: {})
+                SelectorButton(
+                    title: "Все",
+                    onPress: { isSelected in print("test: ", isSelected)}
+                )
             }
+            ActionButton(title: "Показать расписание")
         }
     }
 }
