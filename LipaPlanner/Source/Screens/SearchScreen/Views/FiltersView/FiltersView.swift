@@ -12,8 +12,29 @@ struct FiltersView: View {
 
     var body: some View {
         VStack{
-            TextField("Откуда", text: $test)
-            TextField("Куда", text: $test)
+            HStack {
+                DateSelectorButton(
+                    title: "31.03.21",
+                    onPress: { isSelected in print("test: ", isSelected)}
+                )
+                Spacer()
+                SelectorButton(
+                    title: "Сегодня",
+                    onPress: { isSelected in print("test: ", isSelected)}
+                )
+                Spacer()
+                SelectorButton(
+                    title: "Завтра",
+                    onPress: { isSelected in print("test: ", isSelected)}
+                )
+            }
+            Text("Откуда")
+            Text("Куда")
+            HStack {
+                Button("Ускоренные", action: {})
+                Spacer()
+                Button("Все", action: {})
+            }
         }
     }
 }
