@@ -9,12 +9,15 @@ import SwiftUI
 
 struct SearchScreen: View {
     var body: some View {
-        ScrollView(.vertical) {
-            FiltersView().padding()
-            SearchHistoryView()
+        NavigationView {
+            ScrollView(.vertical) {
+                FiltersView().padding()
+                SearchHistoryView()
+            }
+            .clipped()
+            .background(Color(hex: "1A1A20").edgesIgnoringSafeArea(.all))
+            .navigationBarHidden(true)
         }
-        .clipped()
-        .background(Color(hex: "1A1A20").edgesIgnoringSafeArea(.all))
     }
 }
 

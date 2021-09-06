@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootTabs: View {
     init() {
-        UITabBar.appearance().isTranslucent = false
+//        UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().barTintColor = UIColor(Color(hex: "17171F"))
     }
     

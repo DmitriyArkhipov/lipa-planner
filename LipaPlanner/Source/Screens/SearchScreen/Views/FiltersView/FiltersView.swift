@@ -28,8 +28,8 @@ struct FiltersView: View {
                     onPress: { isSelected in print("test: ", isSelected)}
                 )
             }
-            Text("Откуда")
-            Text("Куда")
+            InputButton(onPress: {}, placeholder: "Куда")
+            InputButton(onPress: {}, placeholder: "Откуда")
             HStack {
                 SelectorButton(
                     title: "Ускоренные",
