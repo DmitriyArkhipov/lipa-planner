@@ -17,12 +17,18 @@
 		CD66CE5026E52B030011828A /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4F26E52B030011828A /* Color+Hex.swift */; };
 		CD66CE5226E628CF0011828A /* InputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5126E628CF0011828A /* InputButton.swift */; };
 		CD66CE5426E66C170011828A /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5326E66C170011828A /* TestScreen.swift */; };
+		CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5526E71E860011828A /* TrainSuggest.swift */; };
+		CD66CE5826E727F90011828A /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5726E727F90011828A /* TextInput.swift */; };
 		CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */; };
 		CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA626E397EF00F31FAA /* Assets.xcassets */; };
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
+		E02530E644CCC6B949C5C967 /* Pods_LipaPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11F4FA95AB1BCECD48FDB2A /* Pods_LipaPlanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1832620EF5BFD42EEC0DD95F /* Pods-LipaPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipaPlanner.release.xcconfig"; path = "Target Support Files/Pods-LipaPlanner/Pods-LipaPlanner.release.xcconfig"; sourceTree = "<group>"; };
+		557D92D72E46DBB81A2305D5 /* Pods-LipaPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipaPlanner.debug.xcconfig"; path = "Target Support Files/Pods-LipaPlanner/Pods-LipaPlanner.debug.xcconfig"; sourceTree = "<group>"; };
+		A11F4FA95AB1BCECD48FDB2A /* Pods_LipaPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LipaPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD04EF9526E3A3C7002CA116 /* RootTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabs.swift; sourceTree = "<group>"; };
 		CD04EF9726E3A4C5002CA116 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		CD04EF9C26E3A6C7002CA116 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
@@ -33,6 +39,8 @@
 		CD66CE4F26E52B030011828A /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		CD66CE5126E628CF0011828A /* InputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputButton.swift; sourceTree = "<group>"; };
 		CD66CE5326E66C170011828A /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
+		CD66CE5526E71E860011828A /* TrainSuggest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSuggest.swift; sourceTree = "<group>"; };
+		CD66CE5726E727F90011828A /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		CD959A9F26E397EC00F31FAA /* LipaPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipaPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipaPlannerApp.swift; sourceTree = "<group>"; };
 		CD959AA626E397EF00F31FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,12 +53,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02530E644CCC6B949C5C967 /* Pods_LipaPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41627A059738FCD905375E55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				557D92D72E46DBB81A2305D5 /* Pods-LipaPlanner.debug.xcconfig */,
+				1832620EF5BFD42EEC0DD95F /* Pods-LipaPlanner.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4FDFC2222530092B2BD3106F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A11F4FA95AB1BCECD48FDB2A /* Pods_LipaPlanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD04EF8926E39CD5002CA116 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +210,8 @@
 		CD66CE4726E49DD70011828A /* Suggest */ = {
 			isa = PBXGroup;
 			children = (
+				CD66CE5526E71E860011828A /* TrainSuggest.swift */,
+				CD66CE5726E727F90011828A /* TextInput.swift */,
 			);
 			path = Suggest;
 			sourceTree = "<group>";
@@ -200,6 +229,8 @@
 			children = (
 				CD959AA126E397EC00F31FAA /* LipaPlanner */,
 				CD959AA026E397EC00F31FAA /* Products */,
+				41627A059738FCD905375E55 /* Pods */,
+				4FDFC2222530092B2BD3106F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD959AAE26E397EF00F31FAA /* Build configuration list for PBXNativeTarget "LipaPlanner" */;
 			buildPhases = (
+				57F941974F037D5631F181B3 /* [CP] Check Pods Manifest.lock */,
 				CD959A9B26E397EC00F31FAA /* Sources */,
 				CD959A9C26E397EC00F31FAA /* Frameworks */,
 				CD959A9D26E397EC00F31FAA /* Resources */,
+				8C5B6E65FBB035DA9D6DC834 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,18 +329,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		57F941974F037D5631F181B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LipaPlanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C5B6E65FBB035DA9D6DC834 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LipaPlanner/Pods-LipaPlanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LipaPlanner/Pods-LipaPlanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LipaPlanner/Pods-LipaPlanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD959A9B26E397EC00F31FAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */,
+				CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */,
 				CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */,
 				CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */,
 				CD04EFA026E3A764002CA116 /* SearchHistoryView.swift in Sources */,
 				CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */,
 				CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */,
 				CD66CE5226E628CF0011828A /* InputButton.swift in Sources */,
+				CD66CE5826E727F90011828A /* TextInput.swift in Sources */,
 				CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */,
 				CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */,
 				CD66CE5026E52B030011828A /* Color+Hex.swift in Sources */,
@@ -436,6 +513,7 @@
 		};
 		CD959AAF26E397EF00F31FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 557D92D72E46DBB81A2305D5 /* Pods-LipaPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +538,7 @@
 		};
 		CD959AB026E397EF00F31FAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1832620EF5BFD42EEC0DD95F /* Pods-LipaPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

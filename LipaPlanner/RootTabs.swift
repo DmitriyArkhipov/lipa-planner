@@ -9,8 +9,11 @@ import SwiftUI
 
 struct RootTabs: View {
     init() {
-//        UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().barTintColor = UIColor(Color(hex: "17171F"))
+        UINavigationBar.appearance().barTintColor = UIColor(Color(hex: "1A1A20"))
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     var body: some View {

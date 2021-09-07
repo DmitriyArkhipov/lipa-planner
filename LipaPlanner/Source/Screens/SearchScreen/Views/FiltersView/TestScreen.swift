@@ -9,9 +9,16 @@ import SwiftUI
 
 struct TestScreen: View {
     var body: some View {
-            VStack {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            }.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.orange/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView(.vertical) {
+//                Spacer()
+                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+//                Spacer()
+            }
+            .clipped()
+            .background(Color(hex: "1A1A20").edgesIgnoringSafeArea(.all))
+//            .navigationBarHidden(true)
+        }
     }
 }
 
