@@ -37,9 +37,17 @@ struct InputButton: View {
             }
         })
         .buttonStyle(InputButtonStyle())
-        .sheet(isPresented: $openSuggest, content: {
-            TrainSuggest(title: placeholder, onPressBack: {openSuggest = false})
-        })
+        .sheet(
+            isPresented: $openSuggest,
+            content: {
+                TrainSuggest(
+                    title: placeholder,
+                    onPressBack: {
+                        openSuggest = false
+                    }
+                )
+            }
+        )
     }
 }
 

@@ -206,8 +206,8 @@
 		CD66CE4726E49DD70011828A /* Suggest */ = {
 			isa = PBXGroup;
 			children = (
+				CDD6A6D226E9C99700BCA1E8 /* Views */,
 				CD66CE5526E71E860011828A /* TrainSuggest.swift */,
-				CD66CE5726E727F90011828A /* TextInput.swift */,
 			);
 			path = Suggest;
 			sourceTree = "<group>";
@@ -257,6 +257,14 @@
 				CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDD6A6D226E9C99700BCA1E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD66CE5726E727F90011828A /* TextInput.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

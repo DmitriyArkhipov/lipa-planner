@@ -36,7 +36,7 @@ struct RootTabs: View {
                     Text("Настройки")
                 }.tag(3)
             }
-        )
+        ).preferredColorScheme(.dark)
     }
 }
 
