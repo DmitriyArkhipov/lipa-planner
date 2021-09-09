@@ -34,16 +34,11 @@ struct InputButton: View {
                     Text(value ?? placeholder)
                     Spacer()
                 }
-//                NavigationLink(
-//                    destination: TestScreen(),
-//                    isActive: $openSuggest,
-//                    label: {}
-//                ).hidden()
             }
         })
         .buttonStyle(InputButtonStyle())
         .sheet(isPresented: $openSuggest, content: {
-            TrainSuggest()
+            TrainSuggest(title: placeholder, onPressBack: {openSuggest = false})
         })
     }
 }

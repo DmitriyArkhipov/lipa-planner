@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,6 @@
 		CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4C26E4AA2A0011828A /* ActionButton.swift */; };
 		CD66CE5026E52B030011828A /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4F26E52B030011828A /* Color+Hex.swift */; };
 		CD66CE5226E628CF0011828A /* InputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5126E628CF0011828A /* InputButton.swift */; };
-		CD66CE5426E66C170011828A /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5326E66C170011828A /* TestScreen.swift */; };
 		CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5526E71E860011828A /* TrainSuggest.swift */; };
 		CD66CE5826E727F90011828A /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5726E727F90011828A /* TextInput.swift */; };
 		CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */; };
@@ -38,7 +37,6 @@
 		CD66CE4C26E4AA2A0011828A /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		CD66CE4F26E52B030011828A /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		CD66CE5126E628CF0011828A /* InputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputButton.swift; sourceTree = "<group>"; };
-		CD66CE5326E66C170011828A /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
 		CD66CE5526E71E860011828A /* TrainSuggest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSuggest.swift; sourceTree = "<group>"; };
 		CD66CE5726E727F90011828A /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		CD959A9F26E397EC00F31FAA /* LipaPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipaPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +64,6 @@
 				557D92D72E46DBB81A2305D5 /* Pods-LipaPlanner.debug.xcconfig */,
 				1832620EF5BFD42EEC0DD95F /* Pods-LipaPlanner.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -194,7 +191,6 @@
 				CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */,
 				CD66CE4C26E4AA2A0011828A /* ActionButton.swift */,
 				CD66CE5126E628CF0011828A /* InputButton.swift */,
-				CD66CE5326E66C170011828A /* TestScreen.swift */,
 			);
 			path = FiltersView;
 			sourceTree = "<group>";
@@ -388,7 +384,6 @@
 				CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */,
 				CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */,
 				CD66CE5026E52B030011828A /* Color+Hex.swift in Sources */,
-				CD66CE5426E66C170011828A /* TestScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

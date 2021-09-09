@@ -25,11 +25,12 @@ struct CustomTextField: View {
 
 struct TextInput: View {
     @State var text = ""
+    let placeholder: String
     var isFocused: Bool?
     
     var body: some View {
         VStack {
-            CustomTextField(placeholder: Text("dfdfdf").foregroundColor(Color(hex: "A7A5B5")), text: $text, isFocused: isFocused ?? false)
+            CustomTextField(placeholder: Text(placeholder).foregroundColor(Color(hex: "A7A5B5")), text: $text, isFocused: isFocused ?? false)
         }
         .padding(.all, 20)
         .background(Color(hex: "393945"))
@@ -46,6 +47,6 @@ struct TextInput: View {
 
 struct TextInput_Previews: PreviewProvider {
     static var previews: some View {
-        TextInput()
+        TextInput(placeholder: "")
     }
 }
