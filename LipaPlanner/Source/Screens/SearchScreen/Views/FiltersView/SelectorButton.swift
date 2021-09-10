@@ -34,6 +34,6 @@ struct SelectorButton: View {
 
 struct SelectorButton_Previews: PreviewProvider {
     static var previews: some View {
-        SelectorButton(title: "Button Title", onPress: { _ in print("TestLog")}, isSelected: false)
+        SelectorButton(title: "Button Title", onPress: { _ in print("TestLog")}, isSelected: false).preferredColorScheme(.dark)
     }
 }

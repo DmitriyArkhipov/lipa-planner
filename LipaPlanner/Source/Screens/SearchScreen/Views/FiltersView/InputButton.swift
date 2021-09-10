@@ -11,8 +11,8 @@ struct InputButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(.all, 20)
-            .background(configuration.isPressed ? Color(hex: "1A1A20") : Color(hex: "393945"))
-            .foregroundColor(Color(hex: "A7A5B5"))
+            .background(configuration.isPressed ? Colors.InputPressed : Colors.InputBackground)
+            .foregroundColor(Colors.InputPlaceholder)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
             .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
     }
@@ -53,6 +53,6 @@ struct InputButton: View {
 
 struct InputButton_Previews: PreviewProvider {
     static var previews: some View {
-        InputButton(onPress: {}, placeholder: "Куда")
+        InputButton(onPress: {}, placeholder: "Куда").preferredColorScheme(.dark)
     }
 }

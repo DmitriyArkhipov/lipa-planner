@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RootTabs: View {
     init() {
-        UITabBar.appearance().barTintColor = UIColor(Color(hex: "17171F"))
-        UINavigationBar.appearance().barTintColor = UIColor(Color(hex: "1A1A20"))
+        UITabBar.appearance().barTintColor = UIColor(Colors.TabBarBackground)
+        UINavigationBar.appearance().barTintColor = UIColor(Colors.Background)
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]

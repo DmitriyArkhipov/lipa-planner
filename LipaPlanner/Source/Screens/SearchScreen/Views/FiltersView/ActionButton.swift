@@ -38,6 +38,6 @@ struct ActionButton: View {
 
 struct ActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        ActionButton(title: "Action title")
+        ActionButton(title: "Action title").preferredColorScheme(.dark)
     }
 }

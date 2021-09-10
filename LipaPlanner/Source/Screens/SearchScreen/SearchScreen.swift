@@ -15,7 +15,7 @@ struct SearchScreen: View {
                 SearchHistoryView()
             }
             .clipped()
-            .background(Color(hex: "1A1A20").edgesIgnoringSafeArea(.all))
+            .background(Colors.Background.edgesIgnoringSafeArea(.all))
             .navigationBarHidden(true)
         }
     }

@@ -30,11 +30,11 @@ struct TextInput: View {
     
     var body: some View {
         VStack {
-            CustomTextField(placeholder: Text(placeholder).foregroundColor(Color(hex: "A7A5B5")), text: $text, isFocused: isFocused ?? false)
+            CustomTextField(placeholder: Text(placeholder).foregroundColor( Colors.InputPlaceholder), text: $text, isFocused: isFocused ?? false)
         }
         .padding(.all, 20)
-        .background(Color(hex: "393945"))
-        .foregroundColor(Color(hex: "FFFFFF"))
+        .background(Colors.InputBackground)
+        .foregroundColor(Colors.InputFilled)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
         .introspectTextField{ textField in
             if let focused = isFocused, focused {
@@ -47,6 +47,6 @@ struct TextInput: View {
 
 struct TextInput_Previews: PreviewProvider {
     static var previews: some View {
-        TextInput(placeholder: "")
+        TextInput(placeholder: "Placeholder")
     }
 }

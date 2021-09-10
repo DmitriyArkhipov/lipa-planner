@@ -40,6 +40,6 @@ struct DateSelectorButton: View {
 
 struct DateSelectorButton_Previews: PreviewProvider {
     static var previews: some View {
-        DateSelectorButton(title: "Date", onPress: { _ in print("testlog")})
+        DateSelectorButton(title: "Date", onPress: { _ in print("testlog")}).preferredColorScheme(.dark)
     }
 }

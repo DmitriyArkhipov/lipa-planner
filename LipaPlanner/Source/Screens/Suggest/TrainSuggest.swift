@@ -20,9 +20,9 @@ struct TrainSuggest: View {
                     .padding(.horizontal, 16.0)
                 List {
                     Text("test item")
-                }.colorMultiply(Color(hex: "1A1A20"))
+                }.colorMultiply(Colors.Background)
             }
-            .background(Color(hex: "1A1A20").edgesIgnoringSafeArea(.all))
+            .background(Colors.Background.edgesIgnoringSafeArea(.all))
             .navigationBarTitle(title, displayMode: .inline)
             .navigationBarItems(leading: Button(action: onPressBack, label: {
                 HStack {
