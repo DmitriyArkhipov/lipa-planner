@@ -88,6 +88,7 @@
 				CD04EF8C26E39D46002CA116 /* Redux */,
 				CD04EF8B26E39CFD002CA116 /* Utils */,
 				CD04EF8A26E39CDD002CA116 /* Screens */,
+				CD04EF9526E3A3C7002CA116 /* RootTabs.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -245,7 +246,6 @@
 			children = (
 				CD04EF8926E39CD5002CA116 /* Source */,
 				CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */,
-				CD04EF9526E3A3C7002CA116 /* RootTabs.swift */,
 				CD959AA626E397EF00F31FAA /* Assets.xcassets */,
 				CD959AAB26E397EF00F31FAA /* Info.plist */,
 				CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */,
