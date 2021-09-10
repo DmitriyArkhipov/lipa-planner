@@ -21,6 +21,7 @@
 		CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA626E397EF00F31FAA /* Assets.xcassets */; };
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
 		CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD6A6D626EB174500BCA1E8 /* Colors.swift */; };
+		CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */; };
 		E02530E644CCC6B949C5C967 /* Pods_LipaPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11F4FA95AB1BCECD48FDB2A /* Pods_LipaPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD959AAB26E397EF00F31FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDD6A6D626EB174500BCA1E8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = "../../lipa-api-keys/ApiKeys.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 				CD04EF9526E3A3C7002CA116 /* RootTabs.swift */,
 				CD959AA626E397EF00F31FAA /* Assets.xcassets */,
 				CD959AAB26E397EF00F31FAA /* Info.plist */,
+				CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */,
 				CD959AA826E397EF00F31FAA /* Preview Content */,
 			);
 			path = LipaPlanner;
@@ -336,6 +339,7 @@
 			files = (
 				CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */,
 				CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */,
+				CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
