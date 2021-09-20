@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct BlueButton: ButtonStyle {
+struct GreenButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(.all, 20)
-            .background(configuration.isPressed ? Color.green : Color.yellow)
+            .background(configuration.isPressed ? Colors.ActionButtonPressed : Colors.ActionButton)
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
             .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
@@ -28,11 +28,11 @@ struct ActionButton: View {
                 Text(title)
                     .font(.body)
                     .fontWeight(.bold)
-                    .colorMultiply(.white)
+                    .foregroundColor(Color.black)
                 Spacer()
             }
         }
-        .buttonStyle(BlueButton())
+        .buttonStyle(GreenButton())
     }
 }
 

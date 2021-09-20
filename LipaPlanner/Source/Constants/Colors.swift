@@ -18,4 +18,11 @@ final class Colors {
     static let TabBarBackground = Color("TabBarBackground")
     
     static let RowBackground = Color("RowBackground")
+    
+    static let SelectedFilterButton = Color("SelectedFilterButton")
+    static let UnselectedFilterButton = Color("UnselectedFilterButton")
+    static let UnselectedTitleFilterButton = Color("UnselectedTitleFilterButton")
+    
+    static let ActionButton = Color("ActionButton")
+    static let ActionButtonPressed = Color("ActionButtonPressed")
 }

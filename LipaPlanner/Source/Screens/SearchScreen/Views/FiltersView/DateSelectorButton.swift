@@ -12,6 +12,14 @@ struct DateSelectorButton: View {
     let onPress: (Bool) -> Void
     
     @State var isSelected: Bool = false
+    
+    var selectedButtonColor: Color {
+        return isSelected ? Colors.SelectedFilterButton : Colors.UnselectedFilterButton
+    }
+    
+    var selectedTitleColor: Color {
+        return isSelected ? Colors.SelectedFilterButton : Colors.UnselectedTitleFilterButton
+    }
 
     var body: some View {
         Button(action: {
@@ -26,14 +34,13 @@ struct DateSelectorButton: View {
                     Text("июл").font(.system(size: 16, design: .default))
                     Text("2021").font(.system(size: 16, design: .default))
                 }
-            }
+            }.foregroundColor(selectedTitleColor)
         })
         .padding(.vertical, 7)
         .padding(.horizontal, 16)
-        .colorMultiply(isSelected ? .green : .blue)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(isSelected ? Color.green : Color.blue, lineWidth: 2)
+                .stroke(selectedButtonColor, lineWidth: 2)
         )
     }
 }

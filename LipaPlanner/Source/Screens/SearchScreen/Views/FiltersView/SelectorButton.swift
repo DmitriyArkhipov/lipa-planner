@@ -13,6 +13,14 @@ struct SelectorButton: View {
     
     @State var isSelected: Bool = false
     
+    var selectedButtonColor: Color {
+        return isSelected ? Colors.SelectedFilterButton : Colors.UnselectedFilterButton
+    }
+    
+    var selectedTitleColor: Color {
+        return isSelected ? Colors.SelectedFilterButton : Colors.UnselectedTitleFilterButton
+    }
+    
     var body: some View {
         Button(action: {
             isSelected = isSelected ? false : true
@@ -23,12 +31,12 @@ struct SelectorButton: View {
             Text(title)
             Spacer()
         })
+        .foregroundColor(selectedTitleColor)
         .padding(.vertical, 16)
         .padding(.horizontal, 6)
-        .colorMultiply(isSelected ? .green : .blue)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(isSelected ? Color.green : Color.blue, lineWidth: 2)
+                .stroke(selectedButtonColor, lineWidth: 2)
         )
     }
 }
