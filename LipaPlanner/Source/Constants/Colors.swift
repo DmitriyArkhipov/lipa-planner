@@ -16,4 +16,6 @@ final class Colors {
     static let InputFilled = Color("InputFilled")
     
     static let TabBarBackground = Color("TabBarBackground")
+    
+    static let RowBackground = Color("RowBackground")
 }

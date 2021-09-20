@@ -13,14 +13,26 @@ struct TrainSuggest: View {
     
     @State var text = ""
     
+    init(title: String, onPressBack: @escaping () -> Void) {
+        UITableView.appearance().backgroundColor = .clear
+        
+        self.title = title
+        self.onPressBack = onPressBack
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
                 TextInput(placeholder: "Название станции",isFocused: true)
                     .padding(.horizontal, isIpod7() ? 0 : 16)
                 List {
-                    Text("test item")
-                }.colorMultiply(Colors.Background)
+                    Text("Речной вокзал").listRowBackground(Colors.RowBackground)
+                    Text("Новосибирск Главный").listRowBackground(Colors.RowBackground)
+                    Text("Бердск").listRowBackground(Colors.RowBackground)
+                }
+                .padding(.top, -16.0)
+                .foregroundColor(Colors.InputFilled)
+                .listStyle(InsetGroupedListStyle())
             }
             .background(Colors.Background.edgesIgnoringSafeArea(.all))
             .navigationBarTitle(title, displayMode: .inline)
