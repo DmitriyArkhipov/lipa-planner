@@ -9,6 +9,10 @@ import SwiftUI
 
 struct FiltersView: View {
     @State var test = ""
+    
+    var horizontalPadding: CGFloat {
+        return isIpod7() ? 0 : 5
+    }
 
     var body: some View {
         VStack{
@@ -17,30 +21,34 @@ struct FiltersView: View {
                     title: "31.03.21",
                     onPress: { isSelected in print("test: ", isSelected)}
                 )
-                Spacer()
+                .padding(.trailing, horizontalPadding)
                 SelectorButton(
                     title: "Сегодня",
                     onPress: { isSelected in print("test: ", isSelected)}
                 )
-                Spacer()
+                .padding(.trailing, horizontalPadding)
                 SelectorButton(
                     title: "Завтра",
                     onPress: { isSelected in print("test: ", isSelected)}
                 )
             }
+            .padding(.bottom, 20.0)
             InputButton(onPress: {}, placeholder: "Куда")
+                .padding(.bottom, 10.0)
             InputButton(onPress: {}, placeholder: "Откуда")
+                .padding(.bottom, 20.0)
             HStack {
                 SelectorButton(
                     title: "Ускоренные",
                     onPress: { isSelected in print("test: ", isSelected)}
                 )
-                Spacer()
+                .padding(.trailing, horizontalPadding)
                 SelectorButton(
                     title: "Все",
                     onPress: { isSelected in print("test: ", isSelected)}
                 )
             }
+            .padding(.bottom, 24.0)
             ActionButton(title: "Показать расписание")
         }
     }

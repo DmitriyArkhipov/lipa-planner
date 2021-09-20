@@ -36,7 +36,9 @@ struct RootTabs: View {
                     Text("Настройки")
                 }.tag(3)
             }
-        ).preferredColorScheme(.dark)
+        )
+        .accentColor(Colors.ActionButton)
+        .preferredColorScheme(.dark)
     }
 }
 
