@@ -23,7 +23,8 @@ struct SelectorButton: View {
             Text(title)
             Spacer()
         })
-        .padding(.all, 16)
+        .padding(.vertical, 16)
+        .padding(.horizontal, 6)
         .colorMultiply(isSelected ? .green : .blue)
         .overlay(
             RoundedRectangle(cornerRadius: 20)

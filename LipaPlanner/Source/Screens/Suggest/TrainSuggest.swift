@@ -17,7 +17,7 @@ struct TrainSuggest: View {
         NavigationView {
             VStack {
                 TextInput(placeholder: "Название станции",isFocused: true)
-                    .padding(.horizontal, 16.0)
+                    .padding(.horizontal, isIpod7() ? 0 : 16)
                 List {
                     Text("test item")
                 }.colorMultiply(Colors.Background)

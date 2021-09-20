@@ -22,6 +22,7 @@
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
 		CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD6A6D626EB174500BCA1E8 /* Colors.swift */; };
 		CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */; };
+		CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EA9826F837F60022A9EB /* isIpod7.swift */; };
 		E02530E644CCC6B949C5C967 /* Pods_LipaPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11F4FA95AB1BCECD48FDB2A /* Pods_LipaPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		CD959AAB26E397EF00F31FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDD6A6D626EB174500BCA1E8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = "../../lipa-api-keys/ApiKeys.plist"; sourceTree = "<group>"; };
+		CDF0EA9826F837F60022A9EB /* isIpod7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isIpod7.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		CD04EF8B26E39CFD002CA116 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CDF0EA9826F837F60022A9EB /* isIpod7.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				CD04EFA026E3A764002CA116 /* SearchHistoryView.swift in Sources */,
 				CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */,
 				CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */,
+				CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */,
 				CD66CE5226E628CF0011828A /* InputButton.swift in Sources */,
 				CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */,
 				CD66CE5826E727F90011828A /* TextInput.swift in Sources */,

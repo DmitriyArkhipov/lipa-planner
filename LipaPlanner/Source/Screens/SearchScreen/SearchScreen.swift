@@ -11,7 +11,7 @@ struct SearchScreen: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
-                FiltersView().padding()
+                FiltersView().padding(isIpod7() ? 0 : 16)
                 SearchHistoryView()
             }
             .clipped()
