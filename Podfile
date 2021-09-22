@@ -7,5 +7,6 @@ target 'LipaPlanner' do
 
   # Pods for LipaPlanner
   pod 'Introspect'
+  pod 'Alamofire'
 
 end

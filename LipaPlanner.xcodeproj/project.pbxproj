@@ -23,6 +23,10 @@
 		CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD6A6D626EB174500BCA1E8 /* Colors.swift */; };
 		CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */; };
 		CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EA9826F837F60022A9EB /* isIpod7.swift */; };
+		CDF0EA9C26FAD9130022A9EB /* RaspSuggestGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EA9B26FAD9130022A9EB /* RaspSuggestGateway.swift */; };
+		CDF0EAA126FADBC80022A9EB /* RaspSuggestedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EAA026FADBC80022A9EB /* RaspSuggestedItem.swift */; };
+		CDF0EAA326FADFEC0022A9EB /* RaspSuggestedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EAA226FADFEC0022A9EB /* RaspSuggestedResponse.swift */; };
+		CDF0EAA626FAE3C40022A9EB /* TrainSuggestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EAA526FAE3C40022A9EB /* TrainSuggestViewModel.swift */; };
 		E02530E644CCC6B949C5C967 /* Pods_LipaPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11F4FA95AB1BCECD48FDB2A /* Pods_LipaPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,10 @@
 		CDD6A6D626EB174500BCA1E8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = "../../lipa-api-keys/ApiKeys.plist"; sourceTree = "<group>"; };
 		CDF0EA9826F837F60022A9EB /* isIpod7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isIpod7.swift; sourceTree = "<group>"; };
+		CDF0EA9B26FAD9130022A9EB /* RaspSuggestGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspSuggestGateway.swift; sourceTree = "<group>"; };
+		CDF0EAA026FADBC80022A9EB /* RaspSuggestedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspSuggestedItem.swift; sourceTree = "<group>"; };
+		CDF0EAA226FADFEC0022A9EB /* RaspSuggestedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspSuggestedResponse.swift; sourceTree = "<group>"; };
+		CDF0EAA526FAE3C40022A9EB /* TrainSuggestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSuggestViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +221,9 @@
 		CD66CE4726E49DD70011828A /* Suggest */ = {
 			isa = PBXGroup;
 			children = (
+				CDF0EAA426FAE3AD0022A9EB /* ViewModels */,
+				CDF0EA9D26FADB010022A9EB /* Entities */,
+				CDF0EA9A26FAD8590022A9EB /* Gateways */,
 				CDD6A6D226E9C99700BCA1E8 /* Views */,
 				CD66CE5526E71E860011828A /* TrainSuggest.swift */,
 			);
@@ -279,6 +290,31 @@
 				CDD6A6D626EB174500BCA1E8 /* Colors.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		CDF0EA9A26FAD8590022A9EB /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				CDF0EA9B26FAD9130022A9EB /* RaspSuggestGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		CDF0EA9D26FADB010022A9EB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CDF0EAA026FADBC80022A9EB /* RaspSuggestedItem.swift */,
+				CDF0EAA226FADFEC0022A9EB /* RaspSuggestedResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CDF0EAA426FAE3AD0022A9EB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CDF0EAA526FAE3C40022A9EB /* TrainSuggestViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,18 +431,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF0EAA626FAE3C40022A9EB /* TrainSuggestViewModel.swift in Sources */,
 				CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */,
 				CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */,
 				CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */,
 				CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */,
 				CD04EFA026E3A764002CA116 /* SearchHistoryView.swift in Sources */,
 				CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */,
+				CDF0EAA326FADFEC0022A9EB /* RaspSuggestedResponse.swift in Sources */,
 				CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */,
 				CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */,
 				CD66CE5226E628CF0011828A /* InputButton.swift in Sources */,
 				CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */,
 				CD66CE5826E727F90011828A /* TextInput.swift in Sources */,
+				CDF0EA9C26FAD9130022A9EB /* RaspSuggestGateway.swift in Sources */,
 				CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */,
+				CDF0EAA126FADBC80022A9EB /* RaspSuggestedItem.swift in Sources */,
 				CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

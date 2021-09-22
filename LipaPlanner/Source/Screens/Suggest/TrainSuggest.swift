@@ -13,6 +13,8 @@ struct TrainSuggest: View {
     
     @State var text = ""
     
+    @ObservedObject var viewModel = TrainSuggestViewModel()
+    
     init(title: String, onPressBack: @escaping () -> Void) {
         UITableView.appearance().backgroundColor = .clear
         
@@ -26,9 +28,9 @@ struct TrainSuggest: View {
                 TextInput(placeholder: "Название станции",isFocused: true)
                     .padding(.horizontal, isIpod7() ? 0 : 16)
                 List {
-                    Text("Речной вокзал").listRowBackground(Colors.RowBackground)
-                    Text("Новосибирск Главный").listRowBackground(Colors.RowBackground)
-                    Text("Бердск").listRowBackground(Colors.RowBackground)
+                    ForEach(self.viewModel.suggests, id: \.self) { suggest in
+                        Text(suggest.titleRu).listRowBackground(Colors.RowBackground)
+                    }
                 }
                 .padding(.top, -16.0)
                 .foregroundColor(Colors.InputFilled)
@@ -41,6 +43,8 @@ struct TrainSuggest: View {
                     Image("BackButton")
                 }
             }))
+        }.onAppear {
+            self.viewModel.fetch()
         }
     }
 }
