@@ -9,8 +9,9 @@ import SwiftUI
 import Introspect
 
 struct CustomTextField: View {
-    var placeholder: Text
     @Binding var text: String
+    
+    var placeholder: Text
     var editingChanged: (Bool)->() = { _ in }
     var commit: ()->() = { }
     var isFocused: Bool = false
@@ -24,13 +25,18 @@ struct CustomTextField: View {
 }
 
 struct TextInput: View {
-    @State var text = ""
+    @Binding var text: String
+    
     let placeholder: String
     var isFocused: Bool?
     
     var body: some View {
         VStack {
-            CustomTextField(placeholder: Text(placeholder).foregroundColor( Colors.InputPlaceholder), text: $text, isFocused: isFocused ?? false)
+            CustomTextField(
+                text: $text,
+                placeholder: Text(placeholder).foregroundColor( Colors.InputPlaceholder),
+                isFocused: isFocused ?? false
+            )
         }
         .padding(.all, 20)
         .background(Colors.InputBackground)
@@ -45,8 +51,16 @@ struct TextInput: View {
     }
 }
 
+struct TestView: View {
+    @State var text: String = ""
+    
+    var body: some View {
+        TextInput(text: $text, placeholder: "Placeholder")
+    }
+}
+
 struct TextInput_Previews: PreviewProvider {
     static var previews: some View {
-        TextInput(placeholder: "Placeholder")
+        TestView()
     }
 }

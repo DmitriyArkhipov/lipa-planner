@@ -11,8 +11,6 @@ struct TrainSuggest: View {
     let title: String
     let onPressBack: () -> Void
     
-    @State var text = ""
-    
     @ObservedObject var viewModel = TrainSuggestViewModel()
     
     init(title: String, onPressBack: @escaping () -> Void) {
@@ -25,7 +23,7 @@ struct TrainSuggest: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextInput(placeholder: "Название станции",isFocused: true)
+                TextInput(text: $viewModel.inputText, placeholder: "Название станции",isFocused: true)
                     .padding(.horizontal, isIpod7() ? 0 : 16)
                 List {
                     ForEach(self.viewModel.suggests, id: \.self) { suggest in
@@ -43,9 +41,10 @@ struct TrainSuggest: View {
                     Image("BackButton")
                 }
             }))
-        }.onAppear {
-            self.viewModel.fetch()
         }
+//        .onAppear {
+//            self.viewModel.fetch()
+//        }
     }
 }
 
