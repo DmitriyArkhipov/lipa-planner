@@ -11,14 +11,20 @@ import SwiftUIRefresh
 struct TrainSuggest: View {
     let title: String
     let onPressBack: () -> Void
+    let onSelected: (RaspSuggestedItem) -> Void
     
     @ObservedObject var viewModel = TrainSuggestViewModel()
     
-    init(title: String, onPressBack: @escaping () -> Void) {
+    init(
+        title: String,
+        onPressBack: @escaping () -> Void,
+        onSelected: @escaping (RaspSuggestedItem) -> Void)
+    {
         UITableView.appearance().backgroundColor = .clear
         
         self.title = title
         self.onPressBack = onPressBack
+        self.onSelected = onSelected
     }
     
     var body: some View {
@@ -28,7 +34,11 @@ struct TrainSuggest: View {
                     .padding(.horizontal, isIpod7() ? 0 : 16)
                 List {
                     ForEach(self.viewModel.suggests, id: \.self) { suggest in
-                        Text(suggest.titleRu).listRowBackground(Colors.RowBackground)
+                        Button(action: {
+                            self.onSelected(suggest)
+                        }) {
+                            Text(suggest.titleRu).listRowBackground(Colors.RowBackground)
+                        }
                     }
                 }
                 .pullToRefresh(
@@ -49,14 +59,11 @@ struct TrainSuggest: View {
                 }
             }))
         }
-//        .onAppear {
-//            self.viewModel.fetch()
-//        }
     }
 }
 
 struct TrainSuggest_Previews: PreviewProvider {
     static var previews: some View {
-        TrainSuggest(title: "Test", onPressBack: {})
+        TrainSuggest(title: "Test", onPressBack: {}, onSelected: { selected in print("test")})
     }
 }

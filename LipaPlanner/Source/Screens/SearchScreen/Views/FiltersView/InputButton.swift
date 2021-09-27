@@ -44,6 +44,8 @@ struct InputButton: View {
                     title: placeholder,
                     onPressBack: {
                         openSuggest = false
+                    }, onSelected: { trainSuggest in
+                        print("selected: ", trainSuggest.titleRu)
                     }
                 )
             }
