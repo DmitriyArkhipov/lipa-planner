@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIRefresh
 
 struct TrainSuggest: View {
     let title: String
@@ -23,13 +24,19 @@ struct TrainSuggest: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextInput(text: $viewModel.inputText, placeholder: "Название станции",isFocused: true)
+                TextInput(text: self.$viewModel.inputText, placeholder: "Название станции",isFocused: true)
                     .padding(.horizontal, isIpod7() ? 0 : 16)
                 List {
                     ForEach(self.viewModel.suggests, id: \.self) { suggest in
                         Text(suggest.titleRu).listRowBackground(Colors.RowBackground)
                     }
                 }
+                .pullToRefresh(
+                    isShowing: self.$viewModel.isLoading,
+                    onRefresh: {
+                        self.viewModel.refresh()
+                    }
+                )
                 .padding(.top, -16.0)
                 .foregroundColor(Colors.InputFilled)
                 .listStyle(InsetGroupedListStyle())

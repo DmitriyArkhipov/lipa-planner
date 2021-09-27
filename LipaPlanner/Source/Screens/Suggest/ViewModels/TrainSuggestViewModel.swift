@@ -30,13 +30,21 @@ class TrainSuggestViewModel: ObservableObject {
             ).store(in: &subscriptions)
     }
     
+    func refresh() {
+        self.fetch(by: self.inputText)
+    }
+    
     func fetch(by name: String) {
+        self.isLoading = true
+
         RaspSuggestGateway().fetch(byName: name, succeed: {[weak self] suggestsResponsed in
             DispatchQueue.main.async {
                 self?.suggests = suggestsResponsed
             }
         }, failure: { error in
             print("error: ", error.errorDescription!)
+        }, finally: { [weak self] in
+            self?.isLoading = false
         })
     }
 }

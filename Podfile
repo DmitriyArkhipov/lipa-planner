@@ -8,5 +8,6 @@ target 'LipaPlanner' do
   # Pods for LipaPlanner
   pod 'Introspect'
   pod 'Alamofire'
+  pod 'SwiftUIRefresh'
 
 end

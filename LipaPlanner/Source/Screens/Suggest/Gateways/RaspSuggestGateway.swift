@@ -18,7 +18,8 @@ class RaspSuggestGateway {
     func fetch(
         byName name: String,
         succeed: @escaping ([RaspSuggestedItem]) -> Void,
-        failure: @escaping (AFError) -> Void
+        failure: @escaping (AFError) -> Void,
+        finally: @escaping () -> Void
     ) {
         var newParameters = self.parameters
         
@@ -27,11 +28,13 @@ class RaspSuggestGateway {
         AF.request(url, method: .get, parameters: newParameters).responseDecodable(of: RaspSuggestedResponse.self) { response in
             if let error = response.error {
                 failure(error)
+                finally()
                 
                 return
             }
             
             succeed(response.value!.suggests)
+            finally()
         }
     }
 }
