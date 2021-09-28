@@ -19,10 +19,10 @@ struct InputButtonStyle: ButtonStyle {
 }
 
 struct InputButton: View {
-    let onPress: () -> Void
+    let onSelected: (RaspSuggestedItem) -> Void
     let placeholder: String
-    var value: String?
     
+    @State var value: String?
     @State var openSuggest = false
     
     var body: some View {
@@ -43,9 +43,12 @@ struct InputButton: View {
                 TrainSuggest(
                     title: placeholder,
                     onPressBack: {
-                        openSuggest = false
-                    }, onSelected: { trainSuggest in
-                        print("selected: ", trainSuggest.titleRu)
+                        self.openSuggest = false
+                    }, onSelected: { trainSuggestItem in
+                        self.value = trainSuggestItem.titleRu
+                        
+                        self.onSelected(trainSuggestItem)
+                        self.openSuggest = false
                     }
                 )
             }
@@ -55,6 +58,6 @@ struct InputButton: View {
 
 struct InputButton_Previews: PreviewProvider {
     static var previews: some View {
-        InputButton(onPress: {}, placeholder: "Куда").preferredColorScheme(.dark)
+        InputButton(onSelected: { value in print("selected: ", value)}, placeholder: "Куда").preferredColorScheme(.dark)
     }
 }

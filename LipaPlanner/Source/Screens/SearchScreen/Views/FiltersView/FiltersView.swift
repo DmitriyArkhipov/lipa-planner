@@ -33,9 +33,9 @@ struct FiltersView: View {
                 )
             }
             .padding(.bottom, 20.0)
-            InputButton(onPress: {}, placeholder: "Куда")
+            InputButton(onSelected: { value in print("selected: ", value) }, placeholder: "Куда")
                 .padding(.bottom, 10.0)
-            InputButton(onPress: {}, placeholder: "Откуда")
+            InputButton(onSelected: { value in print("selected: ", value) }, placeholder: "Откуда")
                 .padding(.bottom, 20.0)
             HStack {
                 SelectorButton(
