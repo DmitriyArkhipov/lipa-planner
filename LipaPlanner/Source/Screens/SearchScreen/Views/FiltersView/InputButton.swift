@@ -25,13 +25,17 @@ struct InputButton: View {
     @State var value: String?
     @State var openSuggest = false
     
+    var selectedColor: Color {
+        return value != nil ? Colors.InputFilled : Colors.InputPlaceholder
+    }
+    
     var body: some View {
         Button(action: {
             openSuggest = true
         }, label: {
             VStack {
                 HStack {
-                    Text(value ?? placeholder)
+                    Text(value ?? placeholder).foregroundColor(self.selectedColor)
                     Spacer()
                 }
             }
