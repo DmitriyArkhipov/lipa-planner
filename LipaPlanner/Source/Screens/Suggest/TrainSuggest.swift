@@ -41,7 +41,12 @@ struct TrainSuggest: View {
                         Button(action: {
                             self.onSelected(suggest)
                         }) {
-                            Text(suggest.titleRu).listRowBackground(Colors.RowBackground)
+                            VStack(alignment: .leading) {
+                                Text(suggest.titleRu)
+                                Text(suggest.itemType)
+                                    .font(.footnote)
+                                    .fontWeight(.light)
+                            }.listRowBackground(Colors.RowBackground)
                         }
                     }
                 }
@@ -68,6 +73,6 @@ struct TrainSuggest: View {
 
 struct TrainSuggest_Previews: PreviewProvider {
     static var previews: some View {
-        TrainSuggest(title: "Test", onPressBack: {}, onSelected: { selected in print("test")})
+        TrainSuggest(title: "Test", onPressBack: {}, onSelected: { selected in print("test")}).preferredColorScheme(.dark)
     }
 }

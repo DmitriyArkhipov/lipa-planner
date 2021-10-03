@@ -22,6 +22,17 @@ struct RaspSuggestedItem: Codable, Hashable {
     let order: Int?
     let pointKey: String?
     
+    var itemType: String {
+        switch self.type {
+        case "settlement":
+            return "Населенный пункт"
+        case "station":
+            return "Станция"
+        default:
+            return ""
+        }
+    }
+    
     
     private enum CodingKeys: String, CodingKey {
         case id = "object_id"
