@@ -29,4 +29,9 @@ class FiltersViewModel: ObservableObject {
             print("alldSelected: ", alldSelected)
         }
     }
+    @Published var dateSelected: Bool = false {
+        didSet {
+            print("alldSelected: ", dateSelected)
+        }
+    }
 }

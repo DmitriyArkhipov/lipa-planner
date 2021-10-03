@@ -9,23 +9,20 @@ import SwiftUI
 
 struct DateSelectorButton: View {
     let title: String
-    let onPress: (Bool) -> Void
     
-    @State var isSelected: Bool = false
+    @Binding var selected: Bool
     
     var selectedButtonColor: Color {
-        return isSelected ? Colors.SelectedFilterButton : Colors.UnselectedFilterButton
+        return selected ? Colors.SelectedFilterButton : Colors.UnselectedFilterButton
     }
     
     var selectedTitleColor: Color {
-        return isSelected ? Colors.SelectedFilterButton : Colors.UnselectedTitleFilterButton
+        return selected ? Colors.SelectedFilterButton : Colors.UnselectedTitleFilterButton
     }
 
     var body: some View {
         Button(action: {
-            isSelected = isSelected ? false : true
-            
-            onPress(isSelected)
+            selected = selected ? false : true
         }, label: {
             HStack {
                 Text("31").font(.system(size: 24, design: .default)).padding(0.0)
@@ -45,8 +42,20 @@ struct DateSelectorButton: View {
     }
 }
 
+struct DateSelectorButton_TestView: View {
+    @State var selected: Bool {
+        didSet {
+            print("selected: ", selected)
+        }
+    }
+    
+    var body: some View {
+        DateSelectorButton(title: "Date", selected: $selected).preferredColorScheme(.dark)
+    }
+}
+
 struct DateSelectorButton_Previews: PreviewProvider {
     static var previews: some View {
-        DateSelectorButton(title: "Date", onPress: { _ in print("testlog")}).preferredColorScheme(.dark)
+        DateSelectorButton_TestView(selected: false)
     }
 }

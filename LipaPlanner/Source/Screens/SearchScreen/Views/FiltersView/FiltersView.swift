@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct FiltersView: View {
-    @State var test = ""
-    
     @ObservedObject var viewModel = FiltersViewModel()
     
     var horizontalPadding: CGFloat {
@@ -21,7 +19,7 @@ struct FiltersView: View {
             HStack {
                 DateSelectorButton(
                     title: "31.03.21",
-                    onPress: { isSelected in print("test: ", isSelected)}
+                    selected: self.$viewModel.dateSelected
                 )
                 .padding(.trailing, horizontalPadding)
                 SelectorButton(
