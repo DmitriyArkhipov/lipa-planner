@@ -34,4 +34,8 @@ class FiltersViewModel: ObservableObject {
             print("alldSelected: ", dateSelected)
         }
     }
+    
+    private lazy var queryBuilder: QueryBuilder = {
+        return QueryBuilder()
+    }()
 }
