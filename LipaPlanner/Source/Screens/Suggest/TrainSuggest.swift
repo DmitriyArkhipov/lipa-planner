@@ -30,8 +30,12 @@ struct TrainSuggest: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextInput(text: self.$viewModel.inputText, placeholder: "Название станции",isFocused: true)
-                    .padding(.horizontal, isIpod7() ? 0 : 16)
+                TextInput(
+                    text: self.$viewModel.inputText,
+                    placeholder: "Название станции",
+                    isFocused: true
+                )
+                .padding(.horizontal, isIpod7() ? 0 : 16)
                 List {
                     ForEach(self.viewModel.suggests, id: \.self) { suggest in
                         Button(action: {
