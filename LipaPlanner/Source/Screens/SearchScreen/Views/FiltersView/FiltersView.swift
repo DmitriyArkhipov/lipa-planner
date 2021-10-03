@@ -10,6 +10,8 @@ import SwiftUI
 struct FiltersView: View {
     @State var test = ""
     
+    @ObservedObject var viewModel = FiltersViewModel()
+    
     var horizontalPadding: CGFloat {
         return isIpod7() ? 0 : 5
     }
@@ -24,12 +26,12 @@ struct FiltersView: View {
                 .padding(.trailing, horizontalPadding)
                 SelectorButton(
                     title: "Сегодня",
-                    onPress: { isSelected in print("test: ", isSelected)}
+                    selected: self.$viewModel.todaySelected
                 )
                 .padding(.trailing, horizontalPadding)
                 SelectorButton(
                     title: "Завтра",
-                    onPress: { isSelected in print("test: ", isSelected)}
+                    selected: self.$viewModel.tomorrowSelected
                 )
             }
             .padding(.bottom, 20.0)
@@ -40,12 +42,12 @@ struct FiltersView: View {
             HStack {
                 SelectorButton(
                     title: "Ускоренные",
-                    onPress: { isSelected in print("test: ", isSelected)}
+                    selected: self.$viewModel.acceleratedSelected
                 )
                 .padding(.trailing, horizontalPadding)
                 SelectorButton(
                     title: "Все",
-                    onPress: { isSelected in print("test: ", isSelected)}
+                    selected: self.$viewModel.alldSelected
                 )
             }
             .padding(.bottom, 24.0)

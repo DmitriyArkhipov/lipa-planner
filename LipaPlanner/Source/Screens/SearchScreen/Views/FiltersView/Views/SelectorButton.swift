@@ -9,23 +9,20 @@ import SwiftUI
 
 struct SelectorButton: View {
     let title: String
-    let onPress: (Bool) -> Void
     
-    @State var isSelected: Bool = false
+    @Binding var selected: Bool
     
     var selectedButtonColor: Color {
-        return isSelected ? Colors.SelectedFilterButton : Colors.UnselectedFilterButton
+        return selected ? Colors.SelectedFilterButton : Colors.UnselectedFilterButton
     }
     
     var selectedTitleColor: Color {
-        return isSelected ? Colors.SelectedFilterButton : Colors.UnselectedTitleFilterButton
+        return selected ? Colors.SelectedFilterButton : Colors.UnselectedTitleFilterButton
     }
     
     var body: some View {
         Button(action: {
-            isSelected = isSelected ? false : true
-            
-            onPress(isSelected)
+            selected = selected ? false : true
         }, label: {
             Spacer()
             Text(title)
@@ -41,8 +38,20 @@ struct SelectorButton: View {
     }
 }
 
+struct SelectorButton_TestView: View {
+    @State var selected: Bool {
+        didSet {
+            print("selected: ", selected)
+        }
+    }
+    
+    var body: some View {
+        SelectorButton(title: "Button Title", selected: $selected).preferredColorScheme(.dark)
+    }
+}
+
 struct SelectorButton_Previews: PreviewProvider {
     static var previews: some View {
-        SelectorButton(title: "Button Title", onPress: { _ in print("TestLog")}, isSelected: false).preferredColorScheme(.dark)
+        SelectorButton_TestView(selected: false)
     }
 }
