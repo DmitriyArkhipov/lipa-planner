@@ -37,13 +37,21 @@ class FiltersViewModel: ObservableObject {
     
     @Published var selectedFrom: RaspSuggestedItem? = nil {
         didSet {
-            print("selectedFrom: ", selectedFrom?.titleRu)
+            guard let fromPoint = selectedFrom?.pointKey else {
+                return
+            }
+            
+            self.queryBuilder.setStartPoint(fromPoint)
         }
     }
     
     @Published var selectedTo: RaspSuggestedItem? = nil {
         didSet {
-            print("selectedTo: ", selectedTo?.titleRu)
+            guard let toPoint = selectedTo?.pointKey else {
+                return
+            }
+            
+            self.queryBuilder.setEndPoint(toPoint)
         }
     }
     

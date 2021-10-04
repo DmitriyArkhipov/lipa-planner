@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 struct RootTabs: View {
     init() {
@@ -39,6 +40,7 @@ struct RootTabs: View {
         )
         .accentColor(Colors.ActionButton)
         .preferredColorScheme(.dark)
+        .addPartialSheet(style: PartialSheetStyle.defaultStyle())
     }
 }
 

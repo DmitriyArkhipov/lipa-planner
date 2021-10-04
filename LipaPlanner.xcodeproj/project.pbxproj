@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		CD0B8C6C2709B07F002247E8 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8C6B2709B07E002247E8 /* FiltersViewModel.swift */; };
 		CD0B8C702709B109002247E8 /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8C6F2709B109002247E8 /* QueryBuilder.swift */; };
 		CD0B8C752709C30C002247E8 /* Date+iso8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8C742709C30C002247E8 /* Date+iso8601.swift */; };
+		CD0B8C79270B1271002247E8 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = CD0B8C78270B1271002247E8 /* PartialSheet */; };
 		CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4826E49E3B0011828A /* SelectorButton.swift */; };
 		CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */; };
 		CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4C26E4AA2A0011828A /* ActionButton.swift */; };
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0B8C79270B1271002247E8 /* PartialSheet in Frameworks */,
 				E02530E644CCC6B949C5C967 /* Pods_LipaPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +370,9 @@
 			dependencies = (
 			);
 			name = LipaPlanner;
+			packageProductDependencies = (
+				CD0B8C78270B1271002247E8 /* PartialSheet */,
+			);
 			productName = LipaPlanner;
 			productReference = CD959A9F26E397EC00F31FAA /* LipaPlanner.app */;
 			productType = "com.apple.product-type.application";
@@ -395,6 +400,9 @@
 				Base,
 			);
 			mainGroup = CD959A9626E397EC00F31FAA;
+			packageReferences = (
+				CD0B8C77270B1271002247E8 /* XCRemoteSwiftPackageReference "PartialSheet" */,
+			);
 			productRefGroup = CD959AA026E397EC00F31FAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -680,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD0B8C77270B1271002247E8 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD0B8C78270B1271002247E8 /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD0B8C77270B1271002247E8 /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD959A9726E397EC00F31FAA /* Project object */;
 }

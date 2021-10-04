@@ -12,22 +12,16 @@ class QueryBuilder {
     
     private var guery: Query = [:]
     
-    func setStartPoint(_ startPoint: String) -> Self {
+    func setStartPoint(_ startPoint: String) {
         guery["from"] = startPoint
-        
-        return self
     }
 
-    func setEndPoint(_ endPoint: String) -> Self {
+    func setEndPoint(_ endPoint: String) {
         guery["to"] = endPoint
-
-        return self
     }
 
-    func setDate(_ date: Date) -> Self {
+    func setDate(_ date: Date) {
         guery["date"] = date.iso8601
-
-        return self
     }
     
     var result: Query {

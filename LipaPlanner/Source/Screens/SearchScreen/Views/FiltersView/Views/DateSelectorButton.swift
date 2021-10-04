@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 struct DateSelectorButton: View {
     let title: String
     
     @Binding var selected: Bool
+    
+    @State var showDatePicker: Bool = false
     
     var selectedButtonColor: Color {
         return selected ? Colors.SelectedFilterButton : Colors.UnselectedFilterButton
@@ -23,6 +26,8 @@ struct DateSelectorButton: View {
     var body: some View {
         Button(action: {
             selected = selected ? false : true
+            
+            self.showDatePicker = true
         }, label: {
             HStack {
                 Text("31").font(.system(size: 24, design: .default)).padding(0.0)
@@ -39,6 +44,11 @@ struct DateSelectorButton: View {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(selectedButtonColor, lineWidth: 2)
         )
+        .partialSheet(isPresented: $showDatePicker, content: {
+            VStack {
+                Text("Hello PICER")
+            }
+        })
     }
 }
 
