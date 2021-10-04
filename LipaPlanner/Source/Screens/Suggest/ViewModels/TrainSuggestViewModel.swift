@@ -18,7 +18,7 @@ class TrainSuggestViewModel: ObservableObject {
     init() {
         $inputText
             .throttle(
-                for: .seconds(1),
+                for: .seconds(0.5),
                 scheduler: DispatchQueue.main,
                 latest: true
             ).sink(

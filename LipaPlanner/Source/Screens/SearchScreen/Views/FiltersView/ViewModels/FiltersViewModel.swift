@@ -35,6 +35,18 @@ class FiltersViewModel: ObservableObject {
         }
     }
     
+    @Published var selectedFrom: RaspSuggestedItem? = nil {
+        didSet {
+            print("selectedFrom: ", selectedFrom?.titleRu)
+        }
+    }
+    
+    @Published var selectedTo: RaspSuggestedItem? = nil {
+        didSet {
+            print("selectedTo: ", selectedTo?.titleRu)
+        }
+    }
+    
     private lazy var queryBuilder: QueryBuilder = {
         return QueryBuilder()
     }()
