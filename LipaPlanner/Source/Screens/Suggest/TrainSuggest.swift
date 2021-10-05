@@ -59,6 +59,7 @@ struct TrainSuggest: View {
                         self.viewModel.refresh()
                     }
                 )
+                .animation(.default)
                 .padding(.top, -16.0)
                 .foregroundColor(Colors.InputFilled)
                 .listStyle(InsetGroupedListStyle())

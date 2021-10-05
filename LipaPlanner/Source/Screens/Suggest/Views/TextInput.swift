@@ -20,6 +20,8 @@ struct CustomTextField: View {
         ZStack(alignment: .topLeading) {
             if text.isEmpty { placeholder }
             TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+        }.onAppear {
+            UITextField.appearance().clearButtonMode = .whileEditing
         }
     }
 }
