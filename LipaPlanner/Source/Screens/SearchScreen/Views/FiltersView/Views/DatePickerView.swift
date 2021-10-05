@@ -20,6 +20,7 @@ struct DatePickerView: View {
             Spacer()
                 .frame(height: 10.0)
             DatePicker("", selection: self.$dateSelected, displayedComponents: .date)
+                .environment(\.locale, Locale.init(identifier: "ru_RU"))
                 .padding(.horizontal, 16.0)
                 .datePickerStyle(GraphicalDatePickerStyle())
                 .accentColor(Colors.ActionButton)

@@ -16,6 +16,7 @@
 		CD0B8C752709C30C002247E8 /* Date+iso8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8C742709C30C002247E8 /* Date+iso8601.swift */; };
 		CD0B8C79270B1271002247E8 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = CD0B8C78270B1271002247E8 /* PartialSheet */; };
 		CD0B8C7B270C0C3B002247E8 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8C7A270C0C3B002247E8 /* DatePickerView.swift */; };
+		CD0B8C7E270C9528002247E8 /* RussianCalendar.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD0B8C80270C9528002247E8 /* RussianCalendar.strings */; };
 		CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4826E49E3B0011828A /* SelectorButton.swift */; };
 		CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */; };
 		CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4C26E4AA2A0011828A /* ActionButton.swift */; };
@@ -47,6 +48,7 @@
 		CD0B8C6F2709B109002247E8 /* QueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
 		CD0B8C742709C30C002247E8 /* Date+iso8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+iso8601.swift"; sourceTree = "<group>"; };
 		CD0B8C7A270C0C3B002247E8 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		CD0B8C7F270C9528002247E8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/RussianCalendar.strings; sourceTree = "<group>"; };
 		CD66CE4826E49E3B0011828A /* SelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorButton.swift; sourceTree = "<group>"; };
 		CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorButton.swift; sourceTree = "<group>"; };
 		CD66CE4C26E4AA2A0011828A /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD6A6D626EB174500BCA1E8 /* Colors.swift */,
+				CD0B8C80270C9528002247E8 /* RussianCalendar.strings */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = CD959A9626E397EC00F31FAA;
 			packageReferences = (
@@ -422,6 +426,7 @@
 			files = (
 				CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */,
 				CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */,
+				CD0B8C7E270C9528002247E8 /* RussianCalendar.strings in Resources */,
 				CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +505,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD0B8C80270C9528002247E8 /* RussianCalendar.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD0B8C7F270C9528002247E8 /* ru */,
+			);
+			name = RussianCalendar.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CD959AAC26E397EF00F31FAA /* Debug */ = {
