@@ -17,10 +17,13 @@ struct DatePickerView: View {
     
     var body: some View {
         VStack {
+            Spacer()
+                .frame(height: 10.0)
             DatePicker("", selection: self.$dateSelected, displayedComponents: .date)
                 .padding(.horizontal, 16.0)
                 .datePickerStyle(GraphicalDatePickerStyle())
                 .accentColor(Colors.ActionButton)
+                .gesture(DragGesture().onChanged{_ in })
             ActionButton(title: "Готово") {
                 self.onSelected(self.dateSelected)
             }

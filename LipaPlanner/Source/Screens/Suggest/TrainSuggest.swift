@@ -15,6 +15,8 @@ struct TrainSuggest: View {
     
     @ObservedObject var viewModel = TrainSuggestViewModel()
     
+    @State var isFocused = true
+    
     init(
         title: String,
         onPressBack: @escaping () -> Void,
@@ -33,12 +35,13 @@ struct TrainSuggest: View {
                 TextInput(
                     text: self.$viewModel.inputText,
                     placeholder: "Название станции",
-                    isFocused: true
+                    isFocused: self.isFocused
                 )
                 .padding(.horizontal, isIpod7() ? 0 : 16)
                 List {
                     ForEach(self.viewModel.suggests, id: \.self) { suggest in
                         Button(action: {
+                            self.isFocused = false
                             self.onSelected(suggest)
                         }) {
                             VStack(alignment: .leading) {
