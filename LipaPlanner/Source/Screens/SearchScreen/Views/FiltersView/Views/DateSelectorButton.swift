@@ -12,6 +12,7 @@ struct DateSelectorButton: View {
     let title: String
     
     @Binding var selected: Bool
+    @Binding var dateSelected: Date
     
     @State var showDatePicker: Bool = false
     
@@ -46,7 +47,10 @@ struct DateSelectorButton: View {
         )
         .partialSheet(isPresented: $showDatePicker, content: {
             VStack {
-                Text("Hello PICER")
+                DatePickerView(dateSelected: self.dateSelected) { date in
+                    self.dateSelected = date
+                    self.showDatePicker = false
+                }
             }
         })
     }
@@ -58,9 +62,14 @@ struct DateSelectorButton_TestView: View {
             print("selected: ", selected)
         }
     }
+    @State var dateSelected: Date = Date() {
+        didSet {
+            print("dateSelected: ", dateSelected)
+        }
+    }
     
     var body: some View {
-        DateSelectorButton(title: "Date", selected: $selected).preferredColorScheme(.dark)
+        DateSelectorButton(title: "Date", selected: $selected, dateSelected: $dateSelected).preferredColorScheme(.dark)
     }
 }
 

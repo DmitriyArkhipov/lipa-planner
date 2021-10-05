@@ -19,7 +19,8 @@ struct FiltersView: View {
             HStack {
                 DateSelectorButton(
                     title: "31.03.21",
-                    selected: self.$viewModel.dateSelected
+                    selected: self.$viewModel.dateActiveSelected,
+                    dateSelected: self.$viewModel.dateSelected
                 )
                 .padding(.trailing, horizontalPadding)
                 SelectorButton(
@@ -49,7 +50,7 @@ struct FiltersView: View {
                 )
             }
             .padding(.bottom, 24.0)
-            ActionButton(title: "Показать расписание")
+            ActionButton(title: "Показать расписание") {}
         }
     }
 }

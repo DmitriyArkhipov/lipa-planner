@@ -20,9 +20,12 @@ struct GreenButton: ButtonStyle {
 
 struct ActionButton: View {
     let title: String
+    let onPress: () -> Void
     
     var body: some View {
-        Button(action: {}){
+        Button(action: {
+            self.onPress()
+        }){
             HStack {
                 Spacer()
                 Text(title)
@@ -38,6 +41,6 @@ struct ActionButton: View {
 
 struct ActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        ActionButton(title: "Action title").preferredColorScheme(.dark)
+        ActionButton(title: "Action title", onPress: {}).preferredColorScheme(.dark)
     }
 }

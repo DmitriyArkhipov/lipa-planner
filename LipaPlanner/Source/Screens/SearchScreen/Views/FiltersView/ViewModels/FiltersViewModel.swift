@@ -29,7 +29,13 @@ class FiltersViewModel: ObservableObject {
             print("alldSelected: ", alldSelected)
         }
     }
-    @Published var dateSelected: Bool = false {
+    @Published var dateActiveSelected: Bool = false {
+        didSet {
+            print("alldSelected: ", dateActiveSelected)
+        }
+    }
+    
+    @Published var dateSelected: Date = Date() {
         didSet {
             print("alldSelected: ", dateSelected)
         }
