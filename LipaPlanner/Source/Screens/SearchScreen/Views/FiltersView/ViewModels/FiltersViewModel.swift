@@ -9,35 +9,61 @@ import Foundation
 import Combine
 
 class FiltersViewModel: ObservableObject {
-    @Published var todaySelected: Bool = false {
+    @Published var todaySelected: Bool = true {
         didSet {
-            print("todaySelected: ", todaySelected)
+            self.queryBuilder.setDate(Date())
+            
+            guard todaySelected else {
+                return
+            }
+            
+            self.dateActiveSelected = false
+            self.tomorrowSelected = false
         }
     }
     @Published var tomorrowSelected: Bool = false {
         didSet {
-            print("tomorrowSelected: ", tomorrowSelected)
+            let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+
+            self.queryBuilder.setDate(tomorrow)
+            
+            guard tomorrowSelected else {
+                return
+            }
+            
+            self.dateActiveSelected = false
+            self.todaySelected = false
         }
     }
     @Published var acceleratedSelected: Bool = false {
         didSet {
-            print("acceleratedSelected: ", acceleratedSelected)
+            guard acceleratedSelected else { return }
+            
+            self.alldSelected = false
         }
     }
     @Published var alldSelected: Bool = false {
         didSet {
-            print("alldSelected: ", alldSelected)
+            guard alldSelected else { return }
+            
+            self.acceleratedSelected = false
         }
     }
     @Published var dateActiveSelected: Bool = false {
         didSet {
-            print("alldSelected: ", dateActiveSelected)
+            guard dateActiveSelected else {
+                return
+            }
+            
+            self.todaySelected = false
+            self.tomorrowSelected = false
         }
     }
     
     @Published var dateSelected: Date = Date() {
         didSet {
-            print("alldSelected: ", dateSelected)
+            self.queryBuilder.setDate(dateSelected)
+            self.dateActiveSelected = true
         }
     }
     
@@ -62,6 +88,10 @@ class FiltersViewModel: ObservableObject {
     }
     
     private lazy var queryBuilder: QueryBuilder = {
-        return QueryBuilder()
+        let queryBulder = QueryBuilder()
+        
+        queryBulder.setDate(Date())
+        
+        return queryBulder
     }()
 }

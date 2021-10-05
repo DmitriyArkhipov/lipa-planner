@@ -11,7 +11,8 @@ import PartialSheet
 struct DateSelectorButton: View {
     let title: String
     
-    @Binding var selected: Bool
+    let selected: Bool
+
     @Binding var dateSelected: Date
     
     @State var showDatePicker: Bool = false
@@ -26,8 +27,6 @@ struct DateSelectorButton: View {
 
     var body: some View {
         Button(action: {
-            selected = selected ? false : true
-            
             self.showDatePicker = true
         }, label: {
             HStack {
@@ -69,7 +68,7 @@ struct DateSelectorButton_TestView: View {
     }
     
     var body: some View {
-        DateSelectorButton(title: "Date", selected: $selected, dateSelected: $dateSelected).preferredColorScheme(.dark)
+        DateSelectorButton(title: "Date", selected: selected, dateSelected: $dateSelected).preferredColorScheme(.dark)
     }
 }
 
