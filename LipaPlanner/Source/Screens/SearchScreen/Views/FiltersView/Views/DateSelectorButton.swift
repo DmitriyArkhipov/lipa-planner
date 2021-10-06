@@ -30,11 +30,11 @@ struct DateSelectorButton: View {
             self.showDatePicker = true
         }, label: {
             HStack {
-                Text("31").font(.system(size: 24, design: .default)).padding(0.0)
+                Text(self.dateSelected.dayStringValue).font(.system(size: 24, design: .default)).padding(0.0)
                     
                 VStack {
-                    Text("июл").font(.system(size: 16, design: .default))
-                    Text("2021").font(.system(size: 16, design: .default))
+                    Text(self.dateSelected.shortMonthStringValue).font(.system(size: 16, design: .default))
+                    Text(self.dateSelected.yearStringValue).font(.system(size: 16, design: .default))
                 }
             }.foregroundColor(selectedTitleColor)
         })
