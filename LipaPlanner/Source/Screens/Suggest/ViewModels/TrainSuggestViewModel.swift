@@ -18,11 +18,12 @@ class TrainSuggestViewModel: ObservableObject {
     init() {
         $inputText
             .throttle(
-                for: .seconds(0.5),
+                for: .seconds(0.7),
                 scheduler: DispatchQueue.main,
                 latest: true
             ).sink(
                 receiveValue: { [weak self] text in
+                    print("call text")
                     if (text.count >= 3) {
                         self?.fetch(by: text)
                     }
