@@ -9,9 +9,7 @@ import SwiftUI
 import PartialSheet
 
 struct DateSelectorButton: View {
-    let title: String
-    
-    let selected: Bool
+    @Binding var selected: Bool
 
     @Binding var dateSelected: Date
     
@@ -49,6 +47,7 @@ struct DateSelectorButton: View {
                 DatePickerView(dateSelected: self.dateSelected) { date in
                     self.dateSelected = date
                     self.showDatePicker = false
+                    self.selected = true
                 }
             }
         })
@@ -68,7 +67,7 @@ struct DateSelectorButton_TestView: View {
     }
     
     var body: some View {
-        DateSelectorButton(title: "Date", selected: selected, dateSelected: $dateSelected).preferredColorScheme(.dark)
+        DateSelectorButton(selected: $selected, dateSelected: $dateSelected).preferredColorScheme(.dark)
     }
 }
 

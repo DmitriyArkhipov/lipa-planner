@@ -11,33 +11,39 @@ import Combine
 class FiltersViewModel: ObservableObject {
     @Published var todaySelected: Bool = true {
         didSet {
-            self.queryBuilder.setDate(Date())
-            
             guard todaySelected else {
                 return
             }
             
+            let today = Date()
+            
+            self.queryBuilder.setDate(today)
+            
+            self.dateSelected = today
             self.dateActiveSelected = false
             self.tomorrowSelected = false
         }
     }
     @Published var tomorrowSelected: Bool = false {
         didSet {
-            let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
-
-            self.queryBuilder.setDate(tomorrow)
-            
             guard tomorrowSelected else {
                 return
             }
             
+            let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+
+            self.queryBuilder.setDate(tomorrow)
+            
+            self.dateSelected = tomorrow
             self.dateActiveSelected = false
             self.todaySelected = false
         }
     }
-    @Published var acceleratedSelected: Bool = false {
+    @Published var acceleratedSelected: Bool = true {
         didSet {
             guard acceleratedSelected else { return }
+            
+            self.queryBuilder.sort = .acceleratedOnly
             
             self.alldSelected = false
         }
@@ -46,6 +52,8 @@ class FiltersViewModel: ObservableObject {
         didSet {
             guard alldSelected else { return }
             
+            self.queryBuilder.sort = .all
+
             self.acceleratedSelected = false
         }
     }
@@ -63,7 +71,6 @@ class FiltersViewModel: ObservableObject {
     @Published var dateSelected: Date = Date() {
         didSet {
             self.queryBuilder.setDate(dateSelected)
-            self.dateActiveSelected = true
         }
     }
     
@@ -91,6 +98,7 @@ class FiltersViewModel: ObservableObject {
         let queryBulder = QueryBuilder()
         
         queryBulder.setDate(Date())
+        queryBulder.sort = .acceleratedOnly
         
         return queryBulder
     }()
