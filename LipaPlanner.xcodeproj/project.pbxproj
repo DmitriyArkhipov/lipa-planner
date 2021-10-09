@@ -131,7 +131,7 @@
 				CD04EF9326E39F3F002CA116 /* NotificationScreen */,
 				CD04EF9226E39F29002CA116 /* RemindersListScreen */,
 				CD04EF9126E39E8D002CA116 /* SearchScreen */,
-				CD04EF9026E39E00002CA116 /* TrainsListScreen */,
+				CD04EF9026E39E00002CA116 /* TrainListScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -177,13 +177,13 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		CD04EF9026E39E00002CA116 /* TrainsListScreen */ = {
+		CD04EF9026E39E00002CA116 /* TrainListScreen */ = {
 			isa = PBXGroup;
 			children = (
 				CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */,
 				CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */,
 			);
-			path = TrainsListScreen;
+			path = TrainListScreen;
 			sourceTree = "<group>";
 		};
 		CD04EF9126E39E8D002CA116 /* SearchScreen */ = {
