@@ -29,6 +29,7 @@
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
 		CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */; };
 		CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */; };
+		CDD53DB12711E4A2007EDF58 /* TrainListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */; };
 		CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD6A6D626EB174500BCA1E8 /* Colors.swift */; };
 		CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */; };
 		CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EA9826F837F60022A9EB /* isIpod7.swift */; };
@@ -66,6 +67,7 @@
 		CD959AAB26E397EF00F31FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListScreen.swift; sourceTree = "<group>"; };
 		CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkFromCode.swift; sourceTree = "<group>"; };
+		CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListScreenViewModel.swift; sourceTree = "<group>"; };
 		CDD6A6D626EB174500BCA1E8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = "../../lipa-api-keys/ApiKeys.plist"; sourceTree = "<group>"; };
 		CDF0EA9826F837F60022A9EB /* isIpod7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isIpod7.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */,
+				CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */,
 			);
 			path = TrainsListScreen;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */,
 				CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */,
 				CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */,
+				CDD53DB12711E4A2007EDF58 /* TrainListScreenViewModel.swift in Sources */,
 				CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */,
 				CD04EFA026E3A764002CA116 /* SearchHistoryView.swift in Sources */,
 				CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */,
