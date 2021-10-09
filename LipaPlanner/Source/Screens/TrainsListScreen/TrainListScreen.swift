@@ -13,23 +13,25 @@ struct TrainListScreen: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    Text("Hello").onTapGesture {
-                        self.openCard = true
-                        self.value = "Hello"
+            ScrollView {
+                LazyVStack {
+                    ForEach(0...3, id: \.self) { _ in
+                        Text("Hello").onTapGesture {
+                            self.openCard = true
+                            self.value = "Hello"
+                        }
+                        Text("Hello2").onTapGesture {
+                            self.openCard = true
+                            self.value = "Hello2"
+                        }
+                        Text("Hello3").onTapGesture {
+                            self.openCard = true
+                            self.value = "Hello3"
+                        }
                     }
-                    Text("Hello2").onTapGesture {
-                        self.openCard = true
-                        self.value = "Hello2"
+                    NavigationLinkFromCode(isActive: self.$openCard) {
+                        Text(self.value)
                     }
-                    Text("Hello3").onTapGesture {
-                        self.openCard = true
-                        self.value = "Hello3"
-                    }
-                }
-                NavigationLinkFromCode(isActive: self.$openCard) {
-                    Text(self.value)
                 }
             }
         }
