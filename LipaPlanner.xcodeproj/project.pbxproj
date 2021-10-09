@@ -27,6 +27,8 @@
 		CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */; };
 		CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA626E397EF00F31FAA /* Assets.xcassets */; };
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
+		CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */; };
+		CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */; };
 		CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD6A6D626EB174500BCA1E8 /* Colors.swift */; };
 		CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */; };
 		CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EA9826F837F60022A9EB /* isIpod7.swift */; };
@@ -62,6 +64,8 @@
 		CD959AA626E397EF00F31FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD959AAB26E397EF00F31FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListScreen.swift; sourceTree = "<group>"; };
+		CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkFromCode.swift; sourceTree = "<group>"; };
 		CDD6A6D626EB174500BCA1E8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = "../../lipa-api-keys/ApiKeys.plist"; sourceTree = "<group>"; };
 		CDF0EA9826F837F60022A9EB /* isIpod7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isIpod7.swift; sourceTree = "<group>"; };
@@ -148,6 +152,11 @@
 		CD04EF8D26E39D50002CA116 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD66CE4826E49E3B0011828A /* SelectorButton.swift */,
+				CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */,
+				CD0B8C7A270C0C3B002247E8 /* DatePickerView.swift */,
+				CD66CE4C26E4AA2A0011828A /* ActionButton.swift */,
+				CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +178,7 @@
 		CD04EF9026E39E00002CA116 /* TrainsListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */,
 			);
 			path = TrainsListScreen;
 			sourceTree = "<group>";
@@ -242,11 +252,7 @@
 		CD0B8C6D2709B099002247E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CD66CE4826E49E3B0011828A /* SelectorButton.swift */,
-				CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */,
-				CD66CE4C26E4AA2A0011828A /* ActionButton.swift */,
 				CD66CE5126E628CF0011828A /* InputButton.swift */,
-				CD0B8C7A270C0C3B002247E8 /* DatePickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 				CD0B8C82270D5D7A002247E8 /* Date+FormattedForView.swift in Sources */,
 				CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */,
 				CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */,
+				CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */,
 				CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */,
 				CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */,
 				CD04EFA026E3A764002CA116 /* SearchHistoryView.swift in Sources */,
@@ -498,6 +505,7 @@
 				CD0B8C702709B109002247E8 /* QueryBuilder.swift in Sources */,
 				CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */,
 				CD66CE5826E727F90011828A /* TextInput.swift in Sources */,
+				CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */,
 				CDF0EA9C26FAD9130022A9EB /* RaspSuggestGateway.swift in Sources */,
 				CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */,
 				CDF0EAA126FADBC80022A9EB /* RaspSuggestedItem.swift in Sources */,
