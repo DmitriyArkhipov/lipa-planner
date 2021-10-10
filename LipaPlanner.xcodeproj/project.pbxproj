@@ -31,6 +31,8 @@
 		CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */; };
 		CDD53DB12711E4A2007EDF58 /* TrainListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */; };
 		CDD53DB4271306E5007EDF58 /* TrainListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DB3271306E5007EDF58 /* TrainListItem.swift */; };
+		CDD53DBA271310EA007EDF58 /* RaspSearchGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DB9271310EA007EDF58 /* RaspSearchGateway.swift */; };
+		CDD53DBC271313EC007EDF58 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DBB271313EC007EDF58 /* ApiKeys.swift */; };
 		CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD6A6D626EB174500BCA1E8 /* Colors.swift */; };
 		CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */; };
 		CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EA9826F837F60022A9EB /* isIpod7.swift */; };
@@ -70,6 +72,8 @@
 		CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkFromCode.swift; sourceTree = "<group>"; };
 		CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListScreenViewModel.swift; sourceTree = "<group>"; };
 		CDD53DB3271306E5007EDF58 /* TrainListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListItem.swift; sourceTree = "<group>"; };
+		CDD53DB9271310EA007EDF58 /* RaspSearchGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspSearchGateway.swift; sourceTree = "<group>"; };
+		CDD53DBB271313EC007EDF58 /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		CDD6A6D626EB174500BCA1E8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = "../../lipa-api-keys/ApiKeys.plist"; sourceTree = "<group>"; };
 		CDF0EA9826F837F60022A9EB /* isIpod7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isIpod7.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		CD04EF8B26E39CFD002CA116 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CD0B8C6F2709B109002247E8 /* QueryBuilder.swift */,
 				CDF0EA9826F837F60022A9EB /* isIpod7.swift */,
 			);
 			path = Utils;
@@ -182,9 +187,11 @@
 		CD04EF9026E39E00002CA116 /* TrainListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CDD53DB827131024007EDF58 /* Entities */,
+				CDD53DB72713100E007EDF58 /* Gateways */,
+				CDD53DB627131002007EDF58 /* ViewModels */,
 				CDD53DB2271306C8007EDF58 /* Views */,
 				CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */,
-				CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */,
 			);
 			path = TrainListScreen;
 			sourceTree = "<group>";
@@ -266,7 +273,6 @@
 		CD0B8C6E2709B0EA002247E8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CD0B8C6F2709B109002247E8 /* QueryBuilder.swift */,
 				CD0B8C742709C30C002247E8 /* Date+iso8601.swift */,
 				CD0B8C81270D5D72002247E8 /* Date+FormattedForView.swift */,
 			);
@@ -276,7 +282,7 @@
 		CD66CE4726E49DD70011828A /* Suggest */ = {
 			isa = PBXGroup;
 			children = (
-				CDF0EAA426FAE3AD0022A9EB /* ViewModels */,
+				CDD53DB527130FED007EDF58 /* ViewModels */,
 				CDF0EA9D26FADB010022A9EB /* Entities */,
 				CDF0EA9A26FAD8590022A9EB /* Gateways */,
 				CDD6A6D226E9C99700BCA1E8 /* Views */,
@@ -339,6 +345,37 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CDD53DB527130FED007EDF58 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CDF0EAA526FAE3C40022A9EB /* TrainSuggestViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CDD53DB627131002007EDF58 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CDD53DB72713100E007EDF58 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				CDD53DB9271310EA007EDF58 /* RaspSearchGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		CDD53DB827131024007EDF58 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		CDD6A6D226E9C99700BCA1E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +387,7 @@
 		CDD6A6D526EB173000BCA1E8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				CDD53DBB271313EC007EDF58 /* ApiKeys.swift */,
 				CDD6A6D626EB174500BCA1E8 /* Colors.swift */,
 				CD0B8C80270C9528002247E8 /* RussianCalendar.strings */,
 			);
@@ -371,14 +409,6 @@
 				CDF0EAA226FADFEC0022A9EB /* RaspSuggestedResponse.swift */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		CDF0EAA426FAE3AD0022A9EB /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				CDF0EAA526FAE3C40022A9EB /* TrainSuggestViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,9 +547,11 @@
 				CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */,
 				CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */,
 				CD66CE5226E628CF0011828A /* InputButton.swift in Sources */,
+				CDD53DBC271313EC007EDF58 /* ApiKeys.swift in Sources */,
 				CD0B8C702709B109002247E8 /* QueryBuilder.swift in Sources */,
 				CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */,
 				CD66CE5826E727F90011828A /* TextInput.swift in Sources */,
+				CDD53DBA271310EA007EDF58 /* RaspSearchGateway.swift in Sources */,
 				CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */,
 				CDF0EA9C26FAD9130022A9EB /* RaspSuggestGateway.swift in Sources */,
 				CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */,
