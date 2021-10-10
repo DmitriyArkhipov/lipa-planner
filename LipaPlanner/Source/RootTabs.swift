@@ -12,8 +12,8 @@ struct RootTabs: View {
     init() {
         UITabBar.appearance().barTintColor = UIColor(Colors.TabBarBackground)
         UINavigationBar.appearance().barTintColor = UIColor(Colors.Background)
-        UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().backgroundColor = UIColor(Colors.Background)
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     

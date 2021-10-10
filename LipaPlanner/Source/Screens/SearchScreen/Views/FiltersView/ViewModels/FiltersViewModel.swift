@@ -94,6 +94,8 @@ class FiltersViewModel: ObservableObject {
         }
     }
     
+    @Published var openTrainList: Bool = false
+    
     private lazy var queryBuilder: QueryBuilder = {
         let queryBulder = QueryBuilder()
         

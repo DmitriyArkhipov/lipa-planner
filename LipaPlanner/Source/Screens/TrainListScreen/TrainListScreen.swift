@@ -11,8 +11,9 @@ struct TrainListScreen: View {
     @State var openCard: Bool = false
     @State var value: String = ""
     
+    let onPressBack: () -> Void
+    
     var body: some View {
-        NavigationView {
             ScrollView {
                 LazyVStack {
                     ForEach(0...3, id: \.self) { _ in
@@ -34,12 +35,24 @@ struct TrainListScreen: View {
                     }
                 }
             }
-        }
+            .navigationBarTitle("Расписание", displayMode: .inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading:
+                Button(
+                    action: onPressBack,
+                    label: {
+                        HStack {
+                            Image("BackButton")
+                        }
+                    }
+                )
+            )
+            .background(Colors.Background.edgesIgnoringSafeArea(.all))
     }
 }
 
 struct TrainListScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TrainListScreen()
+        TrainListScreen(onPressBack: {})
     }
 }

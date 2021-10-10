@@ -30,6 +30,7 @@
 		CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */; };
 		CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */; };
 		CDD53DB12711E4A2007EDF58 /* TrainListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */; };
+		CDD53DB4271306E5007EDF58 /* TrainListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DB3271306E5007EDF58 /* TrainListItem.swift */; };
 		CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD6A6D626EB174500BCA1E8 /* Colors.swift */; };
 		CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */; };
 		CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EA9826F837F60022A9EB /* isIpod7.swift */; };
@@ -68,6 +69,7 @@
 		CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListScreen.swift; sourceTree = "<group>"; };
 		CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkFromCode.swift; sourceTree = "<group>"; };
 		CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListScreenViewModel.swift; sourceTree = "<group>"; };
+		CDD53DB3271306E5007EDF58 /* TrainListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListItem.swift; sourceTree = "<group>"; };
 		CDD6A6D626EB174500BCA1E8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CDF0EA9426EBC0FD0022A9EB /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = "../../lipa-api-keys/ApiKeys.plist"; sourceTree = "<group>"; };
 		CDF0EA9826F837F60022A9EB /* isIpod7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isIpod7.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		CD04EF9026E39E00002CA116 /* TrainListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CDD53DB2271306C8007EDF58 /* Views */,
 				CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */,
 				CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */,
 			);
@@ -326,6 +329,14 @@
 				CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDD53DB2271306C8007EDF58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDD53DB3271306E5007EDF58 /* TrainListItem.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CDD6A6D226E9C99700BCA1E8 /* Views */ = {
@@ -517,6 +528,7 @@
 				CD0B8C7B270C0C3B002247E8 /* DatePickerView.swift in Sources */,
 				CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */,
 				CD0B8C752709C30C002247E8 /* Date+iso8601.swift in Sources */,
+				CDD53DB4271306E5007EDF58 /* TrainListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

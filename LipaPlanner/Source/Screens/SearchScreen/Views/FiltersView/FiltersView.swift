@@ -49,7 +49,14 @@ struct FiltersView: View {
                 )
             }
             .padding(.bottom, 24.0)
-            ActionButton(title: "Показать расписание") {}
+            ActionButton(title: "Показать расписание") {
+                self.viewModel.openTrainList = true
+            }
+            NavigationLinkFromCode(isActive: self.$viewModel.openTrainList) {
+                TrainListScreen(onPressBack: {
+                    self.viewModel.openTrainList = false
+                })
+            }
         }
     }
 }
