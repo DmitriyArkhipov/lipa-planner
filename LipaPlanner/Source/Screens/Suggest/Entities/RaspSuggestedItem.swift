@@ -47,6 +47,6 @@ struct RaspSuggestedItem: Codable, Hashable {
         case ttype = "ttype"
         case type = "type"
         case order = "order"
-        case pointKey = "pointKey"
+        case pointKey = "point_key"
     }
 }
