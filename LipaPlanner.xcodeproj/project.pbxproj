@@ -24,6 +24,7 @@
 		CD66CE5226E628CF0011828A /* InputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5126E628CF0011828A /* InputButton.swift */; };
 		CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5526E71E860011828A /* TrainSuggest.swift */; };
 		CD66CE5826E727F90011828A /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5726E727F90011828A /* TextInput.swift */; };
+		CD6CD69F2755D3EB00DA385C /* Date+dayAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */; };
 		CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */; };
 		CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA626E397EF00F31FAA /* Assets.xcassets */; };
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		CD66CE5126E628CF0011828A /* InputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputButton.swift; sourceTree = "<group>"; };
 		CD66CE5526E71E860011828A /* TrainSuggest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSuggest.swift; sourceTree = "<group>"; };
 		CD66CE5726E727F90011828A /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
+		CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+dayAfter.swift"; sourceTree = "<group>"; };
 		CD959A9F26E397EC00F31FAA /* LipaPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipaPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipaPlannerApp.swift; sourceTree = "<group>"; };
 		CD959AA626E397EF00F31FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -273,7 +275,6 @@
 		CD0B8C6E2709B0EA002247E8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CD0B8C742709C30C002247E8 /* Date+iso8601.swift */,
 				CD0B8C81270D5D72002247E8 /* Date+FormattedForView.swift */,
 			);
 			path = Utils;
@@ -294,6 +295,8 @@
 		CD66CE4E26E52ABD0011828A /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				CD0B8C742709C30C002247E8 /* Date+iso8601.swift */,
+				CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				CDF0EAA126FADBC80022A9EB /* RaspSuggestedItem.swift in Sources */,
 				CD0B8C6C2709B07F002247E8 /* FiltersViewModel.swift in Sources */,
 				CD0B8C7B270C0C3B002247E8 /* DatePickerView.swift in Sources */,
+				CD6CD69F2755D3EB00DA385C /* Date+dayAfter.swift in Sources */,
 				CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */,
 				CD0B8C752709C30C002247E8 /* Date+iso8601.swift in Sources */,
 				CDD53DB4271306E5007EDF58 /* TrainListItem.swift in Sources */,

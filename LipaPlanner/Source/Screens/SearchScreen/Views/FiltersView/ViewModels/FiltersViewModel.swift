@@ -30,7 +30,7 @@ class FiltersViewModel: ObservableObject {
                 return
             }
             
-            let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+            let tomorrow = Date().dayAfter
 
             self.queryBuilder.setDate(tomorrow)
             
@@ -43,7 +43,7 @@ class FiltersViewModel: ObservableObject {
         didSet {
             guard acceleratedSelected else { return }
             
-            self.queryBuilder.sort = .acceleratedOnly
+            self.queryBuilder.sort = .accelerated
             
             self.alldSelected = false
         }
@@ -76,21 +76,21 @@ class FiltersViewModel: ObservableObject {
     
     @Published var selectedFrom: RaspSuggestedItem? = nil {
         didSet {
-            guard let fromPoint = selectedFrom?.pointKey else {
+            guard let selectedFrom = selectedFrom else {
                 return
             }
             
-            self.queryBuilder.setStartPoint(fromPoint)
+            self.queryBuilder.setStartPoint(selectedFrom)
         }
     }
     
     @Published var selectedTo: RaspSuggestedItem? = nil {
         didSet {
-            guard let toPoint = selectedTo?.pointKey else {
+            guard let selectedTo = selectedTo else {
                 return
             }
             
-            self.queryBuilder.setEndPoint(toPoint)
+            self.queryBuilder.setEndPoint(selectedTo)
         }
     }
     
@@ -100,7 +100,7 @@ class FiltersViewModel: ObservableObject {
         let queryBulder = QueryBuilder()
         
         queryBulder.setDate(Date())
-        queryBulder.sort = .acceleratedOnly
+        queryBulder.sort = .accelerated
         
         return queryBulder
     }()
