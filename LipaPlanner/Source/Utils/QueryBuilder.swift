@@ -9,10 +9,9 @@ import Foundation
 
 // TODO: - Будет переиспользован в списке с электричками
 // TODO: - Пока не самая оптимальная валидация query можно сделать получше
-enum QueryBulderError: String, Error {
-    case emptyApiKey = "Нет api_key для доступа к расписанию"
-    case emptyTransportTypes = "Не выбран тип транпорта для поиска"
-    case emptyPoint = "QueryBulderError: Не выбрана точка-станция для поиска"
+
+struct QueryBuilderError: Error {
+    let emptyFields: [QueryBuilder.RequiredKeys]
 }
 
 class QueryBuilder {
@@ -20,6 +19,10 @@ class QueryBuilder {
 
     enum Sort {
         case all, accelerated
+    }
+    
+    enum RequiredKeys: String, CaseIterable {
+        case apikey, transport_types, from, to, date
     }
     
     private var query: Query = [
@@ -46,14 +49,24 @@ class QueryBuilder {
     }
     
     func getResult() throws -> Query {
-        if query["apikey"] == nil {
-            throw QueryBulderError.emptyApiKey
-        } else if query["transport_types"] == nil {
-            throw QueryBulderError.emptyTransportTypes
-        } else if query["from"] == nil || query["to"] == nil {
-            throw QueryBulderError.emptyPoint
-        }
+        try validate()
         
         return self.query
+    }
+    
+    private func validate() throws {
+        let emptyFields = RequiredKeys.allCases.reduce([]) { (result, current) -> [QueryBuilder.RequiredKeys] in
+            var newResult = result
+            
+            if self.query[current.rawValue] == nil {
+                newResult.append(current)
+            }
+            
+            return newResult
+        }
+        
+        if !emptyFields.isEmpty {
+            throw QueryBuilderError(emptyFields: emptyFields)
+        }
     }
 }
