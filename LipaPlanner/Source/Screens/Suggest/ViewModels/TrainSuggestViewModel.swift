@@ -23,7 +23,6 @@ class TrainSuggestViewModel: ObservableObject {
                 latest: true
             ).sink(
                 receiveValue: { [weak self] text in
-                    print("call text")
                     if (text.count >= 3) {
                         self?.fetch(by: text)
                     }
@@ -43,7 +42,7 @@ class TrainSuggestViewModel: ObservableObject {
                 self?.suggests = suggestsResponsed
             }
         }, failure: { error in
-            print("error: ", error.errorDescription!)
+            debugPrint("error: ", error.errorDescription!)
         }, finally: { [weak self] in
             self?.isLoading = false
         })
