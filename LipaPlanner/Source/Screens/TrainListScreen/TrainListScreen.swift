@@ -11,6 +11,8 @@ struct TrainListScreen: View {
     @State var openCard: Bool = false
     @State var value: String = ""
     
+    @ObservedObject var viewModel: TrainListScreenViewModel
+    
     let onPressBack: () -> Void
     
     var body: some View {
@@ -53,6 +55,9 @@ struct TrainListScreen: View {
 
 struct TrainListScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TrainListScreen(onPressBack: {})
+        TrainListScreen(
+            viewModel: TrainListScreenViewModel(query: nil),
+            onPressBack: {}
+        )
     }
 }

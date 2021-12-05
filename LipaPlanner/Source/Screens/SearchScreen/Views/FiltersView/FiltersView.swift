@@ -50,12 +50,16 @@ struct FiltersView: View {
             }
             .padding(.bottom, 24.0)
             ActionButton(title: "Показать расписание") {
-                self.viewModel.openTrainList = true
+                //self.viewModel.openTrainList = true
+                self.viewModel.trainListOpen()
             }
-            NavigationLinkFromCode(isActive: self.$viewModel.openTrainList) {
-                TrainListScreen(onPressBack: {
-                    self.viewModel.openTrainList = false
-                })
+            NavigationLinkFromCode(isActive: self.$viewModel.trainListOpened) {
+                TrainListScreen(
+                    viewModel: TrainListScreenViewModel(query: self.viewModel.trainListQuery),
+                    onPressBack: {
+                        self.viewModel.trainListOpened = false
+                    }
+                )
             }
         }
     }

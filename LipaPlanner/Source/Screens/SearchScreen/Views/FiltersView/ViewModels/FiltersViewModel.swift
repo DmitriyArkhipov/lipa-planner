@@ -94,7 +94,17 @@ class FiltersViewModel: ObservableObject {
         }
     }
     
-    @Published var openTrainList: Bool = false
+    @Published var trainListOpened: Bool = false
+    @Published var trainListQuery: QueryBuilder.Query?
+    
+    func trainListOpen() {
+        do {
+            self.trainListQuery = try self.queryBuilder.getResult()
+            self.trainListOpened = true
+        } catch {
+            debugPrint("error")
+        }
+    }
     
     private lazy var queryBuilder: QueryBuilder = {
         let queryBulder = QueryBuilder()
