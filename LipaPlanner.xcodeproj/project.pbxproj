@@ -26,6 +26,7 @@
 		CD66CE5826E727F90011828A /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5726E727F90011828A /* TextInput.swift */; };
 		CD6CD69F2755D3EB00DA385C /* Date+dayAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */; };
 		CD6CD6A5275E214500DA385C /* TrainTodayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6A4275E214500DA385C /* TrainTodayLabel.swift */; };
+		CD6CD6A927626A1B00DA385C /* TrainListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6A827626A1B00DA385C /* TrainListItemViewModel.swift */; };
 		CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */; };
 		CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA626E397EF00F31FAA /* Assets.xcassets */; };
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		CD66CE5726E727F90011828A /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+dayAfter.swift"; sourceTree = "<group>"; };
 		CD6CD6A4275E214500DA385C /* TrainTodayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainTodayLabel.swift; sourceTree = "<group>"; };
+		CD6CD6A827626A1B00DA385C /* TrainListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListItemViewModel.swift; sourceTree = "<group>"; };
 		CD959A9F26E397EC00F31FAA /* LipaPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipaPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipaPlannerApp.swift; sourceTree = "<group>"; };
 		CD959AA626E397EF00F31FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */,
+				CD6CD6A827626A1B00DA385C /* TrainListItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				CD6CD6A5275E214500DA385C /* TrainTodayLabel.swift in Sources */,
 				CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */,
 				CDF0EA9C26FAD9130022A9EB /* RaspSuggestGateway.swift in Sources */,
+				CD6CD6A927626A1B00DA385C /* TrainListItemViewModel.swift in Sources */,
 				CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */,
 				CDF0EAA126FADBC80022A9EB /* RaspSuggestedItem.swift in Sources */,
 				CD0B8C6C2709B07F002247E8 /* FiltersViewModel.swift in Sources */,

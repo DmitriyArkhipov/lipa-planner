@@ -14,4 +14,12 @@ class TrainListScreenViewModel: ObservableObject {
     init(query: QueryBuilder.Query?) {
         self.query = query
     }
+    
+    func fetch() {
+        RaspSearchGateway.fetch(query: self.query!, succeed: {}, failure: { _ in }, finally: {})
+    }
+    
+    func handleChangeQuery() {
+        
+    }
 }

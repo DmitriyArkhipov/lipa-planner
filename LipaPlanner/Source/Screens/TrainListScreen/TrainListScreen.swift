@@ -50,6 +50,9 @@ struct TrainListScreen: View {
                 )
             )
             .background(Colors.Background.edgesIgnoringSafeArea(.all))
+            .onAppear {
+                self.viewModel.fetch()
+            }
     }
 }
 
