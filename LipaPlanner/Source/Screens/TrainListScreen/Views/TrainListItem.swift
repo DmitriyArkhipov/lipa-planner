@@ -9,12 +9,24 @@ import SwiftUI
 
 struct TrainListItem: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Text("Test")
+                Spacer()
+                Text("Test")
+            }
+            HStack {
+                Text("Test")
+            }
+            HStack {
+                Text("Test")
+            }
+        }.background(Colors.RowBackground)
     }
 }
 
 struct TrainListItem_Previews: PreviewProvider {
     static var previews: some View {
-        TrainListItem()
+        TrainListItem().preferredColorScheme(.dark)
     }
 }

@@ -25,4 +25,8 @@ final class Colors {
     
     static let ActionButton = Color("ActionButton")
     static let ActionButtonPressed = Color("ActionButtonPressed")
+    
+    static let TodayLabelDefault = Color("TodayLabelDefault")
+    static let TodayLabelRed = Color("TodayLabelRed")
+    static let TodayLabelYellow = Color("TodayLabelYellow")
 }
