@@ -16,6 +16,10 @@ class TrainListScreenViewModel: ObservableObject {
     }
     
     func fetch() {
+        guard query != nil else {
+            return
+        }
+        
         RaspSearchGateway.fetch(query: self.query!, succeed: { segments in
             debugPrint("response: ", segments)
         }, failure: { error in

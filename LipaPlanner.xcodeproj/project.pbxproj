@@ -49,6 +49,8 @@
 		CDF0EAA126FADBC80022A9EB /* RaspSuggestedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EAA026FADBC80022A9EB /* RaspSuggestedItem.swift */; };
 		CDF0EAA326FADFEC0022A9EB /* RaspSuggestedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EAA226FADFEC0022A9EB /* RaspSuggestedResponse.swift */; };
 		CDF0EAA626FAE3C40022A9EB /* TrainSuggestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EAA526FAE3C40022A9EB /* TrainSuggestViewModel.swift */; };
+		CDFC0BED27665FFA007C57B0 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC0BEC27665FFA007C57B0 /* RoundedCorner.swift */; };
+		CDFC0BEF2766603C007C57B0 /* View+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC0BEE2766603C007C57B0 /* View+cornerRadius.swift */; };
 		E02530E644CCC6B949C5C967 /* Pods_LipaPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11F4FA95AB1BCECD48FDB2A /* Pods_LipaPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		CDF0EAA026FADBC80022A9EB /* RaspSuggestedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspSuggestedItem.swift; sourceTree = "<group>"; };
 		CDF0EAA226FADFEC0022A9EB /* RaspSuggestedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspSuggestedResponse.swift; sourceTree = "<group>"; };
 		CDF0EAA526FAE3C40022A9EB /* TrainSuggestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSuggestViewModel.swift; sourceTree = "<group>"; };
+		CDFC0BEC27665FFA007C57B0 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		CDFC0BEE2766603C007C57B0 /* View+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+cornerRadius.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,7 @@
 				CD0B8C7A270C0C3B002247E8 /* DatePickerView.swift */,
 				CD66CE4C26E4AA2A0011828A /* ActionButton.swift */,
 				CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */,
+				CDFC0BEC27665FFA007C57B0 /* RoundedCorner.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 			children = (
 				CD0B8C742709C30C002247E8 /* Date+iso8601.swift */,
 				CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */,
+				CDFC0BEE2766603C007C57B0 /* View+cornerRadius.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -602,8 +608,10 @@
 				CD0B8C6C2709B07F002247E8 /* FiltersViewModel.swift in Sources */,
 				CD0B8C7B270C0C3B002247E8 /* DatePickerView.swift in Sources */,
 				CD6CD69F2755D3EB00DA385C /* Date+dayAfter.swift in Sources */,
+				CDFC0BEF2766603C007C57B0 /* View+cornerRadius.swift in Sources */,
 				CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */,
 				CD0B8C752709C30C002247E8 /* Date+iso8601.swift in Sources */,
+				CDFC0BED27665FFA007C57B0 /* RoundedCorner.swift in Sources */,
 				CDD53DB4271306E5007EDF58 /* TrainListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

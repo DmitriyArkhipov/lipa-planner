@@ -23,14 +23,6 @@ struct TrainListScreen: View {
                             self.openCard = true
                             self.value = "Hello"
                         }
-                        Text("Hello2").onTapGesture {
-                            self.openCard = true
-                            self.value = "Hello2"
-                        }
-                        Text("Hello3").onTapGesture {
-                            self.openCard = true
-                            self.value = "Hello3"
-                        }
                     }
                     NavigationLinkFromCode(isActive: self.$openCard) {
                         Text(self.value)

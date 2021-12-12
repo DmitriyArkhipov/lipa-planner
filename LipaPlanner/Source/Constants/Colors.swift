@@ -29,4 +29,7 @@ final class Colors {
     static let TodayLabelDefault = Color("TodayLabelDefault")
     static let TodayLabelRed = Color("TodayLabelRed")
     static let TodayLabelYellow = Color("TodayLabelYellow")
+    
+    static let TrainItemTitleStationColor = Color("TrainItemTitleStationColor")
+    static let TrainItemSpecSecondBackground = Color("TrainItemSpecSecondBackground")
 }
