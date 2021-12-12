@@ -35,16 +35,5 @@ class RaspSearchGateway {
                 finally()
             }
         }
-//            .responseObject(keyPath: "pagination") { (response: DataResponse<Pagination>) in
-//                switch response.result {
-//                case .success:
-//                    let pagination = response.result.value!
-//                    self.total = pagination.total
-//                case .failure(let error):
-//                    DispatchQueue.main.async {
-//                        self.delegate?.failure(error: error)
-//                    }
-//                }
-//        }
     }
 }
