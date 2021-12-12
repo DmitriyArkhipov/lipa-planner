@@ -11,6 +11,6 @@ struct RaspPaginationEntity: Codable {
     let total: Int
     
     private enum CodingKeys: String, CodingKey {
-        case total = "total"
+        case total
     }
 }

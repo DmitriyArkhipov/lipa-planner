@@ -18,13 +18,13 @@ struct TrainThreadEntity: Codable {
     let express_type: String?
     
     private enum CodingKeys: String, CodingKey {
-        case uid = "uid"
-        case title = "title"
-        case number = "number"
-        case short_title = "short_title"
-        case thread_method_link = "thread_method_link"
-        case transport_type = "transport_type"
-        case vehicle = "vehicle"
-        case express_type = "express_type"
+        case uid,
+             title,
+             number,
+             short_title,
+             thread_method_link,
+             transport_type,
+             vehicle,
+             express_type
     }
 }

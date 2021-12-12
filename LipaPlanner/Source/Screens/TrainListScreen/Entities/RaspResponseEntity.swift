@@ -12,7 +12,6 @@ struct RaspResponseEntity: Codable {
     let pagination: RaspPaginationEntity
     
     private enum CodingKeys: String, CodingKey {
-        case segments = "segments"
-        case pagination = "pagination"
+        case segments, pagination
     }
 }

@@ -21,16 +21,16 @@ struct TrainSegmentEntity: Codable {
     let arrival_platform: String
     
     private enum CodingKeys: String, CodingKey {
-        case arrival = "arrival"
-        case from = "from"
-        case thread = "thread"
-        case departure_platform = "departure_platform"
-        case departure = "departure"
-        case stops = "stops"
-        case days = "days"
-        case to = "to"
-        case duration = "duration"
-        case start_date = "start_date"
-        case arrival_platform = "arrival_platform"
+        case arrival,
+             from,
+             thread,
+             departure_platform,
+             departure,
+             stops,
+             days,
+             to,
+             duration,
+             start_date,
+             arrival_platform
     }
 }
