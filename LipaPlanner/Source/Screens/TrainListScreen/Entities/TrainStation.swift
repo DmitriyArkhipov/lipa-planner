@@ -1,5 +1,5 @@
 //
-//  TrainStationEntity.swift
+//  TrainStation.swift
 //  LipaPlanner
 //
 //  Created by Дмитрий Архипов on 12.12.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TrainStationEntity: Codable {
+struct TrainStation: Codable {
     let code: String
     let title: String
     let station_type: String

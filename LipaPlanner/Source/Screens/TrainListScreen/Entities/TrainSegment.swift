@@ -1,5 +1,5 @@
 //
-//  TrainSegmentEntity.swift
+//  TrainSegment.swift
 //  LipaPlanner
 //
 //  Created by Дмитрий Архипов on 12.12.2021.
@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct TrainSegmentEntity: Codable {
+struct TrainSegment: Codable {
     let arrival: String
-    let from: TrainStationEntity
-    let thread: TrainThreadEntity
+    let from: TrainStation
+    let thread: TrainThread
     let departure_platform: String
     let departure: String
     let stops: String
     let days: String?
-    let to: TrainStationEntity
+    let to: TrainStation
     let duration: Double
     let start_date: String
     let arrival_platform: String

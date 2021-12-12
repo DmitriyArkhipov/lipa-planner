@@ -1,5 +1,5 @@
 //
-//  TrainThreadEntity.swift
+//  TrainThread.swift
 //  LipaPlanner
 //
 //  Created by Дмитрий Архипов on 12.12.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TrainThreadEntity: Codable {
+struct TrainThread: Codable {
     let uid: String?
     let title: String
     let number: String?

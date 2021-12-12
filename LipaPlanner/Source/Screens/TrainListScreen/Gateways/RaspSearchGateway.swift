@@ -13,7 +13,7 @@ class RaspSearchGateway {
 
     static func fetch(
         query: QueryBuilder.Query,
-        succeed: @escaping ([TrainSegmentEntity]) -> Void,
+        succeed: @escaping ([TrainSegment]) -> Void,
         failure: @escaping (Error) -> Void,
         finally: @escaping () -> Void
     ) {
@@ -26,7 +26,7 @@ class RaspSearchGateway {
                 }
 
                 let decoder = JSONDecoder()
-                let responseEntity = try decoder.decode(RaspResponseEntity.self, from: response.data!)
+                let responseEntity = try decoder.decode(RaspResponse.self, from: response.data!)
 
                 succeed(responseEntity.segments)
                 finally()
