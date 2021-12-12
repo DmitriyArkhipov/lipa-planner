@@ -27,6 +27,12 @@
 		CD6CD69F2755D3EB00DA385C /* Date+dayAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */; };
 		CD6CD6A5275E214500DA385C /* TrainTodayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6A4275E214500DA385C /* TrainTodayLabel.swift */; };
 		CD6CD6A927626A1B00DA385C /* TrainListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6A827626A1B00DA385C /* TrainListItemViewModel.swift */; };
+		CD6CD6B7276627CB00DA385C /* TrainStationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6B3276627CB00DA385C /* TrainStationEntity.swift */; };
+		CD6CD6B8276627CB00DA385C /* TrainThreadEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6B4276627CB00DA385C /* TrainThreadEntity.swift */; };
+		CD6CD6BA276627CB00DA385C /* TrainSegmentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6B6276627CB00DA385C /* TrainSegmentEntity.swift */; };
+		CD6CD6BF27662AE100DA385C /* Error+isInternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6BE27662AE100DA385C /* Error+isInternetConnection.swift */; };
+		CD6CD6C327662F4200DA385C /* RaspResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6C227662F4200DA385C /* RaspResponseEntity.swift */; };
+		CD6CD6C527664D3000DA385C /* RaspPaginationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6C427664D3000DA385C /* RaspPaginationEntity.swift */; };
 		CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */; };
 		CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA626E397EF00F31FAA /* Assets.xcassets */; };
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
@@ -69,6 +75,12 @@
 		CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+dayAfter.swift"; sourceTree = "<group>"; };
 		CD6CD6A4275E214500DA385C /* TrainTodayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainTodayLabel.swift; sourceTree = "<group>"; };
 		CD6CD6A827626A1B00DA385C /* TrainListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListItemViewModel.swift; sourceTree = "<group>"; };
+		CD6CD6B3276627CB00DA385C /* TrainStationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStationEntity.swift; sourceTree = "<group>"; };
+		CD6CD6B4276627CB00DA385C /* TrainThreadEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainThreadEntity.swift; sourceTree = "<group>"; };
+		CD6CD6B6276627CB00DA385C /* TrainSegmentEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainSegmentEntity.swift; sourceTree = "<group>"; };
+		CD6CD6BE27662AE100DA385C /* Error+isInternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+isInternetConnection.swift"; sourceTree = "<group>"; };
+		CD6CD6C227662F4200DA385C /* RaspResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspResponseEntity.swift; sourceTree = "<group>"; };
+		CD6CD6C427664D3000DA385C /* RaspPaginationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaspPaginationEntity.swift; sourceTree = "<group>"; };
 		CD959A9F26E397EC00F31FAA /* LipaPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LipaPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipaPlannerApp.swift; sourceTree = "<group>"; };
 		CD959AA626E397EF00F31FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -193,6 +205,7 @@
 		CD04EF9026E39E00002CA116 /* TrainListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CD6CD6BD27662AB800DA385C /* Utils */,
 				CDD53DB827131024007EDF58 /* Entities */,
 				CDD53DB72713100E007EDF58 /* Gateways */,
 				CDD53DB627131002007EDF58 /* ViewModels */,
@@ -305,6 +318,14 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
+		CD6CD6BD27662AB800DA385C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CD6CD6BE27662AE100DA385C /* Error+isInternetConnection.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CD959A9626E397EC00F31FAA = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +402,11 @@
 		CDD53DB827131024007EDF58 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CD6CD6B6276627CB00DA385C /* TrainSegmentEntity.swift */,
+				CD6CD6B3276627CB00DA385C /* TrainStationEntity.swift */,
+				CD6CD6B4276627CB00DA385C /* TrainThreadEntity.swift */,
+				CD6CD6C227662F4200DA385C /* RaspResponseEntity.swift */,
+				CD6CD6C427664D3000DA385C /* RaspPaginationEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -546,18 +572,24 @@
 				CD0B8C82270D5D7A002247E8 /* Date+FormattedForView.swift in Sources */,
 				CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */,
 				CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */,
+				CD6CD6B8276627CB00DA385C /* TrainThreadEntity.swift in Sources */,
 				CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */,
 				CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */,
+				CD6CD6BF27662AE100DA385C /* Error+isInternetConnection.swift in Sources */,
 				CDD53DB12711E4A2007EDF58 /* TrainListScreenViewModel.swift in Sources */,
 				CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */,
 				CD04EFA026E3A764002CA116 /* SearchHistoryView.swift in Sources */,
 				CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */,
 				CDF0EAA326FADFEC0022A9EB /* RaspSuggestedResponse.swift in Sources */,
 				CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */,
+				CD6CD6C527664D3000DA385C /* RaspPaginationEntity.swift in Sources */,
 				CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */,
 				CD66CE5226E628CF0011828A /* InputButton.swift in Sources */,
 				CDD53DBC271313EC007EDF58 /* ApiKeys.swift in Sources */,
 				CD0B8C702709B109002247E8 /* QueryBuilder.swift in Sources */,
+				CD6CD6B7276627CB00DA385C /* TrainStationEntity.swift in Sources */,
+				CD6CD6BA276627CB00DA385C /* TrainSegmentEntity.swift in Sources */,
+				CD6CD6C327662F4200DA385C /* RaspResponseEntity.swift in Sources */,
 				CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */,
 				CD66CE5826E727F90011828A /* TextInput.swift in Sources */,
 				CDD53DBA271310EA007EDF58 /* RaspSearchGateway.swift in Sources */,

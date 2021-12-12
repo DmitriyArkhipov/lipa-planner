@@ -16,7 +16,17 @@ class TrainListScreenViewModel: ObservableObject {
     }
     
     func fetch() {
-        RaspSearchGateway.fetch(query: self.query!, succeed: {}, failure: { _ in }, finally: {})
+        RaspSearchGateway.fetch(query: self.query!, succeed: { segments in
+            debugPrint("response: ", segments)
+        }, failure: { error in
+            if error.isInternetConnection {
+                debugPrint("isInternetConnection")
+            } else {
+                debugPrint("error: ", error.localizedDescription)
+            }
+        }, finally: {
+            
+        })
     }
     
     func handleChangeQuery() {
