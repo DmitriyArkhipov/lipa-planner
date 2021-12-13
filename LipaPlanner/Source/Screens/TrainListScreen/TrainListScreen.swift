@@ -18,14 +18,10 @@ struct TrainListScreen: View {
     var body: some View {
             ScrollView {
                 LazyVStack {
-                    ForEach(0...3, id: \.self) { _ in
-                        Text("Hello").onTapGesture {
-                            self.openCard = true
-                            self.value = "Hello"
-                        }
-                    }
-                    NavigationLinkFromCode(isActive: self.$openCard) {
-                        Text(self.value)
+                    ForEach(self.viewModel.itemViewModels, id: \.id) { item in
+                        TrainListItem(viewModel: item)
+                            .padding([.leading, .trailing], 14.0)
+                            .padding([.bottom], 10.0)
                     }
                 }
             }

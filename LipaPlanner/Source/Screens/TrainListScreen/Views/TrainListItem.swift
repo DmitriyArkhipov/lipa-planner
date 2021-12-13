@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TrainListItem: View {
+    let viewModel: TrainListItemViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -39,14 +41,14 @@ struct TrainListItem: View {
             Spacer()
                 .frame(height: 5.0)
             HStack {
-                Text("Новосибирск-Главный")
+                Text(self.viewModel.fromTitle)
                     .font(.system(size: 15, design: .default))
                     .fontWeight(.regular)
                     .foregroundColor(Colors.TrainItemTitleStationColor)
                     .multilineTextAlignment(.leading)
                     .frame(width: 123.0,alignment: .leading)
                     .padding(.trailing, 45.0)
-                Text("Новосибирск-Главный")
+                Text(self.viewModel.toTitle)
                     .font(.system(size: 15, design: .default))
                     .fontWeight(.regular)
                     .foregroundColor(Colors.TrainItemTitleStationColor)
@@ -73,8 +75,8 @@ struct TrainListItem: View {
     }
 }
 
-struct TrainListItem_Previews: PreviewProvider {
-    static var previews: some View {
-        TrainListItem().preferredColorScheme(.dark)
-    }
-}
+//struct TrainListItem_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TrainListItem().preferredColorScheme(.dark)
+//    }
+//}
