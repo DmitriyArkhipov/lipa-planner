@@ -1,25 +1,29 @@
 PODS:
   - Alamofire (5.4.3)
   - Introspect (0.1.3)
+  - SkeletonUI (1.0.7)
   - SwiftUIRefresh (0.0.3):
     - Introspect (~> 0.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Introspect
+  - SkeletonUI
   - SwiftUIRefresh
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Introspect
+    - SkeletonUI
     - SwiftUIRefresh
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Introspect: 2be020f30f084ada52bb4387fff83fa52c5c400e
+  SkeletonUI: 18fbcd8698480432852d7e30a65b8d5e138266f0
   SwiftUIRefresh: ca6ae2718d25aad5dd68bbf5d2ae36ef6ade98bf
 
-PODFILE CHECKSUM: 8af72bc94998555116df67d3c2ed59fd1440b47c
+PODFILE CHECKSUM: fb43ffd20b1c755797ebcb56de6c747b105bf99d
 
 COCOAPODS: 1.11.2

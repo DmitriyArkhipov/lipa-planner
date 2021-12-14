@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TrainListItemViewModel {
+class TrainListItemViewModel: Identifiable {
     let id = UUID()
     
     let segment: TrainSegment

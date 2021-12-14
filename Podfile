@@ -9,5 +9,6 @@ target 'LipaPlanner' do
   pod 'Introspect'
   pod 'Alamofire'
   pod 'SwiftUIRefresh'
+  pod 'SkeletonUI'
 
 end

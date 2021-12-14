@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SkeletonUI
 
 struct TrainListScreen: View {
     @State var openCard: Bool = false
@@ -17,13 +18,16 @@ struct TrainListScreen: View {
     
     var body: some View {
             ScrollView {
-                LazyVStack {
-                    ForEach(self.viewModel.itemViewModels, id: \.id) { item in
-                        TrainListItem(viewModel: item)
-                            .padding([.leading, .trailing], 14.0)
-                            .padding([.bottom], 10.0)
+                TrainListSkeleton(loading: self.viewModel.isLoading) {
+                    LazyVStack {
+                        ForEach(self.viewModel.itemViewModels, id: \.id) { item in
+                            TrainListItem(viewModel: item)
+                                .padding([.leading, .trailing], 14.0)
+                                .padding([.bottom], 10.0)
+                        }
                     }
                 }
+                
             }
             .navigationBarTitle("Расписание", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
@@ -49,6 +53,6 @@ struct TrainListScreen_Previews: PreviewProvider {
         TrainListScreen(
             viewModel: TrainListScreenViewModel(query: nil),
             onPressBack: {}
-        )
+        ).preferredColorScheme(.dark)
     }
 }

@@ -11,6 +11,7 @@ import Combine
 class TrainListScreenViewModel: ObservableObject {
     let query: QueryBuilder.Query?
     
+    @Published var isLoading: Bool = false
     @Published var itemViewModels: [TrainListItemViewModel] = []
     
     init(query: QueryBuilder.Query?) {
@@ -22,11 +23,15 @@ class TrainListScreenViewModel: ObservableObject {
             return
         }
         
+        self.isLoading = true
+        
         RaspSearchGateway.fetch(
             query: self.query!,
             succeed: { [weak self] segments in
-                self?.itemViewModels = segments.map { item in
-                    return TrainListItemViewModel(segment: item)
+                DispatchQueue.main.async {
+                    self?.itemViewModels = segments.map { item in
+                        return TrainListItemViewModel(segment: item)
+                    }
                 }
             },
             failure: { error in
@@ -35,8 +40,10 @@ class TrainListScreenViewModel: ObservableObject {
             } else {
                 debugPrint("error: ", error.localizedDescription)
             }
-        }, finally: {
-            
+        }, finally: { [weak self] in
+            DispatchQueue.main.async {
+                self?.isLoading = false
+            }
         })
     }
     
