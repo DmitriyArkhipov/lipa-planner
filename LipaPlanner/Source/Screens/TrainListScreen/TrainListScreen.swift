@@ -27,7 +27,6 @@ struct TrainListScreen: View {
                         }
                     }
                 }
-                
             }
             .navigationBarTitle("Расписание", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
@@ -43,7 +42,9 @@ struct TrainListScreen: View {
             )
             .background(Colors.Background.edgesIgnoringSafeArea(.all))
             .onAppear {
-                self.viewModel.fetch()
+                if self.viewModel.itemViewModels.isEmpty {
+                    self.viewModel.fetch()
+                }
             }
     }
 }
