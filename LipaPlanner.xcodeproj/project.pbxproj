@@ -20,6 +20,12 @@
 		CD0B8C82270D5D7A002247E8 /* Date+FormattedForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8C81270D5D72002247E8 /* Date+FormattedForView.swift */; };
 		CD36A6742768E1AF00C66763 /* TrainListSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A6732768E1AF00C66763 /* TrainListSkeleton.swift */; };
 		CD36A6762768EB7900C66763 /* TrainListSkeletonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A6752768EB7900C66763 /* TrainListSkeletonItem.swift */; };
+		CD36A678276E05F900C66763 /* Date+FromISO8601String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A677276E05F900C66763 /* Date+FromISO8601String.swift */; };
+		CD36A67A276E06E300C66763 /* Date+DefaultFormattedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A679276E06E300C66763 /* Date+DefaultFormattedTime.swift */; };
+		CD36A681276F18DC00C66763 /* TimeInterval+FormattedMinutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A680276F18DC00C66763 /* TimeInterval+FormattedMinutes.swift */; };
+		CD36A683276F1B3400C66763 /* Date+waitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A682276F1B3400C66763 /* Date+waitingTime.swift */; };
+		CD36A692277238CE00C66763 /* WaitingTimeLabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A691277238CE00C66763 /* WaitingTimeLabelTest.swift */; };
+		CD36A69427723FAF00C66763 /* Date+waitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A682276F1B3400C66763 /* Date+waitingTime.swift */; };
 		CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4826E49E3B0011828A /* SelectorButton.swift */; };
 		CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */; };
 		CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4C26E4AA2A0011828A /* ActionButton.swift */; };
@@ -56,6 +62,16 @@
 		E02530E644CCC6B949C5C967 /* Pods_LipaPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11F4FA95AB1BCECD48FDB2A /* Pods_LipaPlanner.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CD36A68C277238A900C66763 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD959A9726E397EC00F31FAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD959A9E26E397EC00F31FAA;
+			remoteInfo = LipaPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1832620EF5BFD42EEC0DD95F /* Pods-LipaPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipaPlanner.release.xcconfig"; path = "Target Support Files/Pods-LipaPlanner/Pods-LipaPlanner.release.xcconfig"; sourceTree = "<group>"; };
 		557D92D72E46DBB81A2305D5 /* Pods-LipaPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipaPlanner.debug.xcconfig"; path = "Target Support Files/Pods-LipaPlanner/Pods-LipaPlanner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +88,12 @@
 		CD0B8C81270D5D72002247E8 /* Date+FormattedForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+FormattedForView.swift"; sourceTree = "<group>"; };
 		CD36A6732768E1AF00C66763 /* TrainListSkeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListSkeleton.swift; sourceTree = "<group>"; };
 		CD36A6752768EB7900C66763 /* TrainListSkeletonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListSkeletonItem.swift; sourceTree = "<group>"; };
+		CD36A677276E05F900C66763 /* Date+FromISO8601String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+FromISO8601String.swift"; sourceTree = "<group>"; };
+		CD36A679276E06E300C66763 /* Date+DefaultFormattedTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DefaultFormattedTime.swift"; sourceTree = "<group>"; };
+		CD36A680276F18DC00C66763 /* TimeInterval+FormattedMinutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+FormattedMinutes.swift"; sourceTree = "<group>"; };
+		CD36A682276F1B3400C66763 /* Date+waitingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+waitingTime.swift"; sourceTree = "<group>"; };
+		CD36A688277238A900C66763 /* LipaPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LipaPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD36A691277238CE00C66763 /* WaitingTimeLabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingTimeLabelTest.swift; sourceTree = "<group>"; };
 		CD66CE4826E49E3B0011828A /* SelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorButton.swift; sourceTree = "<group>"; };
 		CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorButton.swift; sourceTree = "<group>"; };
 		CD66CE4C26E4AA2A0011828A /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
@@ -110,6 +132,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CD36A685277238A900C66763 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD959A9C26E397EC00F31FAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +335,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		CD36A689277238A900C66763 /* LipaPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD36A691277238CE00C66763 /* WaitingTimeLabelTest.swift */,
+			);
+			path = LipaPlannerTests;
+			sourceTree = "<group>";
+		};
 		CD66CE4726E49DD70011828A /* Suggest */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +369,10 @@
 			isa = PBXGroup;
 			children = (
 				CD6CD6BE27662AE100DA385C /* Error+isInternetConnection.swift */,
+				CD36A677276E05F900C66763 /* Date+FromISO8601String.swift */,
+				CD36A680276F18DC00C66763 /* TimeInterval+FormattedMinutes.swift */,
+				CD36A679276E06E300C66763 /* Date+DefaultFormattedTime.swift */,
+				CD36A682276F1B3400C66763 /* Date+waitingTime.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -340,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				CD959AA126E397EC00F31FAA /* LipaPlanner */,
+				CD36A689277238A900C66763 /* LipaPlannerTests */,
 				CD959AA026E397EC00F31FAA /* Products */,
 				41627A059738FCD905375E55 /* Pods */,
 				4FDFC2222530092B2BD3106F /* Frameworks */,
@@ -350,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				CD959A9F26E397EC00F31FAA /* LipaPlanner.app */,
+				CD36A688277238A900C66763 /* LipaPlannerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -461,6 +504,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CD36A687277238A900C66763 /* LipaPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD36A68E277238A900C66763 /* Build configuration list for PBXNativeTarget "LipaPlannerTests" */;
+			buildPhases = (
+				CD36A684277238A900C66763 /* Sources */,
+				CD36A685277238A900C66763 /* Frameworks */,
+				CD36A686277238A900C66763 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD36A68D277238A900C66763 /* PBXTargetDependency */,
+			);
+			name = LipaPlannerTests;
+			productName = LipaPlannerTests;
+			productReference = CD36A688277238A900C66763 /* LipaPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CD959A9E26E397EC00F31FAA /* LipaPlanner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD959AAE26E397EF00F31FAA /* Build configuration list for PBXNativeTarget "LipaPlanner" */;
@@ -489,9 +550,13 @@
 		CD959A9726E397EC00F31FAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					CD36A687277238A900C66763 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = CD959A9E26E397EC00F31FAA;
+					};
 					CD959A9E26E397EC00F31FAA = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -515,11 +580,19 @@
 			projectRoot = "";
 			targets = (
 				CD959A9E26E397EC00F31FAA /* LipaPlanner */,
+				CD36A687277238A900C66763 /* LipaPlannerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CD36A686277238A900C66763 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD959A9D26E397EC00F31FAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,10 +649,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CD36A684277238A900C66763 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD36A692277238CE00C66763 /* WaitingTimeLabelTest.swift in Sources */,
+				CD36A69427723FAF00C66763 /* Date+waitingTime.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD959A9B26E397EC00F31FAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD36A67A276E06E300C66763 /* Date+DefaultFormattedTime.swift in Sources */,
 				CDF0EAA626FAE3C40022A9EB /* TrainSuggestViewModel.swift in Sources */,
 				CD36A6762768EB7900C66763 /* TrainListSkeletonItem.swift in Sources */,
 				CD36A6742768E1AF00C66763 /* TrainListSkeleton.swift in Sources */,
@@ -601,12 +684,14 @@
 				CD66CE5226E628CF0011828A /* InputButton.swift in Sources */,
 				CDD53DBC271313EC007EDF58 /* ApiKeys.swift in Sources */,
 				CD0B8C702709B109002247E8 /* QueryBuilder.swift in Sources */,
+				CD36A678276E05F900C66763 /* Date+FromISO8601String.swift in Sources */,
 				CD6CD6B7276627CB00DA385C /* TrainStation.swift in Sources */,
 				CD6CD6BA276627CB00DA385C /* TrainSegment.swift in Sources */,
 				CD6CD6C327662F4200DA385C /* RaspResponse.swift in Sources */,
 				CDD6A6D726EB174500BCA1E8 /* Colors.swift in Sources */,
 				CD66CE5826E727F90011828A /* TextInput.swift in Sources */,
 				CDD53DBA271310EA007EDF58 /* RaspSearchGateway.swift in Sources */,
+				CD36A681276F18DC00C66763 /* TimeInterval+FormattedMinutes.swift in Sources */,
 				CD6CD6A5275E214500DA385C /* TrainTodayLabel.swift in Sources */,
 				CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */,
 				CDF0EA9C26FAD9130022A9EB /* RaspSuggestGateway.swift in Sources */,
@@ -617,6 +702,7 @@
 				CD0B8C7B270C0C3B002247E8 /* DatePickerView.swift in Sources */,
 				CD6CD69F2755D3EB00DA385C /* Date+dayAfter.swift in Sources */,
 				CDFC0BEF2766603C007C57B0 /* View+cornerRadius.swift in Sources */,
+				CD36A683276F1B3400C66763 /* Date+waitingTime.swift in Sources */,
 				CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */,
 				CD0B8C752709C30C002247E8 /* Date+iso8601.swift in Sources */,
 				CDFC0BED27665FFA007C57B0 /* RoundedCorner.swift in Sources */,
@@ -625,6 +711,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD36A68D277238A900C66763 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD959A9E26E397EC00F31FAA /* LipaPlanner */;
+			targetProxy = CD36A68C277238A900C66763 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CD0B8C80270C9528002247E8 /* RussianCalendar.strings */ = {
@@ -638,6 +732,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CD36A68F277238A900C66763 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D983Q7J5Y7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = style.zerkalo.LipaPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LipaPlanner.app/LipaPlanner";
+			};
+			name = Debug;
+		};
+		CD36A690277238A900C66763 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D983Q7J5Y7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = style.zerkalo.LipaPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LipaPlanner.app/LipaPlanner";
+			};
+			name = Release;
+		};
 		CD959AAC26E397EF00F31FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -809,6 +953,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD36A68E277238A900C66763 /* Build configuration list for PBXNativeTarget "LipaPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD36A68F277238A900C66763 /* Debug */,
+				CD36A690277238A900C66763 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CD959A9A26E397EC00F31FAA /* Build configuration list for PBXProject "LipaPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

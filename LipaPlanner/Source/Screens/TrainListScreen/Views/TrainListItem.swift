@@ -13,7 +13,7 @@ struct TrainListItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                TrainTodayLabel(title: "Через 10 мин", state: .soon)
+                TrainTodayLabel(title: self.viewModel.waitingTime, state: .soon)
                 Spacer()
                 Button(action: {
                     debugPrint("press reminder")
@@ -23,15 +23,15 @@ struct TrainListItem: View {
             }
             .padding([.top, .leading, .trailing], 15.0)
             HStack(alignment: .center) {
-                Text("12:30")
+                Text(self.viewModel.fromTime)
                     .font(.system(size: 22, design: .default))
                     .fontWeight(.bold)
                     .padding(.trailing, 33.0)
-                Text("40 мин")
+                Text(self.viewModel.duration)
                     .font(.system(size: 13, design: .default))
                     .fontWeight(.regular)
                     .padding(.trailing, 26.0)
-                Text("12:30")
+                Text(self.viewModel.toTime)
                     .font(.system(size: 22, design: .default))
                     .fontWeight(.bold)
                 Spacer()
@@ -58,7 +58,7 @@ struct TrainListItem: View {
             }
             .padding([.horizontal], 15.0)
             HStack {
-                Text("Черепаново - Новосибирск-Главный")
+                Text(self.viewModel.trainThread)
                     .font(.system(size: 17, design: .default))
                     .fontWeight(.regular)
                     .padding(.vertical, 10.0)

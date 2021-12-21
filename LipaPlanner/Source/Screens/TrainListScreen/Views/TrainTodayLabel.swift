@@ -37,7 +37,8 @@ struct TrainTodayLabel: View {
         Text(self.title)
             .font(.system(size: 12, design: .default))
             .padding(.vertical, 5.0)
-            .frame(width: 104.0)
+            .padding(.horizontal, 10.0)
+            .lineLimit(1)
             .textCase(.uppercase)
             .modifier(TrainTodayLabelStyle(state: self.state))
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
@@ -46,6 +47,6 @@ struct TrainTodayLabel: View {
 
 struct TrainTodayLabel_Previews: PreviewProvider {
     static var previews: some View {
-        TrainTodayLabel(title: "Завтра", state: .soon)
+        TrainTodayLabel(title: "dssaa", state: .soon)
     }
 }
