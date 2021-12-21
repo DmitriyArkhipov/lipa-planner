@@ -16,22 +16,12 @@ struct FiltersView: View {
 
     var body: some View {
         VStack{
-            HStack {
-                DateSelectorButton(
-                    selected: self.$viewModel.dateActiveSelected,
-                    dateSelected: self.$viewModel.dateSelected
-                )
-                .padding(.trailing, horizontalPadding)
-                SelectorButton(
-                    title: "Сегодня",
-                    selected: self.$viewModel.todaySelected
-                )
-                .padding(.trailing, horizontalPadding)
-                SelectorButton(
-                    title: "Завтра",
-                    selected: self.$viewModel.tomorrowSelected
-                )
-            }
+            DaySelector(
+                dateSelected: self.$viewModel.dateActiveSelected,
+                dateValueSelected: self.$viewModel.dateSelected,
+                todaySelected: self.$viewModel.todaySelected,
+                tomorrowSelected: self.$viewModel.tomorrowSelected
+            )
             .padding(.bottom, 20.0)
             InputButton(placeholder: "Откуда", selected: self.$viewModel.selectedFrom)
                 .padding(.bottom, 10.0)

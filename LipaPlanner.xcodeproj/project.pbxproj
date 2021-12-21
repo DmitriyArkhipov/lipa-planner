@@ -26,6 +26,7 @@
 		CD36A683276F1B3400C66763 /* Date+waitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A682276F1B3400C66763 /* Date+waitingTime.swift */; };
 		CD36A692277238CE00C66763 /* WaitingTimeLabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A691277238CE00C66763 /* WaitingTimeLabelTest.swift */; };
 		CD36A69427723FAF00C66763 /* Date+waitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A682276F1B3400C66763 /* Date+waitingTime.swift */; };
+		CD36A69A2772491300C66763 /* DaySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A6992772491300C66763 /* DaySelector.swift */; };
 		CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4826E49E3B0011828A /* SelectorButton.swift */; };
 		CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */; };
 		CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4C26E4AA2A0011828A /* ActionButton.swift */; };
@@ -94,6 +95,7 @@
 		CD36A682276F1B3400C66763 /* Date+waitingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+waitingTime.swift"; sourceTree = "<group>"; };
 		CD36A688277238A900C66763 /* LipaPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LipaPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD36A691277238CE00C66763 /* WaitingTimeLabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingTimeLabelTest.swift; sourceTree = "<group>"; };
+		CD36A6992772491300C66763 /* DaySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelector.swift; sourceTree = "<group>"; };
 		CD66CE4826E49E3B0011828A /* SelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorButton.swift; sourceTree = "<group>"; };
 		CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorButton.swift; sourceTree = "<group>"; };
 		CD66CE4C26E4AA2A0011828A /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				CD66CE4C26E4AA2A0011828A /* ActionButton.swift */,
 				CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */,
 				CDFC0BEC27665FFA007C57B0 /* RoundedCorner.swift */,
+				CD36A6992772491300C66763 /* DaySelector.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				CD6CD6B8276627CB00DA385C /* TrainThread.swift in Sources */,
 				CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */,
 				CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */,
+				CD36A69A2772491300C66763 /* DaySelector.swift in Sources */,
 				CD6CD6BF27662AE100DA385C /* Error+isInternetConnection.swift in Sources */,
 				CDD53DB12711E4A2007EDF58 /* TrainListScreenViewModel.swift in Sources */,
 				CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */,
