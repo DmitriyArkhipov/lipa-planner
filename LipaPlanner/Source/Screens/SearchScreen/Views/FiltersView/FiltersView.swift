@@ -50,7 +50,6 @@ struct FiltersView: View {
             }
             .padding(.bottom, 24.0)
             ActionButton(title: "Показать расписание") {
-                //self.viewModel.openTrainList = true
                 self.viewModel.trainListOpen()
             }
             NavigationLinkFromCode(isActive: self.$viewModel.trainListOpened) {
