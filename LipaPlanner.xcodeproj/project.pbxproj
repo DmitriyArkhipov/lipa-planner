@@ -45,6 +45,7 @@
 		CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */; };
 		CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA626E397EF00F31FAA /* Assets.xcassets */; };
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
+		CDBDA80E2789D1F40095C832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBDA80D2789D1F40095C832 /* LaunchScreen.storyboard */; };
 		CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */; };
 		CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */; };
 		CDD53DB12711E4A2007EDF58 /* TrainListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */; };
@@ -116,6 +117,7 @@
 		CD959AA626E397EF00F31FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD959AAB26E397EF00F31FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDBDA80D2789D1F40095C832 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListScreen.swift; sourceTree = "<group>"; };
 		CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkFromCode.swift; sourceTree = "<group>"; };
 		CDD53DB02711E4A2007EDF58 /* TrainListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListScreenViewModel.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				CD04EF8B26E39CFD002CA116 /* Utils */,
 				CD04EF8A26E39CDD002CA116 /* Screens */,
 				CD04EF9526E3A3C7002CA116 /* RootTabs.swift */,
+				CDBDA80D2789D1F40095C832 /* LaunchScreen.storyboard */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */,
 				CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */,
 				CD0B8C7E270C9528002247E8 /* RussianCalendar.strings in Resources */,
+				CDBDA80E2789D1F40095C832 /* LaunchScreen.storyboard in Resources */,
 				CDF0EA9526EBC0FD0022A9EB /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

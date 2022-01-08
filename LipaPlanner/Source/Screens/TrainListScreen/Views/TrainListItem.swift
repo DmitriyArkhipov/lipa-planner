@@ -14,7 +14,7 @@ struct TrainListItem: View {
         VStack(alignment: .leading) {
             HStack {
                 if !self.viewModel.waitingTime.isEmpty {
-                    TrainTodayLabel(title: self.viewModel.waitingTime, state: .soon)
+                    TrainTodayLabel(title: self.viewModel.waitingTime, state: self.viewModel.waitingTimeState)
                 }
                 Spacer()
                 Button(action: {

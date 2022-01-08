@@ -8,6 +8,10 @@
 import Foundation
 
 extension Date {
+    enum WaitingLabel {
+        case tomorrow, now, soon, undefined
+    }
+    
     private var waitingDate: Date {
         let today = Date()
         let calendar = Calendar.current
@@ -41,7 +45,7 @@ extension Date {
         return "\(hour) ч \(minutesString) мин"
     }
 
-    var waitingTime: String {
+    var waitingTime: (String, WaitingLabel)  {
         let today = Date()
         let calendar = Calendar.current
         let todayDay = calendar.component(.day, from: today)
@@ -62,13 +66,13 @@ extension Date {
         {
             let time = self.waitingDate.formattedTimeWithUnits
 
-            return "Через \(time)".uppercased()
+            return ("Через \(time)".uppercased(), .soon)
         } else if waitingHour == 0 && waitingMinute == 0 {
-            return "Сейчас".uppercased()
+            return ("Сейчас".uppercased(), .now)
         } else if tomorrowDay == inputDay || todayDay == inputDay {
-            return "Завтра".uppercased()
+            return ("Завтра".uppercased(), .tomorrow)
         }
 
-        return ""
+        return ("", .undefined)
     }
 }

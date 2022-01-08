@@ -19,7 +19,9 @@ class WaitingTimeLabelTest: XCTestCase {
         
         let train = calendar.date(from: trainDateComponents)!
         
-        XCTAssertEqual(train.waitingTime, String("Через 1 ч 10 мин").uppercased())
+        let ( waitingTime, _ ) = train.waitingTime
+        
+        XCTAssertEqual(waitingTime, String("Через 1 ч 10 мин").uppercased())
     }
     
     func testTomorrowWaitingTime() throws {
@@ -33,10 +35,14 @@ class WaitingTimeLabelTest: XCTestCase {
         
         let train = calendar.date(from: trainDateComponents)!
         
-        XCTAssertEqual(train.waitingTime, String("Завтра").uppercased())
+        let ( waitingTime, _ ) = train.waitingTime
+        
+        XCTAssertEqual(waitingTime, String("Завтра").uppercased())
     }
     
     func testNowWaitingTime() throws {
-        XCTAssertEqual(Date().waitingTime, String("Сейчас").uppercased())
+        let ( waitingTime, _ ) = Date().waitingTime
+
+        XCTAssertEqual(waitingTime, String("Сейчас").uppercased())
     }
 }

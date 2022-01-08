@@ -24,6 +24,8 @@ class TrainListItemViewModel: Identifiable {
     
     let waitingTime: String
     
+    let waitingTimeState: TrainTodayLabelState
+    
     
     init(segment: TrainSegment) {
         self.segment = segment
@@ -34,6 +36,18 @@ class TrainListItemViewModel: Identifiable {
         self.toTime = segment.departure
         self.duration = segment.duration
         self.trainThread = segment.thread.title
-        self.waitingTime = segment.waiting_time
+        
+        let ( waitingTime, label )  = segment.departure_date.waitingTime
+        
+        self.waitingTime = waitingTime
+        
+        switch label {
+        case .tomorrow:
+            self.waitingTimeState = .tomorrow
+        case .now:
+            self.waitingTimeState = .now
+        case .undefined, .soon:
+            self.waitingTimeState = .soon
+        }
     }
 }

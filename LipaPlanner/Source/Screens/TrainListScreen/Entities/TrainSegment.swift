@@ -19,7 +19,7 @@ struct TrainSegment: Codable {
     let duration: String
     let start_date: String
     let arrival_platform: String
-    let waiting_time: String
+    let departure_date: Date
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -35,7 +35,7 @@ struct TrainSegment: Codable {
         
         let departureString = try container.decode(String.self, forKey: .departure)
         self.departure = formattedTimeFrom(departureString)
-        self.waiting_time = Date.fromISO8601(string: departureString).waitingTime
+        self.departure_date = Date.fromISO8601(string: departureString)
         
         let durationTimeInterval = try container.decode(TimeInterval.self, forKey: .duration)
         self.duration = durationTimeInterval.formattedMinutes
