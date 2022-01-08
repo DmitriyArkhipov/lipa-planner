@@ -17,6 +17,7 @@ struct SearchScreen: View {
             .clipped()
             .background(Colors.Background.edgesIgnoringSafeArea(.all))
             .navigationBarHidden(true)
+            .navigationTitle("")
         }
     }
 }

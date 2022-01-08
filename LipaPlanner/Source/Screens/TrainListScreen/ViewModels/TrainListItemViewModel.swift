@@ -31,9 +31,9 @@ class TrainListItemViewModel: Identifiable {
         self.segment = segment
         
         self.fromTitle = segment.from.title
-        self.fromTime = segment.arrival
+        self.fromTime = segment.departure
         self.toTitle = segment.to.title
-        self.toTime = segment.departure
+        self.toTime = segment.arrival
         self.duration = segment.duration
         self.trainThread = segment.thread.title
         

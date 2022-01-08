@@ -37,7 +37,7 @@ struct DateSelectorButton: View {
             }.foregroundColor(selectedTitleColor)
         })
         .padding(.vertical, 7)
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 10)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
                 .stroke(selectedButtonColor, lineWidth: 2)

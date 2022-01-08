@@ -27,19 +27,20 @@ struct TrainListScreen: View {
                         }
                     }
                 }
+                .padding(.top, 16.0)
             }
             .navigationBarTitle("Расписание", displayMode: .inline)
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading:
-                Button(
-                    action: onPressBack,
-                    label: {
-                        HStack {
-                            Image("BackButton")
-                        }
-                    }
-                )
-            )
+//            .navigationBarBackButtonHidden(true)
+//            .navigationBarItems(leading:
+//                Button(
+//                    action: onPressBack,
+//                    label: {
+//                        HStack {
+//                            Image("BackButton")
+//                        }
+//                    }
+//                )
+//            )
             .background(Colors.Background.edgesIgnoringSafeArea(.all))
             .onAppear {
                 if self.viewModel.itemViewModels.isEmpty {

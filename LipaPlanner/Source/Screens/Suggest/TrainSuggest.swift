@@ -64,11 +64,14 @@ struct TrainSuggest: View {
                 .foregroundColor(Colors.InputFilled)
                 .listStyle(InsetGroupedListStyle())
             }
+            .padding(.top, 16.0)
             .background(Colors.Background.edgesIgnoringSafeArea(.all))
             .navigationBarTitle(title, displayMode: .inline)
             .navigationBarItems(leading: Button(action: onPressBack, label: {
                 HStack {
-                    Image("BackButton")
+                    Image("CloseButton")
+                        .renderingMode(.template)
+                        .foregroundColor(Colors.ActionButton)
                 }
             }))
         }
