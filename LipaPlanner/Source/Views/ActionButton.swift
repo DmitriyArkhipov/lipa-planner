@@ -10,7 +10,7 @@ import SwiftUI
 struct GreenButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .padding(.all, 20)
+            .padding(.all, 16)
             .background(configuration.isPressed ? Colors.ActionButtonPressed : Colors.ActionButton)
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))

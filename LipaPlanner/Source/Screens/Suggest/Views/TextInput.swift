@@ -40,7 +40,7 @@ struct TextInput: View {
                 isFocused: isFocused ?? false
             )
         }
-        .padding(.all, 20)
+        .padding(.all, 16)
         .background(Colors.InputBackground)
         .foregroundColor(Colors.InputFilled)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
