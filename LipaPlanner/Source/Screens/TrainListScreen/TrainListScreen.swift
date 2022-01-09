@@ -14,10 +14,22 @@ struct TrainListScreen: View {
     
     @ObservedObject var viewModel: TrainListScreenViewModel
     
-    let onPressBack: () -> Void
-    
     var body: some View {
             ScrollView {
+                DaySelector(
+                    dateSelected: self.$viewModel.dateActiveSelected,
+                    dateValueSelected: self.$viewModel.dateSelected,
+                    todaySelected: self.$viewModel.todaySelected,
+                    tomorrowSelected: self.$viewModel.tomorrowSelected
+                )
+                .padding(.horizontal, 16.0)
+                .padding(.vertical, 16.0)
+                SortSelector(
+                    acceleratedSelected: self.$viewModel.acceleratedSelected,
+                    alldSelected: self.$viewModel.alldSelected
+                )
+                .padding(.horizontal, 16.0)
+                .padding(.bottom, 16.0)
                 TrainListSkeleton(loading: self.viewModel.isLoading) {
                     LazyVStack {
                         ForEach(self.viewModel.itemViewModels, id: \.id) { item in
@@ -30,17 +42,6 @@ struct TrainListScreen: View {
                 .padding(.top, 16.0)
             }
             .navigationBarTitle("Расписание", displayMode: .inline)
-//            .navigationBarBackButtonHidden(true)
-//            .navigationBarItems(leading:
-//                Button(
-//                    action: onPressBack,
-//                    label: {
-//                        HStack {
-//                            Image("BackButton")
-//                        }
-//                    }
-//                )
-//            )
             .background(Colors.Background.edgesIgnoringSafeArea(.all))
             .onAppear {
                 if self.viewModel.itemViewModels.isEmpty {
@@ -53,8 +54,7 @@ struct TrainListScreen: View {
 struct TrainListScreen_Previews: PreviewProvider {
     static var previews: some View {
         TrainListScreen(
-            viewModel: TrainListScreenViewModel(query: nil),
-            onPressBack: {}
+            viewModel: TrainListScreenViewModel(query: nil)
         ).preferredColorScheme(.dark)
     }
 }

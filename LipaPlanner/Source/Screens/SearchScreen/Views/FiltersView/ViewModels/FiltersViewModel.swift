@@ -39,24 +39,7 @@ class FiltersViewModel: ObservableObject {
             self.todaySelected = false
         }
     }
-    @Published var acceleratedSelected: Bool = true {
-        didSet {
-            guard acceleratedSelected else { return }
-            
-            self.queryBuilder.sort = .accelerated
-            
-            self.alldSelected = false
-        }
-    }
-    @Published var alldSelected: Bool = false {
-        didSet {
-            guard alldSelected else { return }
-            
-            self.queryBuilder.sort = .all
 
-            self.acceleratedSelected = false
-        }
-    }
     @Published var dateActiveSelected: Bool = false {
         didSet {
             guard dateActiveSelected else {
@@ -91,6 +74,25 @@ class FiltersViewModel: ObservableObject {
             }
             
             self.queryBuilder.setEndPoint(selectedTo)
+        }
+    }
+    
+    @Published var acceleratedSelected: Bool = true {
+        didSet {
+            guard acceleratedSelected else { return }
+            
+            self.queryBuilder.sort = .accelerated
+            
+            self.alldSelected = false
+        }
+    }
+    @Published var alldSelected: Bool = false {
+        didSet {
+            guard alldSelected else { return }
+            
+            self.queryBuilder.sort = .all
+
+            self.acceleratedSelected = false
         }
     }
     

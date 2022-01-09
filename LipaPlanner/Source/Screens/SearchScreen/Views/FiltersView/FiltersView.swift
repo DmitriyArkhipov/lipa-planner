@@ -37,10 +37,7 @@ struct FiltersView: View {
             }
             NavigationLinkFromCode(isActive: self.$viewModel.trainListOpened) {
                 TrainListScreen(
-                    viewModel: TrainListScreenViewModel(query: self.viewModel.trainListQuery),
-                    onPressBack: {
-                        self.viewModel.trainListOpened = false
-                    }
+                    viewModel: TrainListScreenViewModel(query: self.viewModel.trainListQuery)
                 )
             }
         }
