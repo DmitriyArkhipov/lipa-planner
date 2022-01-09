@@ -27,17 +27,10 @@ struct FiltersView: View {
                 .padding(.bottom, 10.0)
             InputButton(placeholder: "Куда", selected: self.$viewModel.selectedTo)
                 .padding(.bottom, 20.0)
-            HStack {
-                SelectorButton(
-                    title: "Ускоренные",
-                    selected: self.$viewModel.acceleratedSelected
-                )
-                .padding(.trailing, horizontalPadding)
-                SelectorButton(
-                    title: "Все",
-                    selected: self.$viewModel.alldSelected
-                )
-            }
+            SortSelector(
+                acceleratedSelected: self.$viewModel.acceleratedSelected,
+                alldSelected: self.$viewModel.alldSelected
+            )
             .padding(.bottom, 24.0)
             ActionButton(title: "Показать расписание") {
                 self.viewModel.trainListOpen()
