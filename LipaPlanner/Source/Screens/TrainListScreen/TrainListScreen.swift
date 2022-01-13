@@ -54,7 +54,7 @@ struct TrainListScreen: View {
 struct TrainListScreen_Previews: PreviewProvider {
     static var previews: some View {
         TrainListScreen(
-            viewModel: TrainListScreenViewModel(query: nil)
+            viewModel: TrainListScreenViewModel(query: nil, sort: nil)
         ).preferredColorScheme(.dark)
     }
 }

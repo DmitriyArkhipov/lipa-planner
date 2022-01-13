@@ -98,10 +98,12 @@ class FiltersViewModel: ObservableObject {
     
     @Published var trainListOpened: Bool = false
     @Published var trainListQuery: QueryBuilder.Query?
+    @Published var trainListSort: QueryBuilder.Sort?
     
     func trainListOpen() {
         do {
             self.trainListQuery = try self.queryBuilder.getResult()
+            self.trainListSort = self.queryBuilder.sort
             self.trainListOpened = true
         } catch {
             debugPrint("error")

@@ -32,6 +32,12 @@ class QueryBuilder {
     
     var sort: Sort = .all
     
+    convenience init(from guery: Query) {
+        self.init()
+        
+        self.query.merge(query) { $1 }
+    }
+    
     func setStartPoint(_ startPoint: RaspSuggestedItem) {
         query["from"] = startPoint.pointKey
     }

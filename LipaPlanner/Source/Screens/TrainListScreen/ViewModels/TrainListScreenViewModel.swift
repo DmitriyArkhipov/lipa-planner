@@ -11,6 +11,9 @@ import Combine
 class TrainListScreenViewModel: ObservableObject {
     let query: QueryBuilder.Query?
     
+    private var queryBuilder: QueryBuilder?
+    private var initialized = false
+    
     @Published var isLoading: Bool = false
     @Published var itemViewModels: [TrainListItemViewModel] = []
     
@@ -18,7 +21,9 @@ class TrainListScreenViewModel: ObservableObject {
         didSet {
             guard acceleratedSelected else { return }
             
-//            self.queryBuilder.sort = .accelerated
+            if initialized {
+                self.queryBuilder!.sort = .accelerated
+            }
             
             self.alldSelected = false
         }
@@ -27,7 +32,9 @@ class TrainListScreenViewModel: ObservableObject {
         didSet {
             guard alldSelected else { return }
             
-//            self.queryBuilder.sort = .all
+            if initialized {
+                self.queryBuilder!.sort = .all
+            }
 
             self.acceleratedSelected = false
         }
@@ -41,7 +48,9 @@ class TrainListScreenViewModel: ObservableObject {
             
             let today = Date()
             
-//            self.queryBuilder.setDate(today)
+            if initialized {
+                self.queryBuilder!.setDate(today)
+            }
             
             self.dateSelected = today
             self.dateActiveSelected = false
@@ -55,8 +64,10 @@ class TrainListScreenViewModel: ObservableObject {
             }
             
             let tomorrow = Date().dayAfter
-
-//            self.queryBuilder.setDate(tomorrow)
+            
+            if initialized {
+                self.queryBuilder!.setDate(tomorrow)
+            }
             
             self.dateSelected = tomorrow
             self.dateActiveSelected = false
@@ -75,12 +86,28 @@ class TrainListScreenViewModel: ObservableObject {
     }
     @Published var dateSelected: Date = Date() {
         didSet {
-//            self.queryBuilder.setDate(dateSelected)
+            if initialized {
+                self.queryBuilder!.setDate(dateSelected)
+            }
         }
     }
     
-    init(query: QueryBuilder.Query?) {
+    init(query: QueryBuilder.Query?, sort: QueryBuilder.Sort?) {
         self.query = query
+        
+        if let query = query, let sort = sort {
+            self.queryBuilder = QueryBuilder(from: query)
+            self.queryBuilder!.sort = sort
+            
+            switch sort {
+            case .accelerated:
+                self.acceleratedSelected = true
+            case .all:
+                self.alldSelected = true
+            }
+        }
+        
+        self.initialized = true
     }
     
     func fetch() {
