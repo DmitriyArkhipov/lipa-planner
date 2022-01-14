@@ -53,15 +53,15 @@ extension Date {
 
         let tomorrowDay = todayDay + 1
 
-        let inputDay = calendar.component(.day, from: self)
-        let inputMonth = calendar.component(.month, from: self)
+        let selfDay = calendar.component(.day, from: self)
+        let selfMonth = calendar.component(.month, from: self)
 
         let waitingHour = calendar.component(.hour, from: self.waitingDate)
         let waitingMinute = calendar.component(.minute, from: self.waitingDate)
 
         if
-            todayDay == inputDay,
-            todayMonth == inputMonth,
+            todayDay == selfDay,
+            todayMonth == selfMonth,
             today.timeIntervalSince1970 < self.timeIntervalSince1970
         {
             let time = self.waitingDate.formattedTimeWithUnits
@@ -69,7 +69,7 @@ extension Date {
             return ("Через \(time)".uppercased(), .soon)
         } else if waitingHour == 0 && waitingMinute == 0 {
             return ("Сейчас".uppercased(), .now)
-        } else if tomorrowDay == inputDay || todayDay == inputDay {
+        } else if (tomorrowDay == selfDay) {
             return ("Завтра".uppercased(), .tomorrow)
         }
 
