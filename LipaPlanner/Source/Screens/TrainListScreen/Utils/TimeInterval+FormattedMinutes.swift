@@ -12,4 +12,8 @@ extension TimeInterval {
         let minutes = self / 60
         return "\(Int(minutes)) мин"
     }
+    
+    var minutes: Double {
+        return self / 60
+    }
 }

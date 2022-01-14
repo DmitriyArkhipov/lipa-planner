@@ -17,6 +17,7 @@ struct TrainSegment: Codable {
     let days: String?
     let to: TrainStation
     let duration: String
+    let durationMinutes: Double
     let start_date: String
     let arrival_platform: String
     let departure_date: Date
@@ -39,6 +40,7 @@ struct TrainSegment: Codable {
         
         let durationTimeInterval = try container.decode(TimeInterval.self, forKey: .duration)
         self.duration = durationTimeInterval.formattedMinutes
+        self.durationMinutes = durationTimeInterval.minutes
         
         self.from = try container.decode(TrainStation.self, forKey: .from)
         self.thread = try container.decode(TrainThread.self, forKey: .thread)

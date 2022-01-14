@@ -14,6 +14,8 @@ class TrainListScreenViewModel: ObservableObject {
     
     let filtersViewModel: TrainListFiltersViewModel
     
+    private var unsortedItemViewModels: [TrainListItemViewModel] = []
+    
     init(filersViewModel: TrainListFiltersViewModel) {
         self.filtersViewModel = filersViewModel
         
@@ -27,14 +29,14 @@ class TrainListScreenViewModel: ObservableObject {
         }
     }
     
-    var handleChangeSort: () -> Void {
-        return { [weak self] in
-            self?.sort()
+    var handleChangeSort: (QueryBuilder.Sort) -> Void {
+        return { [weak self] sort in
+            self?.sort(sort)
         }
     }
     
     func fetch() {
-        guard let query = self.filtersViewModel.query else {
+        guard let query = self.filtersViewModel.query, let sort = self.filtersViewModel.sort else {
             return
         }
         
@@ -44,9 +46,14 @@ class TrainListScreenViewModel: ObservableObject {
             query: query,
             succeed: { [weak self] segments in
                 DispatchQueue.main.async {
-                    self?.itemViewModels = segments.map { item in
+                    let viewModels = segments.map { item in
                         return TrainListItemViewModel(segment: item)
                     }
+                    
+                    self?.itemViewModels = viewModels
+                    self?.unsortedItemViewModels = viewModels
+                    
+                    self?.sort(sort)
                 }
             },
             failure: { error in
@@ -62,7 +69,22 @@ class TrainListScreenViewModel: ObservableObject {
         })
     }
     
-    func sort() {
-        debugPrint("sort")
+    func sort(_ sort: QueryBuilder.Sort) {
+        switch sort {
+        case .all:
+            self.itemViewModels = self.unsortedItemViewModels
+        case .accelerated:
+            let viewModels = self.unsortedItemViewModels.reduce([]) { result, item -> [TrainListItemViewModel] in
+                var newResult = result
+                
+                if item.segment.durationMinutes < 40 {
+                    newResult.append(item)
+                }
+                
+                return newResult
+            }
+            
+            self.itemViewModels = viewModels
+        }
     }
 }

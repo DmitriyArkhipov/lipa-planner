@@ -9,12 +9,16 @@ import Foundation
 import Combine
 
 class TrainListFiltersViewModel: ObservableObject {
-    typealias ChangeHandler = () -> Void
+    typealias ChangeQueryHandler = () -> Void
+    typealias ChangeSortHandler = (QueryBuilder.Sort) -> Void
     
     let query: QueryBuilder.Query?
     
-    var onChangeQuery: ChangeHandler?
-    var onChangeSort: ChangeHandler?
+    var onChangeQuery: ChangeQueryHandler?
+    var onChangeSort: ChangeSortHandler?
+    var sort: QueryBuilder.Sort? {
+        return self.queryBuilder?.sort
+    }
     
     private var queryBuilder: QueryBuilder?
     private var initialized = false
@@ -26,7 +30,7 @@ class TrainListFiltersViewModel: ObservableObject {
             if initialized {
                 self.queryBuilder!.sort = .accelerated
                 
-                self.onChangeSort?()
+                self.onChangeSort?(.accelerated)
             }
             
             self.alldSelected = false
@@ -39,7 +43,7 @@ class TrainListFiltersViewModel: ObservableObject {
             if initialized {
                 self.queryBuilder!.sort = .all
                 
-                self.onChangeSort?()
+                self.onChangeSort?(.all)
             }
 
             self.acceleratedSelected = false
