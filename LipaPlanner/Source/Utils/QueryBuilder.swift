@@ -7,9 +7,6 @@
 
 import Foundation
 
-// TODO: - Будет переиспользован в списке с электричками
-// TODO: - Пока не самая оптимальная валидация query можно сделать получше
-
 struct QueryBuilderError: Error {
     let emptyFields: [QueryBuilder.RequiredKeys]
 }
