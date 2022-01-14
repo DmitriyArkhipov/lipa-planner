@@ -9,116 +9,39 @@ import Foundation
 import Combine
 
 class TrainListScreenViewModel: ObservableObject {
-    let query: QueryBuilder.Query?
-    
-    private var queryBuilder: QueryBuilder?
-    private var initialized = false
-    
     @Published var isLoading: Bool = false
     @Published var itemViewModels: [TrainListItemViewModel] = []
     
-    @Published var acceleratedSelected: Bool = true  {
-        didSet {
-            guard acceleratedSelected else { return }
-            
-            if initialized {
-                self.queryBuilder!.sort = .accelerated
-            }
-            
-            self.alldSelected = false
-        }
+    let filtersViewModel: TrainListFiltersViewModel
+    
+    init(filersViewModel: TrainListFiltersViewModel) {
+        self.filtersViewModel = filersViewModel
+        
+        self.filtersViewModel.onChangeQuery = handleChangeQuery
+        self.filtersViewModel.onChangeSort = handleChangeSort
     }
-    @Published var alldSelected: Bool = false {
-        didSet {
-            guard alldSelected else { return }
-            
-            if initialized {
-                self.queryBuilder!.sort = .all
-            }
-
-            self.acceleratedSelected = false
+    
+    var handleChangeQuery: () -> Void {
+        return { [weak self] in
+            self?.fetch()
         }
     }
     
-    @Published var todaySelected: Bool = true {
-        didSet {
-            guard todaySelected else {
-                return
-            }
-            
-            let today = Date()
-            
-            if initialized {
-                self.queryBuilder!.setDate(today)
-            }
-            
-            self.dateSelected = today
-            self.dateActiveSelected = false
-            self.tomorrowSelected = false
+    var handleChangeSort: () -> Void {
+        return { [weak self] in
+            self?.sort()
         }
-    }
-    @Published var tomorrowSelected: Bool = false {
-        didSet {
-            guard tomorrowSelected else {
-                return
-            }
-            
-            let tomorrow = Date().dayAfter
-            
-            if initialized {
-                self.queryBuilder!.setDate(tomorrow)
-            }
-            
-            self.dateSelected = tomorrow
-            self.dateActiveSelected = false
-            self.todaySelected = false
-        }
-    }
-    @Published var dateActiveSelected: Bool = false {
-        didSet {
-            guard dateActiveSelected else {
-                return
-            }
-            
-            self.todaySelected = false
-            self.tomorrowSelected = false
-        }
-    }
-    @Published var dateSelected: Date = Date() {
-        didSet {
-            if initialized {
-                self.queryBuilder!.setDate(dateSelected)
-            }
-        }
-    }
-    
-    init(query: QueryBuilder.Query?, sort: QueryBuilder.Sort?) {
-        self.query = query
-        
-        if let query = query, let sort = sort {
-            self.queryBuilder = QueryBuilder(from: query)
-            self.queryBuilder!.sort = sort
-            
-            switch sort {
-            case .accelerated:
-                self.acceleratedSelected = true
-            case .all:
-                self.alldSelected = true
-            }
-        }
-        
-        self.initialized = true
     }
     
     func fetch() {
-        guard query != nil else {
+        guard let query = self.filtersViewModel.query else {
             return
         }
         
         self.isLoading = true
         
         RaspSearchGateway.fetch(
-            query: self.query!,
+            query: query,
             succeed: { [weak self] segments in
                 DispatchQueue.main.async {
                     self?.itemViewModels = segments.map { item in
@@ -139,7 +62,7 @@ class TrainListScreenViewModel: ObservableObject {
         })
     }
     
-    func handleChangeQuery() {
-        
+    func sort() {
+        debugPrint("sort")
     }
 }

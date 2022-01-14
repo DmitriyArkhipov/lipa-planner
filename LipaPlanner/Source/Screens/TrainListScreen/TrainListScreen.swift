@@ -16,18 +16,7 @@ struct TrainListScreen: View {
     
     var body: some View {
             ScrollView {
-                DaySelector(
-                    dateSelected: self.$viewModel.dateActiveSelected,
-                    dateValueSelected: self.$viewModel.dateSelected,
-                    todaySelected: self.$viewModel.todaySelected,
-                    tomorrowSelected: self.$viewModel.tomorrowSelected
-                )
-                .padding(.horizontal, 16.0)
-                .padding(.vertical, 16.0)
-                SortSelector(
-                    acceleratedSelected: self.$viewModel.acceleratedSelected,
-                    alldSelected: self.$viewModel.alldSelected
-                )
+                TrainListFiltersView(viewModel: self.viewModel.filtersViewModel)
                 .padding(.horizontal, 16.0)
                 .padding(.bottom, 16.0)
                 TrainListSkeleton(loading: self.viewModel.isLoading) {
@@ -54,7 +43,7 @@ struct TrainListScreen: View {
 struct TrainListScreen_Previews: PreviewProvider {
     static var previews: some View {
         TrainListScreen(
-            viewModel: TrainListScreenViewModel(query: nil, sort: nil)
+            viewModel: TrainListScreenViewModel(filersViewModel: TrainListFiltersViewModel(query: nil, sort: nil))
         ).preferredColorScheme(.dark)
     }
 }
