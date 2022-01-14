@@ -32,4 +32,6 @@ final class Colors {
     
     static let TrainItemTitleStationColor = Color("TrainItemTitleStationColor")
     static let TrainItemSpecSecondBackground = Color("TrainItemSpecSecondBackground")
+    
+    static let RevertButtonColor = Color("RevertButtonColor")
 }

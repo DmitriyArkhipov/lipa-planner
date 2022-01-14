@@ -23,10 +23,28 @@ struct FiltersView: View {
                 tomorrowSelected: self.$viewModel.tomorrowSelected
             )
             .padding(.bottom, 20.0)
-            InputButton(placeholder: "Откуда", selected: self.$viewModel.selectedFrom)
-                .padding(.bottom, 10.0)
-            InputButton(placeholder: "Куда", selected: self.$viewModel.selectedTo)
-                .padding(.bottom, 20.0)
+            ZStack {
+                VStack {
+                    InputButton(placeholder: "Откуда", selected: self.$viewModel.selectedFrom)
+                        .padding(.bottom, 10.0)
+                    InputButton(placeholder: "Куда", selected: self.$viewModel.selectedTo)
+                }
+                HStack {
+                    Spacer()
+                    Button(action: {}, label: {
+                        ZStack {
+                            Circle().fill(Colors.RevertButtonColor).frame(width: 40, height: 40)
+                            Image("RevertButtonIcon")
+                        }
+                    })
+                        .padding(.trailing, 20.0)
+                }
+            }.padding(.bottom, 20.0)
+            
+            
+            
+            
+            
             SortSelector(
                 acceleratedSelected: self.$viewModel.acceleratedSelected,
                 alldSelected: self.$viewModel.alldSelected
