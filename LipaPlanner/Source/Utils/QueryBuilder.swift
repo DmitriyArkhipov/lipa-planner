@@ -35,7 +35,11 @@ class QueryBuilder {
     convenience init(from guery: Query) {
         self.init()
         
-        self.query.merge(query) { $1 }
+        var newQuery = self.query
+        
+        newQuery.merge(guery) { $1 }
+        
+        self.query = newQuery
     }
     
     func setStartPoint(_ startPoint: RaspSuggestedItem) {

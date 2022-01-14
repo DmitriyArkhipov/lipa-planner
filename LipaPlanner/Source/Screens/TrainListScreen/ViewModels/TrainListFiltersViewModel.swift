@@ -12,12 +12,15 @@ class TrainListFiltersViewModel: ObservableObject {
     typealias ChangeQueryHandler = () -> Void
     typealias ChangeSortHandler = (QueryBuilder.Sort) -> Void
     
-    let query: QueryBuilder.Query?
+    private let initialQuery: QueryBuilder.Query?
     
     var onChangeQuery: ChangeQueryHandler?
     var onChangeSort: ChangeSortHandler?
     var sort: QueryBuilder.Sort? {
         return self.queryBuilder?.sort
+    }
+    var query: QueryBuilder.Query? {
+        return try? self.queryBuilder?.getResult()
     }
     
     private var queryBuilder: QueryBuilder?
@@ -109,11 +112,24 @@ class TrainListFiltersViewModel: ObservableObject {
     }
     
     init(query: QueryBuilder.Query?, sort: QueryBuilder.Sort?) {
-        self.query = query
+        self.initialQuery = query
         
         if let query = query, let sort = sort {
             self.queryBuilder = QueryBuilder(from: query)
             self.queryBuilder!.sort = sort
+            
+            if let dateISO8601String = query["date"] {
+                let date = Date.fromISO8601(string: dateISO8601String)
+
+                if date.isToday {
+                    self.todaySelected = true
+                } else if date.isTomorrow {
+                    self.tomorrowSelected = true
+                } else {
+                    self.dateSelected = date
+                    self.dateActiveSelected = true
+                }
+            }
             
             switch sort {
             case .accelerated:
