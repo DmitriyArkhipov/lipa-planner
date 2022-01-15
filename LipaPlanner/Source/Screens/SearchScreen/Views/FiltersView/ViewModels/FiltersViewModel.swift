@@ -100,6 +100,15 @@ class FiltersViewModel: ObservableObject {
     @Published var trainListQuery: QueryBuilder.Query?
     @Published var trainListSort: QueryBuilder.Sort?
     
+    private lazy var queryBuilder: QueryBuilder = {
+        let queryBulder = QueryBuilder()
+        
+        queryBulder.setDate(Date())
+        queryBulder.sort = .accelerated
+        
+        return queryBulder
+    }()
+    
     func trainListOpen() {
         do {
             self.trainListQuery = try self.queryBuilder.getResult()
@@ -110,12 +119,13 @@ class FiltersViewModel: ObservableObject {
         }
     }
     
-    private lazy var queryBuilder: QueryBuilder = {
-        let queryBulder = QueryBuilder()
+    func replaceFromAndTo() {
+        let selectedFrom = self.selectedFrom
+        let selectedTo = self.selectedTo
         
-        queryBulder.setDate(Date())
-        queryBulder.sort = .accelerated
-        
-        return queryBulder
-    }()
+        if selectedFrom != nil, selectedTo != nil {
+            self.selectedFrom = selectedTo
+            self.selectedTo = selectedFrom
+        }
+    }
 }

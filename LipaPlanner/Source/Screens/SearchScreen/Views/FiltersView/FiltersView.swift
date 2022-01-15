@@ -31,7 +31,9 @@ struct FiltersView: View {
                 }
                 HStack {
                     Spacer()
-                    Button(action: {}, label: {
+                    Button(action: {
+                        self.viewModel.replaceFromAndTo()
+                    }, label: {
                         ZStack {
                             Circle().fill(Colors.RevertButtonColor).frame(width: 40, height: 40)
                             Image("RevertButtonIcon")

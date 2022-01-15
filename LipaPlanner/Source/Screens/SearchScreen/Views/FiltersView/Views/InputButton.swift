@@ -23,11 +23,10 @@ struct InputButton: View {
     
     @Binding var selected: RaspSuggestedItem?
     
-    @State var value: String?
     @State var openSuggest = false
     
     var selectedColor: Color {
-        return value != nil ? Colors.InputFilled : Colors.InputPlaceholder
+        return self.selected?.titleRu != nil ? Colors.InputFilled : Colors.InputPlaceholder
     }
     
     var body: some View {
@@ -36,7 +35,7 @@ struct InputButton: View {
         }, label: {
             VStack {
                 HStack {
-                    Text(value ?? placeholder).foregroundColor(self.selectedColor)
+                    Text(self.selected?.titleRu ?? placeholder).foregroundColor(self.selectedColor)
                     Spacer()
                 }
             }
@@ -50,7 +49,6 @@ struct InputButton: View {
                     onPressBack: {
                         self.openSuggest = false
                     }, onSelected: { trainSuggestItem in
-                        self.value = trainSuggestItem.titleRu
                         self.selected = trainSuggestItem
                         self.openSuggest = false
                     }
