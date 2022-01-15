@@ -42,11 +42,6 @@ struct FiltersView: View {
                         .padding(.trailing, 20.0)
                 }
             }.padding(.bottom, 20.0)
-            
-            
-            
-            
-            
             SortSelector(
                 acceleratedSelected: self.$viewModel.acceleratedSelected,
                 alldSelected: self.$viewModel.alldSelected
