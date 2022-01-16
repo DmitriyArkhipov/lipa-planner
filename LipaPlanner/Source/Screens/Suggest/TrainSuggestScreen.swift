@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftUIRefresh
 
-struct TrainSuggest: View {
+struct TrainSuggestScreen: View {
     let title: String
     let onPressBack: () -> Void
     let onSelected: (RaspSuggestedItem) -> Void
@@ -80,6 +80,6 @@ struct TrainSuggest: View {
 
 struct TrainSuggest_Previews: PreviewProvider {
     static var previews: some View {
-        TrainSuggest(title: "Test", onPressBack: {}, onSelected: { selected in print("test")}).preferredColorScheme(.dark)
+        TrainSuggestScreen(title: "Test", onPressBack: {}, onSelected: { selected in print("test")}).preferredColorScheme(.dark)
     }
 }

@@ -32,11 +32,12 @@
 		CD36A692277238CE00C66763 /* WaitingTimeLabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A691277238CE00C66763 /* WaitingTimeLabelTest.swift */; };
 		CD36A69427723FAF00C66763 /* Date+waitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A682276F1B3400C66763 /* Date+waitingTime.swift */; };
 		CD36A69A2772491300C66763 /* DaySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD36A6992772491300C66763 /* DaySelector.swift */; };
+		CD5722DE2792B8E000AFEE57 /* PathEvaluationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5722DD2792B8E000AFEE57 /* PathEvaluationScreen.swift */; };
 		CD66CE4926E49E3B0011828A /* SelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4826E49E3B0011828A /* SelectorButton.swift */; };
 		CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */; };
 		CD66CE4D26E4AA2A0011828A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE4C26E4AA2A0011828A /* ActionButton.swift */; };
 		CD66CE5226E628CF0011828A /* InputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5126E628CF0011828A /* InputButton.swift */; };
-		CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5526E71E860011828A /* TrainSuggest.swift */; };
+		CD66CE5626E71E860011828A /* TrainSuggestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5526E71E860011828A /* TrainSuggestScreen.swift */; };
 		CD66CE5826E727F90011828A /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66CE5726E727F90011828A /* TextInput.swift */; };
 		CD6CD69F2755D3EB00DA385C /* Date+dayAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */; };
 		CD6CD6A5275E214500DA385C /* TrainTodayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6CD6A4275E214500DA385C /* TrainTodayLabel.swift */; };
@@ -107,11 +108,12 @@
 		CD36A688277238A900C66763 /* LipaPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LipaPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD36A691277238CE00C66763 /* WaitingTimeLabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingTimeLabelTest.swift; sourceTree = "<group>"; };
 		CD36A6992772491300C66763 /* DaySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelector.swift; sourceTree = "<group>"; };
+		CD5722DD2792B8E000AFEE57 /* PathEvaluationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEvaluationScreen.swift; sourceTree = "<group>"; };
 		CD66CE4826E49E3B0011828A /* SelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorButton.swift; sourceTree = "<group>"; };
 		CD66CE4A26E4A3AE0011828A /* DateSelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorButton.swift; sourceTree = "<group>"; };
 		CD66CE4C26E4AA2A0011828A /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		CD66CE5126E628CF0011828A /* InputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputButton.swift; sourceTree = "<group>"; };
-		CD66CE5526E71E860011828A /* TrainSuggest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSuggest.swift; sourceTree = "<group>"; };
+		CD66CE5526E71E860011828A /* TrainSuggestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSuggestScreen.swift; sourceTree = "<group>"; };
 		CD66CE5726E727F90011828A /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		CD6CD69E2755D3EB00DA385C /* Date+dayAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+dayAfter.swift"; sourceTree = "<group>"; };
 		CD6CD6A4275E214500DA385C /* TrainTodayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainTodayLabel.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		CD04EF8A26E39CDD002CA116 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CD5722DC2792B8C200AFEE57 /* PathEvaluation */,
 				CD66CE4726E49DD70011828A /* Suggest */,
 				CD04EF9426E39F65002CA116 /* TrainCardScreen */,
 				CD04EF9326E39F3F002CA116 /* NotificationScreen */,
@@ -360,6 +363,14 @@
 			path = LipaPlannerTests;
 			sourceTree = "<group>";
 		};
+		CD5722DC2792B8C200AFEE57 /* PathEvaluation */ = {
+			isa = PBXGroup;
+			children = (
+				CD5722DD2792B8E000AFEE57 /* PathEvaluationScreen.swift */,
+			);
+			path = PathEvaluation;
+			sourceTree = "<group>";
+		};
 		CD66CE4726E49DD70011828A /* Suggest */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,7 +378,7 @@
 				CDF0EA9D26FADB010022A9EB /* Entities */,
 				CDF0EA9A26FAD8590022A9EB /* Gateways */,
 				CDD6A6D226E9C99700BCA1E8 /* Views */,
-				CD66CE5526E71E860011828A /* TrainSuggest.swift */,
+				CD66CE5526E71E860011828A /* TrainSuggestScreen.swift */,
 			);
 			path = Suggest;
 			sourceTree = "<group>";
@@ -690,8 +701,9 @@
 				CD36A6742768E1AF00C66763 /* TrainListSkeleton.swift in Sources */,
 				CD0B8C82270D5D7A002247E8 /* Date+FormattedForView.swift in Sources */,
 				CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */,
-				CD66CE5626E71E860011828A /* TrainSuggest.swift in Sources */,
+				CD66CE5626E71E860011828A /* TrainSuggestScreen.swift in Sources */,
 				CD6CD6B8276627CB00DA385C /* TrainThread.swift in Sources */,
+				CD5722DE2792B8E000AFEE57 /* PathEvaluationScreen.swift in Sources */,
 				CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */,
 				CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */,
 				CD36A69A2772491300C66763 /* DaySelector.swift in Sources */,

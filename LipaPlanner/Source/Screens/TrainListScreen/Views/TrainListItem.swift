@@ -10,6 +10,8 @@ import SwiftUI
 struct TrainListItem: View {
     let viewModel: TrainListItemViewModel
     
+    @State var pathEvaluationPresended: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -19,6 +21,7 @@ struct TrainListItem: View {
                 Spacer()
                 Button(action: {
                     debugPrint("press reminder")
+                    self.pathEvaluationPresended = true
                 }) {
                     Image("ReminderIcon")
                 }
@@ -74,6 +77,8 @@ struct TrainListItem: View {
         }
         .background(Colors.RowBackground)
         .cornerRadius(24.0)
+        .sheet(isPresented: self.$pathEvaluationPresended, onDismiss: {}, content: { PathEvaluationScreen(onPressBack: { self.pathEvaluationPresended = false })
+        })
     }
 }
 

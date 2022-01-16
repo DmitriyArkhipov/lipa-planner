@@ -44,7 +44,7 @@ struct InputButton: View {
         .sheet(
             isPresented: $openSuggest,
             content: {
-                TrainSuggest(
+                TrainSuggestScreen(
                     title: placeholder,
                     onPressBack: {
                         self.openSuggest = false
