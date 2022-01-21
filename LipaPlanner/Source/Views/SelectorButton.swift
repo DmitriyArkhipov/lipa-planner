@@ -22,6 +22,10 @@ struct SelectorButton: View {
     
     var body: some View {
         Button(action: {
+            guard !selected else {
+                return
+            }
+            
             selected = selected ? false : true
         }, label: {
             Spacer()
