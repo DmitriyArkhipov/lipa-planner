@@ -18,6 +18,9 @@
 		CD0B8C7B270C0C3B002247E8 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8C7A270C0C3B002247E8 /* DatePickerView.swift */; };
 		CD0B8C7E270C9528002247E8 /* RussianCalendar.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD0B8C80270C9528002247E8 /* RussianCalendar.strings */; };
 		CD0B8C82270D5D7A002247E8 /* Date+FormattedForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B8C81270D5D72002247E8 /* Date+FormattedForView.swift */; };
+		CD0D0703279AC9D0003C90A8 /* PathEvaluationScreenActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D0702279AC9D0003C90A8 /* PathEvaluationScreenActions.swift */; };
+		CD0D0705279AC9DC003C90A8 /* PathEvaluationScreenReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D0704279AC9DC003C90A8 /* PathEvaluationScreenReducer.swift */; };
+		CD0D0707279AC9E7003C90A8 /* PathEvaluationScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D0706279AC9E7003C90A8 /* PathEvaluationScreenState.swift */; };
 		CD1A1AA927912157004B8A09 /* TrainListFiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A1AA827912157004B8A09 /* TrainListFiltersViewModel.swift */; };
 		CD1A1AAB2791266D004B8A09 /* TrainListFiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A1AAA2791266D004B8A09 /* TrainListFiltersView.swift */; };
 		CD1A1AAD27916BBA004B8A09 /* Date+isToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A1AAC27916BBA004B8A09 /* Date+isToday.swift */; };
@@ -94,6 +97,9 @@
 		CD0B8C7A270C0C3B002247E8 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		CD0B8C7F270C9528002247E8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/RussianCalendar.strings; sourceTree = "<group>"; };
 		CD0B8C81270D5D72002247E8 /* Date+FormattedForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+FormattedForView.swift"; sourceTree = "<group>"; };
+		CD0D0702279AC9D0003C90A8 /* PathEvaluationScreenActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEvaluationScreenActions.swift; sourceTree = "<group>"; };
+		CD0D0704279AC9DC003C90A8 /* PathEvaluationScreenReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEvaluationScreenReducer.swift; sourceTree = "<group>"; };
+		CD0D0706279AC9E7003C90A8 /* PathEvaluationScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEvaluationScreenState.swift; sourceTree = "<group>"; };
 		CD1A1AA827912157004B8A09 /* TrainListFiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListFiltersViewModel.swift; sourceTree = "<group>"; };
 		CD1A1AAA2791266D004B8A09 /* TrainListFiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListFiltersView.swift; sourceTree = "<group>"; };
 		CD1A1AAC27916BBA004B8A09 /* Date+isToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+isToday.swift"; sourceTree = "<group>"; };
@@ -355,6 +361,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		CD0D06FD279AC988003C90A8 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D0702279AC9D0003C90A8 /* PathEvaluationScreenActions.swift */,
+				CD0D0704279AC9DC003C90A8 /* PathEvaluationScreenReducer.swift */,
+				CD0D0706279AC9E7003C90A8 /* PathEvaluationScreenState.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		CD36A689277238A900C66763 /* LipaPlannerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +382,7 @@
 		CD5722DC2792B8C200AFEE57 /* PathEvaluation */ = {
 			isa = PBXGroup;
 			children = (
+				CD0D06FD279AC988003C90A8 /* Store */,
 				CD5722DD2792B8E000AFEE57 /* PathEvaluationScreen.swift */,
 			);
 			path = PathEvaluation;
@@ -717,11 +734,13 @@
 				CD6CD6C527664D3000DA385C /* RaspPagination.swift in Sources */,
 				CD1A1AAB2791266D004B8A09 /* TrainListFiltersView.swift in Sources */,
 				CD30D80C278ADB0000C461A6 /* SortSelector.swift in Sources */,
+				CD0D0707279AC9E7003C90A8 /* PathEvaluationScreenState.swift in Sources */,
 				CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */,
 				CD66CE5226E628CF0011828A /* InputButton.swift in Sources */,
 				CDD53DBC271313EC007EDF58 /* ApiKeys.swift in Sources */,
 				CD0B8C702709B109002247E8 /* QueryBuilder.swift in Sources */,
 				CD36A678276E05F900C66763 /* Date+FromISO8601String.swift in Sources */,
+				CD0D0705279AC9DC003C90A8 /* PathEvaluationScreenReducer.swift in Sources */,
 				CD6CD6B7276627CB00DA385C /* TrainStation.swift in Sources */,
 				CD1A1AAF27916C43004B8A09 /* Date+isTomorrow.swift in Sources */,
 				CD1A1AAD27916BBA004B8A09 /* Date+isToday.swift in Sources */,
@@ -735,6 +754,7 @@
 				CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */,
 				CDF0EA9C26FAD9130022A9EB /* RaspSuggestGateway.swift in Sources */,
 				CD6CD6A927626A1B00DA385C /* TrainListItemViewModel.swift in Sources */,
+				CD0D0703279AC9D0003C90A8 /* PathEvaluationScreenActions.swift in Sources */,
 				CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */,
 				CDF0EAA126FADBC80022A9EB /* RaspSuggestedItem.swift in Sources */,
 				CD0B8C6C2709B07F002247E8 /* FiltersViewModel.swift in Sources */,

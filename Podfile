@@ -10,5 +10,7 @@ target 'LipaPlanner' do
   pod 'Alamofire'
   pod 'SwiftUIRefresh'
   pod 'SkeletonUI'
+  pod 'ReSwift'
+  pod 'ReSwiftThunk'
 
 end
