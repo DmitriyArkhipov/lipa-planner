@@ -48,4 +48,13 @@ class MapKitProvider {
             succeed(matchingItems.first!)
         }
     }
+    
+    func createAnnotation(from mapKitItem: MKMapItem, type: AnnotationType) -> TypedPointAnnotation {
+        let annotation = TypedPointAnnotation()
+        annotation.coordinate = mapKitItem.placemark.coordinate
+        annotation.title = mapKitItem.placemark.name
+        annotation.type = type
+        
+        return annotation
+    }
 }

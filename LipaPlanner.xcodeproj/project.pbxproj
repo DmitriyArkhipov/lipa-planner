@@ -11,6 +11,8 @@
 		CD00264E27FE9B5900EB9075 /* PathEvaluationScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00264D27FE9B5900EB9075 /* PathEvaluationScreenViewModel.swift */; };
 		CD00265127FE9D8F00EB9075 /* EvaluationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00265027FE9D8F00EB9075 /* EvaluationPath.swift */; };
 		CD00265527FEA44900EB9075 /* MapKitProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00265427FEA44900EB9075 /* MapKitProvider.swift */; };
+		CD002657280200F000EB9075 /* TypedAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD002656280200F000EB9075 /* TypedAnnotaion.swift */; };
+		CD00265A28020B0700EB9075 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00265928020B0700EB9075 /* PlaceAnnotationView.swift */; };
 		CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9526E3A3C7002CA116 /* RootTabs.swift */; };
 		CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9726E3A4C5002CA116 /* SearchScreen.swift */; };
 		CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9C26E3A6C7002CA116 /* FiltersView.swift */; };
@@ -95,6 +97,8 @@
 		CD00264D27FE9B5900EB9075 /* PathEvaluationScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEvaluationScreenViewModel.swift; sourceTree = "<group>"; };
 		CD00265027FE9D8F00EB9075 /* EvaluationPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationPath.swift; sourceTree = "<group>"; };
 		CD00265427FEA44900EB9075 /* MapKitProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitProvider.swift; sourceTree = "<group>"; };
+		CD002656280200F000EB9075 /* TypedAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedAnnotaion.swift; sourceTree = "<group>"; };
+		CD00265928020B0700EB9075 /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
 		CD04EF9526E3A3C7002CA116 /* RootTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabs.swift; sourceTree = "<group>"; };
 		CD04EF9726E3A4C5002CA116 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		CD04EF9C26E3A6C7002CA116 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
@@ -227,8 +231,17 @@
 			isa = PBXGroup;
 			children = (
 				CD00265027FE9D8F00EB9075 /* EvaluationPath.swift */,
+				CD002656280200F000EB9075 /* TypedAnnotaion.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		CD00265828020AEE00EB9075 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD00265928020B0700EB9075 /* PlaceAnnotationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CD04EF8926E39CD5002CA116 /* Source */ = {
@@ -424,6 +437,7 @@
 		CD5722DC2792B8C200AFEE57 /* PathEvaluation */ = {
 			isa = PBXGroup;
 			children = (
+				CD00265828020AEE00EB9075 /* Views */,
 				CD00264F27FE9D7E00EB9075 /* Entities */,
 				CD00264627F9793A00EB9075 /* Utils */,
 				CD0D06FD279AC988003C90A8 /* Store */,
@@ -772,6 +786,7 @@
 				CD66CE4B26E4A3AE0011828A /* DateSelectorButton.swift in Sources */,
 				CD36A69A2772491300C66763 /* DaySelector.swift in Sources */,
 				CD6CD6BF27662AE100DA385C /* Error+isInternetConnection.swift in Sources */,
+				CD002657280200F000EB9075 /* TypedAnnotaion.swift in Sources */,
 				CDD53DB12711E4A2007EDF58 /* TrainListScreenViewModel.swift in Sources */,
 				CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */,
 				CD04EFA026E3A764002CA116 /* SearchHistoryView.swift in Sources */,
@@ -791,6 +806,7 @@
 				CD0D0705279AC9DC003C90A8 /* PathEvaluationScreenReducer.swift in Sources */,
 				CD6CD6B7276627CB00DA385C /* TrainStation.swift in Sources */,
 				CD1A1AAF27916C43004B8A09 /* Date+isTomorrow.swift in Sources */,
+				CD00265A28020B0700EB9075 /* PlaceAnnotationView.swift in Sources */,
 				CD1A1AAD27916BBA004B8A09 /* Date+isToday.swift in Sources */,
 				CD6CD6BA276627CB00DA385C /* TrainSegment.swift in Sources */,
 				CD6CD6C327662F4200DA385C /* RaspResponse.swift in Sources */,

@@ -18,7 +18,13 @@ struct PathEvaluationScreen: View {
                 VStack {
                     Map(
                         coordinateRegion: self.$viewModel.region,
-                        showsUserLocation: true
+                        showsUserLocation: true,
+                        annotationItems: self.viewModel.annotationItems,
+                        annotationContent: { place in
+                            MapAnnotation(coordinate: place.coordinate) {
+                                PlaceAnnotationView(type: place.type!)
+                            }
+                        }
                     )
                     .frame(height: 300)
                     Spacer()
