@@ -77,8 +77,16 @@ struct TrainListItem: View {
         }
         .background(Colors.RowBackground)
         .cornerRadius(24.0)
-        .sheet(isPresented: self.$pathEvaluationPresended, onDismiss: {}, content: { PathEvaluationScreen(onPressBack: { self.pathEvaluationPresended = false })
-        })
+        .sheet(
+            isPresented: self.$pathEvaluationPresended,
+            onDismiss: {},
+            content: {
+                PathEvaluationScreen(
+                    onPressBack: { self.pathEvaluationPresended = false },
+                    viewModel: PathEvaluationScreenViewModel(with: self.viewModel.segment)
+                )
+            }
+        )
     }
 }
 

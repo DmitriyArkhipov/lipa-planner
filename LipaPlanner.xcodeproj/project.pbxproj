@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD00264827F9799900EB9075 /* GeolocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00264727F9799900EB9075 /* GeolocationProvider.swift */; };
+		CD00264E27FE9B5900EB9075 /* PathEvaluationScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00264D27FE9B5900EB9075 /* PathEvaluationScreenViewModel.swift */; };
+		CD00265127FE9D8F00EB9075 /* EvaluationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00265027FE9D8F00EB9075 /* EvaluationPath.swift */; };
+		CD00265527FEA44900EB9075 /* MapKitProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00265427FEA44900EB9075 /* MapKitProvider.swift */; };
 		CD04EF9626E3A3C7002CA116 /* RootTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9526E3A3C7002CA116 /* RootTabs.swift */; };
 		CD04EF9826E3A4C5002CA116 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9726E3A4C5002CA116 /* SearchScreen.swift */; };
 		CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD04EF9C26E3A6C7002CA116 /* FiltersView.swift */; };
@@ -87,6 +91,10 @@
 		1832620EF5BFD42EEC0DD95F /* Pods-LipaPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipaPlanner.release.xcconfig"; path = "Target Support Files/Pods-LipaPlanner/Pods-LipaPlanner.release.xcconfig"; sourceTree = "<group>"; };
 		557D92D72E46DBB81A2305D5 /* Pods-LipaPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LipaPlanner.debug.xcconfig"; path = "Target Support Files/Pods-LipaPlanner/Pods-LipaPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		A11F4FA95AB1BCECD48FDB2A /* Pods_LipaPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LipaPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD00264727F9799900EB9075 /* GeolocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationProvider.swift; sourceTree = "<group>"; };
+		CD00264D27FE9B5900EB9075 /* PathEvaluationScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEvaluationScreenViewModel.swift; sourceTree = "<group>"; };
+		CD00265027FE9D8F00EB9075 /* EvaluationPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationPath.swift; sourceTree = "<group>"; };
+		CD00265427FEA44900EB9075 /* MapKitProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitProvider.swift; sourceTree = "<group>"; };
 		CD04EF9526E3A3C7002CA116 /* RootTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabs.swift; sourceTree = "<group>"; };
 		CD04EF9726E3A4C5002CA116 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		CD04EF9C26E3A6C7002CA116 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
@@ -190,9 +198,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD00264627F9793A00EB9075 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CD00265427FEA44900EB9075 /* MapKitProvider.swift */,
+				CD00264727F9799900EB9075 /* GeolocationProvider.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CD00264B27F9875C00EB9075 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CD6CD6B6276627CB00DA385C /* TrainSegment.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CD00264C27FE9B4400EB9075 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CD00264D27FE9B5900EB9075 /* PathEvaluationScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CD00264F27FE9D7E00EB9075 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CD00265027FE9D8F00EB9075 /* EvaluationPath.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		CD04EF8926E39CD5002CA116 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CD00264B27F9875C00EB9075 /* Entities */,
 				CDD6A6D526EB173000BCA1E8 /* Constants */,
 				CD66CE4E26E52ABD0011828A /* Extentions */,
 				CD04EF8F26E39DE9002CA116 /* CoreData */,
@@ -382,7 +424,10 @@
 		CD5722DC2792B8C200AFEE57 /* PathEvaluation */ = {
 			isa = PBXGroup;
 			children = (
+				CD00264F27FE9D7E00EB9075 /* Entities */,
+				CD00264627F9793A00EB9075 /* Utils */,
 				CD0D06FD279AC988003C90A8 /* Store */,
+				CD00264C27FE9B4400EB9075 /* ViewModels */,
 				CD5722DD2792B8E000AFEE57 /* PathEvaluationScreen.swift */,
 			);
 			path = PathEvaluation;
@@ -506,7 +551,6 @@
 		CDD53DB827131024007EDF58 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				CD6CD6B6276627CB00DA385C /* TrainSegment.swift */,
 				CD6CD6B3276627CB00DA385C /* TrainStation.swift */,
 				CD6CD6B4276627CB00DA385C /* TrainThread.swift */,
 				CD6CD6C227662F4200DA385C /* RaspResponse.swift */,
@@ -712,9 +756,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD00265127FE9D8F00EB9075 /* EvaluationPath.swift in Sources */,
 				CD36A67A276E06E300C66763 /* Date+DefaultFormattedTime.swift in Sources */,
+				CD00264E27FE9B5900EB9075 /* PathEvaluationScreenViewModel.swift in Sources */,
 				CDF0EAA626FAE3C40022A9EB /* TrainSuggestViewModel.swift in Sources */,
 				CD36A6762768EB7900C66763 /* TrainListSkeletonItem.swift in Sources */,
+				CD00264827F9799900EB9075 /* GeolocationProvider.swift in Sources */,
 				CD36A6742768E1AF00C66763 /* TrainListSkeleton.swift in Sources */,
 				CD0B8C82270D5D7A002247E8 /* Date+FormattedForView.swift in Sources */,
 				CD04EF9D26E3A6C7002CA116 /* FiltersView.swift in Sources */,
@@ -735,6 +782,7 @@
 				CD1A1AAB2791266D004B8A09 /* TrainListFiltersView.swift in Sources */,
 				CD30D80C278ADB0000C461A6 /* SortSelector.swift in Sources */,
 				CD0D0707279AC9E7003C90A8 /* PathEvaluationScreenState.swift in Sources */,
+				CD00265527FEA44900EB9075 /* MapKitProvider.swift in Sources */,
 				CDF0EA9926F837F60022A9EB /* isIpod7.swift in Sources */,
 				CD66CE5226E628CF0011828A /* InputButton.swift in Sources */,
 				CDD53DBC271313EC007EDF58 /* ApiKeys.swift in Sources */,

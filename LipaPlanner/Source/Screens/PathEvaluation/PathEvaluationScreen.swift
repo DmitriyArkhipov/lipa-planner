@@ -10,15 +10,23 @@ import MapKit
 
 struct PathEvaluationScreen: View {
     let onPressBack: () -> Void
-    
-    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @ObservedObject var viewModel: PathEvaluationScreenViewModel
     
     var body: some View {
         NavigationView {
-            VStack {
-                Map(coordinateRegion: $region)
-                            .frame(width: 400, height: 300)
-                Text("Hello")
+            ZStack {
+                VStack {
+                    Map(
+                        coordinateRegion: self.$viewModel.region,
+                        showsUserLocation: true
+                    )
+                    .frame(height: 300)
+                    Spacer()
+                }
+                VStack {
+                    Spacer()
+                    Text("Hello test")
+                }
             }
             .navigationBarTitle("Оценка пути до станции", displayMode: .inline)
             .navigationBarItems(leading: Button(action: onPressBack, label: {
@@ -28,12 +36,15 @@ struct PathEvaluationScreen: View {
                         .foregroundColor(Colors.ActionButton)
                 }
             }))
+            .onAppear {
+                self.viewModel.requestRoutsAndRegions()
+            }
         }
     }
 }
 
-struct PathEvaluation_Previews: PreviewProvider {
-    static var previews: some View {
-        PathEvaluationScreen(onPressBack: {}).preferredColorScheme(.dark)
-    }
-}
+//struct PathEvaluation_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PathEvaluationScreen(onPressBack: {}).preferredColorScheme(.dark)
+//    }
+//}
