@@ -59,7 +59,7 @@ class PathEvaluationScreenViewModel: ObservableObject {
     func requestRoutsAndRegions() {
         
         geolocationProvider.requestCurrentLocation(succeed: {[weak self] location in
-            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             
             guard let weakSelf = self else {
@@ -68,7 +68,7 @@ class PathEvaluationScreenViewModel: ObservableObject {
             
             let sourceMapKitItem = weakSelf.mapKitProvider.getMapItem(from: location)
             
-            self?.evaluationPath = EvaluationPath(source: sourceMapKitItem, destination: nil)
+            weakSelf.evaluationPath = EvaluationPath(source: sourceMapKitItem, destination: nil)
             
             weakSelf.mapKitProvider.requestStationLocation(
                 at: weakSelf.trainSegment,
