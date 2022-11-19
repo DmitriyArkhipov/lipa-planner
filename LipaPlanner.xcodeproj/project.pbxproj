@@ -60,6 +60,7 @@
 		CD959AA326E397EC00F31FAA /* LipaPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD959AA226E397EC00F31FAA /* LipaPlannerApp.swift */; };
 		CD959AA726E397EF00F31FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA626E397EF00F31FAA /* Assets.xcassets */; };
 		CD959AAA26E397EF00F31FAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */; };
+		CDB7A45D2804353300B2B7A7 /* SearchHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB7A45C2804353300B2B7A7 /* SearchHistoryItem.swift */; };
 		CDBDA80E2789D1F40095C832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBDA80D2789D1F40095C832 /* LaunchScreen.storyboard */; };
 		CDD53DAC270EA726007EDF58 /* TrainListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */; };
 		CDD53DAE270EABE0007EDF58 /* NavigationLinkFromCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */; };
@@ -147,6 +148,7 @@
 		CD959AA626E397EF00F31FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD959AAB26E397EF00F31FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB7A45C2804353300B2B7A7 /* SearchHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryItem.swift; sourceTree = "<group>"; };
 		CDBDA80D2789D1F40095C832 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDD53DAB270EA726007EDF58 /* TrainListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainListScreen.swift; sourceTree = "<group>"; };
 		CDD53DAD270EABE0007EDF58 /* NavigationLinkFromCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkFromCode.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 		CD04EF9B26E3A6A2002CA116 /* SearchHistoryView */ = {
 			isa = PBXGroup;
 			children = (
+				CDB7A45B2804352100B2B7A7 /* Views */,
 				CD04EF9F26E3A764002CA116 /* SearchHistoryView.swift */,
 			);
 			path = SearchHistoryView;
@@ -522,6 +525,14 @@
 				CD959AA926E397EF00F31FAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDB7A45B2804352100B2B7A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDB7A45C2804353300B2B7A7 /* SearchHistoryItem.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CDD53DB2271306C8007EDF58 /* Views */ = {
@@ -775,6 +786,7 @@
 				CD00264E27FE9B5900EB9075 /* PathEvaluationScreenViewModel.swift in Sources */,
 				CDF0EAA626FAE3C40022A9EB /* TrainSuggestViewModel.swift in Sources */,
 				CD36A6762768EB7900C66763 /* TrainListSkeletonItem.swift in Sources */,
+				CDB7A45D2804353300B2B7A7 /* SearchHistoryItem.swift in Sources */,
 				CD00264827F9799900EB9075 /* GeolocationProvider.swift in Sources */,
 				CD36A6742768E1AF00C66763 /* TrainListSkeleton.swift in Sources */,
 				CD0B8C82270D5D7A002247E8 /* Date+FormattedForView.swift in Sources */,
